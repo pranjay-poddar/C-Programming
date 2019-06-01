@@ -1,7 +1,7 @@
-Grading at Sat Jun  1 02:57:32 UTC 2019
+Grading at Sat Jun  1 03:07:44 UTC 2019
 Attempting to compile retirement.c
 Checking for struct _retire_info
-Found on line 4, column 9 
+Found on line 4, column 1 
 Checking for field int months
 Found on line 5, column 3 
 Checking for field double contribution
@@ -9,14 +9,1759 @@ Found on line 6, column 3
 Checking for field double rate_of_return
 Found on line 7, column 3 
 Checking for typedef of struct _retire_info to retire_info
-You have a typedef for retire_info, but it is : 
-typedef struct _retire_info {
-where I instead expected you to define it to struct _retire_info
-not found
+Found on line 9, column 1 
 Checking for void retirement (int startAge, double initial,  retire_info working,  retire_info retired)
-Found on line 19, column 1 
+Found on line 20, column 1 
 Checking for int main(void)
-Found on line 26, column 1 
-Your code does not have the right struct, fields, and/or functions.
+Found on line 27, column 1 
+Trying to run retirement calculator..
+Line_1_did_not_match
+Line_2_did_not_match
+Line_3_did_not_match
+Line_4_did_not_match
+Line_5_did_not_match
+Line_6_did_not_match
+Line_7_did_not_match
+Line_8_did_not_match
+Line_9_did_not_match
+Line_10_did_not_match
+Line_11_did_not_match
+Line_12_did_not_match
+Line_13_did_not_match
+Line_14_did_not_match
+Line_15_did_not_match
+Line_16_did_not_match
+Line_17_did_not_match
+Line_18_did_not_match
+Line_19_did_not_match
+Line_20_did_not_match
+Line_21_did_not_match
+Line_22_did_not_match
+Line_23_did_not_match
+Line_24_did_not_match
+Line_25_did_not_match
+Line_26_did_not_match
+Line_27_did_not_match
+Line_28_did_not_match
+Line_29_did_not_match
+Line_30_did_not_match
+Line_31_did_not_match
+Line_32_did_not_match
+Line_33_did_not_match
+Line_34_did_not_match
+Line_35_did_not_match
+Line_36_did_not_match
+Line_37_did_not_match
+Line_38_did_not_match
+Line_39_did_not_match
+Line_40_did_not_match
+Line_41_did_not_match
+Line_42_did_not_match
+Line_43_did_not_match
+Line_44_did_not_match
+Line_45_did_not_match
+Line_46_did_not_match
+Line_47_did_not_match
+Line_48_did_not_match
+Line_49_did_not_match
+Line_50_did_not_match
+Line_51_did_not_match
+Line_52_did_not_match
+Line_53_did_not_match
+Line_54_did_not_match
+Line_55_did_not_match
+Line_56_did_not_match
+Line_57_did_not_match
+Line_58_did_not_match
+Line_59_did_not_match
+Line_60_did_not_match
+Line_61_did_not_match
+Line_62_did_not_match
+Line_63_did_not_match
+Line_64_did_not_match
+Line_65_did_not_match
+Line_66_did_not_match
+Line_67_did_not_match
+Line_68_did_not_match
+Line_69_did_not_match
+Line_70_did_not_match
+Line_71_did_not_match
+Line_72_did_not_match
+Line_73_did_not_match
+Line_74_did_not_match
+Line_75_did_not_match
+Line_76_did_not_match
+Line_77_did_not_match
+Line_78_did_not_match
+Line_79_did_not_match
+Line_80_did_not_match
+Line_81_did_not_match
+Line_82_did_not_match
+Line_83_did_not_match
+Line_84_did_not_match
+Line_85_did_not_match
+Line_86_did_not_match
+Line_87_did_not_match
+Line_88_did_not_match
+Line_89_did_not_match
+Line_90_did_not_match
+Line_91_did_not_match
+Line_92_did_not_match
+Line_93_did_not_match
+Line_94_did_not_match
+Line_95_did_not_match
+Line_96_did_not_match
+Line_97_did_not_match
+Line_98_did_not_match
+Line_99_did_not_match
+Line_100_did_not_match
+Line_101_did_not_match
+Line_102_did_not_match
+Line_103_did_not_match
+Line_104_did_not_match
+Line_105_did_not_match
+Line_106_did_not_match
+Line_107_did_not_match
+Line_108_did_not_match
+Line_109_did_not_match
+Line_110_did_not_match
+Line_111_did_not_match
+Line_112_did_not_match
+Line_113_did_not_match
+Line_114_did_not_match
+Line_115_did_not_match
+Line_116_did_not_match
+Line_117_did_not_match
+Line_118_did_not_match
+Line_119_did_not_match
+Line_120_did_not_match
+Line_121_did_not_match
+Line_122_did_not_match
+Line_123_did_not_match
+Line_124_did_not_match
+Line_125_did_not_match
+Line_126_did_not_match
+Line_127_did_not_match
+Line_128_did_not_match
+Line_129_did_not_match
+Line_130_did_not_match
+Line_131_did_not_match
+Line_132_did_not_match
+Line_133_did_not_match
+Line_134_did_not_match
+Line_135_did_not_match
+Line_136_did_not_match
+Line_137_did_not_match
+Line_138_did_not_match
+Line_139_did_not_match
+Line_140_did_not_match
+Line_141_did_not_match
+Line_142_did_not_match
+Line_143_did_not_match
+Line_144_did_not_match
+Line_145_did_not_match
+Line_146_did_not_match
+Line_147_did_not_match
+Line_148_did_not_match
+Line_149_did_not_match
+Line_150_did_not_match
+Line_151_did_not_match
+Line_152_did_not_match
+Line_153_did_not_match
+Line_154_did_not_match
+Line_155_did_not_match
+Line_156_did_not_match
+Line_157_did_not_match
+Line_158_did_not_match
+Line_159_did_not_match
+Line_160_did_not_match
+Line_161_did_not_match
+Line_162_did_not_match
+Line_163_did_not_match
+Line_164_did_not_match
+Line_165_did_not_match
+Line_166_did_not_match
+Line_167_did_not_match
+Line_168_did_not_match
+Line_169_did_not_match
+Line_170_did_not_match
+Line_171_did_not_match
+Line_172_did_not_match
+Line_173_did_not_match
+Line_174_did_not_match
+Line_175_did_not_match
+Line_176_did_not_match
+Line_177_did_not_match
+Line_178_did_not_match
+Line_179_did_not_match
+Line_180_did_not_match
+Line_181_did_not_match
+Line_182_did_not_match
+Line_183_did_not_match
+Line_184_did_not_match
+Line_185_did_not_match
+Line_186_did_not_match
+Line_187_did_not_match
+Line_188_did_not_match
+Line_189_did_not_match
+Line_190_did_not_match
+Line_191_did_not_match
+Line_192_did_not_match
+Line_193_did_not_match
+Line_194_did_not_match
+Line_195_did_not_match
+Line_196_did_not_match
+Line_197_did_not_match
+Line_198_did_not_match
+Line_199_did_not_match
+Line_200_did_not_match
+Line_201_did_not_match
+Line_202_did_not_match
+Line_203_did_not_match
+Line_204_did_not_match
+Line_205_did_not_match
+Line_206_did_not_match
+Line_207_did_not_match
+Line_208_did_not_match
+Line_209_did_not_match
+Line_210_did_not_match
+Line_211_did_not_match
+Line_212_did_not_match
+Line_213_did_not_match
+Line_214_did_not_match
+Line_215_did_not_match
+Line_216_did_not_match
+Line_217_did_not_match
+Line_218_did_not_match
+Line_219_did_not_match
+Line_220_did_not_match
+Line_221_did_not_match
+Line_222_did_not_match
+Line_223_did_not_match
+Line_224_did_not_match
+Line_225_did_not_match
+Line_226_did_not_match
+Line_227_did_not_match
+Line_228_did_not_match
+Line_229_did_not_match
+Line_230_did_not_match
+Line_231_did_not_match
+Line_232_did_not_match
+Line_233_did_not_match
+Line_234_did_not_match
+Line_235_did_not_match
+Line_236_did_not_match
+Line_237_did_not_match
+Line_238_did_not_match
+Line_239_did_not_match
+Line_240_did_not_match
+Line_241_did_not_match
+Line_242_did_not_match
+Line_243_did_not_match
+Line_244_did_not_match
+Line_245_did_not_match
+Line_246_did_not_match
+Line_247_did_not_match
+Line_248_did_not_match
+Line_249_did_not_match
+Line_250_did_not_match
+Line_251_did_not_match
+Line_252_did_not_match
+Line_253_did_not_match
+Line_254_did_not_match
+Line_255_did_not_match
+Line_256_did_not_match
+Line_257_did_not_match
+Line_258_did_not_match
+Line_259_did_not_match
+Line_260_did_not_match
+Line_261_did_not_match
+Line_262_did_not_match
+Line_263_did_not_match
+Line_264_did_not_match
+Line_265_did_not_match
+Line_266_did_not_match
+Line_267_did_not_match
+Line_268_did_not_match
+Line_269_did_not_match
+Line_270_did_not_match
+Line_271_did_not_match
+Line_272_did_not_match
+Line_273_did_not_match
+Line_274_did_not_match
+Line_275_did_not_match
+Line_276_did_not_match
+Line_277_did_not_match
+Line_278_did_not_match
+Line_279_did_not_match
+Line_280_did_not_match
+Line_281_did_not_match
+Line_282_did_not_match
+Line_283_did_not_match
+Line_284_did_not_match
+Line_285_did_not_match
+Line_286_did_not_match
+Line_287_did_not_match
+Line_288_did_not_match
+Line_289_did_not_match
+Line_290_did_not_match
+Line_291_did_not_match
+Line_292_did_not_match
+Line_293_did_not_match
+Line_294_did_not_match
+Line_295_did_not_match
+Line_296_did_not_match
+Line_297_did_not_match
+Line_298_did_not_match
+Line_299_did_not_match
+Line_300_did_not_match
+Line_301_did_not_match
+Line_302_did_not_match
+Line_303_did_not_match
+Line_304_did_not_match
+Line_305_did_not_match
+Line_306_did_not_match
+Line_307_did_not_match
+Line_308_did_not_match
+Line_309_did_not_match
+Line_310_did_not_match
+Line_311_did_not_match
+Line_312_did_not_match
+Line_313_did_not_match
+Line_314_did_not_match
+Line_315_did_not_match
+Line_316_did_not_match
+Line_317_did_not_match
+Line_318_did_not_match
+Line_319_did_not_match
+Line_320_did_not_match
+Line_321_did_not_match
+Line_322_did_not_match
+Line_323_did_not_match
+Line_324_did_not_match
+Line_325_did_not_match
+Line_326_did_not_match
+Line_327_did_not_match
+Line_328_did_not_match
+Line_329_did_not_match
+Line_330_did_not_match
+Line_331_did_not_match
+Line_332_did_not_match
+Line_333_did_not_match
+Line_334_did_not_match
+Line_335_did_not_match
+Line_336_did_not_match
+Line_337_did_not_match
+Line_338_did_not_match
+Line_339_did_not_match
+Line_340_did_not_match
+Line_341_did_not_match
+Line_342_did_not_match
+Line_343_did_not_match
+Line_344_did_not_match
+Line_345_did_not_match
+Line_346_did_not_match
+Line_347_did_not_match
+Line_348_did_not_match
+Line_349_did_not_match
+Line_350_did_not_match
+Line_351_did_not_match
+Line_352_did_not_match
+Line_353_did_not_match
+Line_354_did_not_match
+Line_355_did_not_match
+Line_356_did_not_match
+Line_357_did_not_match
+Line_358_did_not_match
+Line_359_did_not_match
+Line_360_did_not_match
+Line_361_did_not_match
+Line_362_did_not_match
+Line_363_did_not_match
+Line_364_did_not_match
+Line_365_did_not_match
+Line_366_did_not_match
+Line_367_did_not_match
+Line_368_did_not_match
+Line_369_did_not_match
+Line_370_did_not_match
+Line_371_did_not_match
+Line_372_did_not_match
+Line_373_did_not_match
+Line_374_did_not_match
+Line_375_did_not_match
+Line_376_did_not_match
+Line_377_did_not_match
+Line_378_did_not_match
+Line_379_did_not_match
+Line_380_did_not_match
+Line_381_did_not_match
+Line_382_did_not_match
+Line_383_did_not_match
+Line_384_did_not_match
+Line_385_did_not_match
+Line_386_did_not_match
+Line_387_did_not_match
+Line_388_did_not_match
+Line_389_did_not_match
+Line_390_did_not_match
+Line_391_did_not_match
+Line_392_did_not_match
+Line_393_did_not_match
+Line_394_did_not_match
+Line_395_did_not_match
+Line_396_did_not_match
+Line_397_did_not_match
+Line_398_did_not_match
+Line_399_did_not_match
+Line_400_did_not_match
+Line_401_did_not_match
+Line_402_did_not_match
+Line_403_did_not_match
+Line_404_did_not_match
+Line_405_did_not_match
+Line_406_did_not_match
+Line_407_did_not_match
+Line_408_did_not_match
+Line_409_did_not_match
+Line_410_did_not_match
+Line_411_did_not_match
+Line_412_did_not_match
+Line_413_did_not_match
+Line_414_did_not_match
+Line_415_did_not_match
+Line_416_did_not_match
+Line_417_did_not_match
+Line_418_did_not_match
+Line_419_did_not_match
+Line_420_did_not_match
+Line_421_did_not_match
+Line_422_did_not_match
+Line_423_did_not_match
+Line_424_did_not_match
+Line_425_did_not_match
+Line_426_did_not_match
+Line_427_did_not_match
+Line_428_did_not_match
+Line_429_did_not_match
+Line_430_did_not_match
+Line_431_did_not_match
+Line_432_did_not_match
+Line_433_did_not_match
+Line_434_did_not_match
+Line_435_did_not_match
+Line_436_did_not_match
+Line_437_did_not_match
+Line_438_did_not_match
+Line_439_did_not_match
+Line_440_did_not_match
+Line_441_did_not_match
+Line_442_did_not_match
+Line_443_did_not_match
+Line_444_did_not_match
+Line_445_did_not_match
+Line_446_did_not_match
+Line_447_did_not_match
+Line_448_did_not_match
+Line_449_did_not_match
+Line_450_did_not_match
+Line_451_did_not_match
+Line_452_did_not_match
+Line_453_did_not_match
+Line_454_did_not_match
+Line_455_did_not_match
+Line_456_did_not_match
+Line_457_did_not_match
+Line_458_did_not_match
+Line_459_did_not_match
+Line_460_did_not_match
+Line_461_did_not_match
+Line_462_did_not_match
+Line_463_did_not_match
+Line_464_did_not_match
+Line_465_did_not_match
+Line_466_did_not_match
+Line_467_did_not_match
+Line_468_did_not_match
+Line_469_did_not_match
+Line_470_did_not_match
+Line_471_did_not_match
+Line_472_did_not_match
+Line_473_did_not_match
+Line_474_did_not_match
+Line_475_did_not_match
+Line_476_did_not_match
+Line_477_did_not_match
+Line_478_did_not_match
+Line_479_did_not_match
+Line_480_did_not_match
+Line_481_did_not_match
+Line_482_did_not_match
+Line_483_did_not_match
+Line_484_did_not_match
+Line_485_did_not_match
+Line_486_did_not_match
+Line_487_did_not_match
+Line_488_did_not_match
+Line_489_did_not_match
+Line_490_did_not_match
+Line_491_did_not_match
+Line_492_did_not_match
+Line_493_did_not_match
+Line_494_did_not_match
+Line_495_did_not_match
+Line_496_did_not_match
+Line_497_did_not_match
+Line_498_did_not_match
+Line_499_did_not_match
+Line_500_did_not_match
+Line_501_did_not_match
+Line_502_did_not_match
+Line_503_did_not_match
+Line_504_did_not_match
+Line_505_did_not_match
+Line_506_did_not_match
+Line_507_did_not_match
+Line_508_did_not_match
+Line_509_did_not_match
+Line_510_did_not_match
+Line_511_did_not_match
+Line_512_did_not_match
+Line_513_did_not_match
+Line_514_did_not_match
+Line_515_did_not_match
+Line_516_did_not_match
+Line_517_did_not_match
+Line_518_did_not_match
+Line_519_did_not_match
+Line_520_did_not_match
+Line_521_did_not_match
+Line_522_did_not_match
+Line_523_did_not_match
+Line_524_did_not_match
+Line_525_did_not_match
+Line_526_did_not_match
+Line_527_did_not_match
+Line_528_did_not_match
+Line_529_did_not_match
+Line_530_did_not_match
+Line_531_did_not_match
+Line_532_did_not_match
+Line_533_did_not_match
+Line_534_did_not_match
+Line_535_did_not_match
+Line_536_did_not_match
+Line_537_did_not_match
+Line_538_did_not_match
+Line_539_did_not_match
+Line_540_did_not_match
+Line_541_did_not_match
+Line_542_did_not_match
+Line_543_did_not_match
+Line_544_did_not_match
+Line_545_did_not_match
+Line_546_did_not_match
+Line_547_did_not_match
+Line_548_did_not_match
+Line_549_did_not_match
+Line_550_did_not_match
+Line_551_did_not_match
+Line_552_did_not_match
+Line_553_did_not_match
+Line_554_did_not_match
+Line_555_did_not_match
+Line_556_did_not_match
+Line_557_did_not_match
+Line_558_did_not_match
+Line_559_did_not_match
+Line_560_did_not_match
+Line_561_did_not_match
+Line_562_did_not_match
+Line_563_did_not_match
+Line_564_did_not_match
+Line_565_did_not_match
+Line_566_did_not_match
+Line_567_did_not_match
+Line_568_did_not_match
+Line_569_did_not_match
+Line_570_did_not_match
+Line_571_did_not_match
+Line_572_did_not_match
+Line_573_did_not_match
+Line_574_did_not_match
+Line_575_did_not_match
+Line_576_did_not_match
+Line_577_did_not_match
+Line_578_did_not_match
+Line_579_did_not_match
+Line_580_did_not_match
+Line_581_did_not_match
+Line_582_did_not_match
+Line_583_did_not_match
+Line_584_did_not_match
+Line_585_did_not_match
+Line_586_did_not_match
+Line_587_did_not_match
+Line_588_did_not_match
+Line_589_did_not_match
+Line_590_did_not_match
+Line_591_did_not_match
+Line_592_did_not_match
+Line_593_did_not_match
+Line_594_did_not_match
+Line_595_did_not_match
+Line_596_did_not_match
+Line_597_did_not_match
+Line_598_did_not_match
+Line_599_did_not_match
+Line_600_did_not_match
+Line_601_did_not_match
+Line_602_did_not_match
+Line_603_did_not_match
+Line_604_did_not_match
+Line_605_did_not_match
+Line_606_did_not_match
+Line_607_did_not_match
+Line_608_did_not_match
+Line_609_did_not_match
+Line_610_did_not_match
+Line_611_did_not_match
+Line_612_did_not_match
+Line_613_did_not_match
+Line_614_did_not_match
+Line_615_did_not_match
+Line_616_did_not_match
+Line_617_did_not_match
+Line_618_did_not_match
+Line_619_did_not_match
+Line_620_did_not_match
+Line_621_did_not_match
+Line_622_did_not_match
+Line_623_did_not_match
+Line_624_did_not_match
+Line_625_did_not_match
+Line_626_did_not_match
+Line_627_did_not_match
+Line_628_did_not_match
+Line_629_did_not_match
+Line_630_did_not_match
+Line_631_did_not_match
+Line_632_did_not_match
+Line_633_did_not_match
+Line_634_did_not_match
+Line_635_did_not_match
+Line_636_did_not_match
+Line_637_did_not_match
+Line_638_did_not_match
+Line_639_did_not_match
+Line_640_did_not_match
+Line_641_did_not_match
+Line_642_did_not_match
+Line_643_did_not_match
+Line_644_did_not_match
+Line_645_did_not_match
+Line_646_did_not_match
+Line_647_did_not_match
+Line_648_did_not_match
+Line_649_did_not_match
+Line_650_did_not_match
+Line_651_did_not_match
+Line_652_did_not_match
+Line_653_did_not_match
+Line_654_did_not_match
+Line_655_did_not_match
+Line_656_did_not_match
+Line_657_did_not_match
+Line_658_did_not_match
+Line_659_did_not_match
+Line_660_did_not_match
+Line_661_did_not_match
+Line_662_did_not_match
+Line_663_did_not_match
+Line_664_did_not_match
+Line_665_did_not_match
+Line_666_did_not_match
+Line_667_did_not_match
+Line_668_did_not_match
+Line_669_did_not_match
+Line_670_did_not_match
+Line_671_did_not_match
+Line_672_did_not_match
+Line_673_did_not_match
+Line_674_did_not_match
+Line_675_did_not_match
+Line_676_did_not_match
+Line_677_did_not_match
+Line_678_did_not_match
+Line_679_did_not_match
+Line_680_did_not_match
+Line_681_did_not_match
+Line_682_did_not_match
+Line_683_did_not_match
+Line_684_did_not_match
+Line_685_did_not_match
+Line_686_did_not_match
+Line_687_did_not_match
+Line_688_did_not_match
+Line_689_did_not_match
+Line_690_did_not_match
+Line_691_did_not_match
+Line_692_did_not_match
+Line_693_did_not_match
+Line_694_did_not_match
+Line_695_did_not_match
+Line_696_did_not_match
+Line_697_did_not_match
+Line_698_did_not_match
+Line_699_did_not_match
+Line_700_did_not_match
+Line_701_did_not_match
+Line_702_did_not_match
+Line_703_did_not_match
+Line_704_did_not_match
+Line_705_did_not_match
+Line_706_did_not_match
+Line_707_did_not_match
+Line_708_did_not_match
+Line_709_did_not_match
+Line_710_did_not_match
+Line_711_did_not_match
+Line_712_did_not_match
+Line_713_did_not_match
+Line_714_did_not_match
+Line_715_did_not_match
+Line_716_did_not_match
+Line_717_did_not_match
+Line_718_did_not_match
+Line_719_did_not_match
+Line_720_did_not_match
+Line_721_did_not_match
+Line_722_did_not_match
+Line_723_did_not_match
+Line_724_did_not_match
+Line_725_did_not_match
+Line_726_did_not_match
+Line_727_did_not_match
+Line_728_did_not_match
+Line_729_did_not_match
+Line_730_did_not_match
+Line_731_did_not_match
+Line_732_did_not_match
+Line_733_did_not_match
+Line_734_did_not_match
+Line_735_did_not_match
+Line_736_did_not_match
+Line_737_did_not_match
+Line_738_did_not_match
+Line_739_did_not_match
+Line_740_did_not_match
+Line_741_did_not_match
+Line_742_did_not_match
+Line_743_did_not_match
+Line_744_did_not_match
+Line_745_did_not_match
+Line_746_did_not_match
+Line_747_did_not_match
+Line_748_did_not_match
+Line_749_did_not_match
+Line_750_did_not_match
+Line_751_did_not_match
+Line_752_did_not_match
+Line_753_did_not_match
+Line_754_did_not_match
+Line_755_did_not_match
+Line_756_did_not_match
+Line_757_did_not_match
+Line_758_did_not_match
+Line_759_did_not_match
+Line_760_did_not_match
+Line_761_did_not_match
+Line_762_did_not_match
+Line_763_did_not_match
+Line_764_did_not_match
+Line_765_did_not_match
+Line_766_did_not_match
+Line_767_did_not_match
+Line_768_did_not_match
+Line_769_did_not_match
+Line_770_did_not_match
+Line_771_did_not_match
+Line_772_did_not_match
+Line_773_did_not_match
+Line_774_did_not_match
+Line_775_did_not_match
+Line_776_did_not_match
+Line_777_did_not_match
+Line_778_did_not_match
+Line_779_did_not_match
+Line_780_did_not_match
+Line_781_did_not_match
+Line_782_did_not_match
+Line_783_did_not_match
+Line_784_did_not_match
+Line_785_did_not_match
+Line_786_did_not_match
+Line_787_did_not_match
+Line_788_did_not_match
+Line_789_did_not_match
+Line_790_did_not_match
+Line_791_did_not_match
+Line_792_did_not_match
+Line_793_did_not_match
+Line_794_did_not_match
+Line_795_did_not_match
+Line_796_did_not_match
+Line_797_did_not_match
+Line_798_did_not_match
+Line_799_did_not_match
+Line_800_did_not_match
+Line_801_did_not_match
+Line_802_did_not_match
+Line_803_did_not_match
+Line_804_did_not_match
+Line_805_did_not_match
+Line_806_did_not_match
+Line_807_did_not_match
+Line_808_did_not_match
+Line_809_did_not_match
+Line_810_did_not_match
+Line_811_did_not_match
+Line_812_did_not_match
+Line_813_did_not_match
+Line_814_did_not_match
+Line_815_did_not_match
+Line_816_did_not_match
+Line_817_did_not_match
+Line_818_did_not_match
+Line_819_did_not_match
+Line_820_did_not_match
+Line_821_did_not_match
+Line_822_did_not_match
+Line_823_did_not_match
+Line_824_did_not_match
+Line_825_did_not_match
+Line_826_did_not_match
+Line_827_did_not_match
+Line_828_did_not_match
+Line_829_did_not_match
+Line_830_did_not_match
+Line_831_did_not_match
+Line_832_did_not_match
+Line_833_did_not_match
+Line_834_did_not_match
+Line_835_did_not_match
+Line_836_did_not_match
+Line_837_did_not_match
+Line_838_did_not_match
+Line_839_did_not_match
+Line_840_did_not_match
+Line_841_did_not_match
+Line_842_did_not_match
+Line_843_did_not_match
+Line_844_did_not_match
+Line_845_did_not_match
+Line_846_did_not_match
+Line_847_did_not_match
+Line_848_did_not_match
+Line_849_did_not_match
+Line_850_did_not_match
+Line_851_did_not_match
+Line_852_did_not_match
+Line_853_did_not_match
+Line_854_did_not_match
+Line_855_did_not_match
+Line_856_did_not_match
+Line_857_did_not_match
+Line_858_did_not_match
+Line_859_did_not_match
+Line_860_did_not_match
+Line_861_did_not_match
+Line_862_did_not_match
+Line_863_did_not_match
+Line_864_did_not_match
+Line_865_did_not_match
+Line_866_did_not_match
+Line_867_did_not_match
+Line_868_did_not_match
+Line_869_did_not_match
+Line_870_did_not_match
+Line_871_did_not_match
+Line_872_did_not_match
+Line_873_did_not_match
+Your file did not match the expected ouput
+Your output did not match what we expected. Here is what you printed
+Age  27 month  3 you have $21345.000000000000000000000
+Age  27 month  4 you have $22425.043749999997089616954
+Age  27 month  5 you have $23509.137664062494877725840
+Age  27 month  6 you have $24597.296930302727560047060
+Age  27 month  7 you have $25689.536793791361560579389
+Age  27 month  8 you have $26785.872556768077629385516
+Age  27 month  9 you have $27886.319578855956933693960
+Age  27 month 10 you have $28990.893277276663866359740
+Age  27 month 11 you have $30099.609127066447399556637
+Age  28 month  0 you have $31212.482661292942793807015
+Age  28 month  1 you have $32329.529471272788214264438
+Age  28 month  2 you have $33450.765206790063530206680
+Age  28 month  3 you have $34576.205576315522193908691
+Age  28 month  4 you have $35705.866347226699872408062
+Age  28 month  5 you have $36839.763346028797968756407
+Age  28 month  6 you have $37977.912458576400240417570
+Age  28 month  7 you have $39120.329630296058894600719
+Age  28 month  8 you have $40267.030866409666487015784
+Age  28 month  9 you have $41418.032232158700935542583
+Age  28 month 10 you have $42573.349853029292717110366
+Age  28 month 11 you have $43732.999914978150627575815
+Age  29 month  0 you have $44896.998664659317000769079
+Age  29 month  1 you have $46065.362409651788766495883
+Age  29 month  2 you have $47238.107518687982519622892
+Age  29 month  3 you have $48415.250421883058152161539
+Age  29 month  4 you have $49596.807610965115600265563
+Age  29 month  5 you have $50782.795639506228326354176
+Age  29 month  6 you have $51973.231123154371744021773
+Age  29 month  7 you have $53168.130739866195654030889
+Age  29 month  8 you have $54367.511230140691623091698
+Age  29 month  9 you have $55571.389397253711649682373
+Age  29 month 10 you have $56779.782107493410876486450
+Age  29 month 11 you have $57992.706290396505210082978
+Age  30 month  0 you have $59210.178938985489367041737
+Age  30 month  1 you have $60432.217110006677103228867
+Age  30 month  2 you have $61658.837924169194593559951
+Age  30 month  3 you have $62890.058566384825098793954
+Age  30 month  4 you have $64125.896286008763127028942
+Age  30 month  5 you have $65366.368397081292641814798
+Age  30 month  6 you have $66611.492278570338385179639
+Age  30 month  7 you have $67861.285374614977627061307
+Age  30 month  8 you have $69115.765194769774097949266
+Age  30 month  9 you have $70374.949314250159659422934
+Age  30 month 10 you have $71638.855374178587226197124
+Age  30 month 11 you have $72907.501081831753253936768
+Age  31 month  0 you have $74180.904210888620582409203
+Age  31 month  1 you have $75459.082601679445360787213
+Age  31 month  2 you have $76742.054161435735295526683
+Age  31 month  3 you have $78029.836864541110116988420
+Age  31 month  4 you have $79322.448752783137024380267
+Age  31 month  5 you have $80619.907935606068349443376
+Age  31 month  6 you have $81922.232590364583302289248
+Age  31 month  7 you have $83229.440962578446487896144
+Age  31 month  8 you have $84541.551366188112297095358
+Age  31 month  9 you have $85858.582183811304275877774
+Age  31 month 10 you have $87180.551867000584024935961
+Age  31 month 11 you have $88507.478936501822317950428
+Age  32 month  0 you have $89839.381982513703405857086
+Age  32 month  1 you have $91176.279664948116987943649
+Age  32 month  2 you have $92518.190713691670680418611
+Age  32 month  3 you have $93865.133928868002840317786
+Age  32 month  4 you have $95217.128181101244990713894
+Age  32 month  5 you have $96574.192411780371912755072
+Age  32 month  6 you have $97936.345633324541267938912
+Age  32 month  7 you have $99303.606929449495510198176
+Age  32 month  8 you have $100675.995455434924224391580
+Age  32 month  9 you have $102053.530438392801443114877
+Age  32 month 10 you have $103436.231177536770701408386
+Age  32 month 11 you have $104824.117044452519621700048
+Age  33 month  0 you have $106217.207483369202236644924
+Age  33 month  1 you have $107615.522011431821738369763
+Age  33 month  2 you have $109019.080218974675517529249
+Age  33 month  3 you have $110427.901769795818836428225
+Age  33 month  4 you have $111842.006401432547136209905
+Age  33 month  5 you have $113261.413925437911530025303
+Age  33 month  6 you have $114686.144227658296586014330
+Age  33 month  7 you have $116116.217268512002192437649
+Age  33 month  8 you have $117551.653083268916816450655
+Age  33 month  9 you have $118992.471782331165741197765
+Age  33 month 10 you have $120438.693551514894352294505
+Age  33 month 11 you have $121890.338652333070058375597
+Age  34 month  0 you have $123347.427422279302845709026
+Age  34 month  1 you have $124809.980275112844537943602
+Age  34 month  2 you have $126278.017701144504826515913
+Age  34 month  3 you have $127751.560267523789661936462
+Age  34 month  4 you have $129230.628618527000071480870
+Age  34 month  5 you have $130715.243475846466026268899
+Age  34 month  6 you have $132205.425638880871701985598
+Age  34 month  7 you have $133701.195985026657581329346
+Age  34 month  8 you have $135202.575469970499398186803
+Age  34 month  9 you have $136709.585127982863923534751
+Age  34 month 10 you have $138222.246072212787112221122
+Age  34 month 11 you have $139740.579494983569020405412
+Age  35 month  0 you have $141264.606668089749291539192
+Age  35 month  1 you have $142794.348943095072172582150
+Age  35 month  2 you have $144329.827751631673891097307
+Age  35 month  3 you have $145871.064605700288666412234
+Age  35 month  4 you have $147418.081097971647977828979
+Age  35 month  5 you have $148970.898902089043986052275
+Age  35 month  6 you have $150529.539772971853381022811
+Age  35 month  7 you have $152094.025547120487317442894
+Age  35 month  8 you have $153664.378142922185361385345
+Age  35 month  9 you have $155240.619560958119109272957
+Age  35 month 10 you have $156822.771884311689063906670
+Age  35 month 11 you have $158410.857278877840144559741
+Age  36 month  0 you have $160004.897993673628661781549
+Age  36 month  1 you have $161604.916361149895237758756
+Age  36 month  2 you have $163210.934797504189191386104
+Age  36 month  3 you have $164822.975802994827972725034
+Age  36 month  4 you have $166441.061962256033439189196
+Age  36 month  5 you have $168065.215944614494219422340
+Age  36 month  6 you have $169695.460504406772088259459
+Age  36 month  7 you have $171331.818481298279948532581
+Age  36 month  8 you have $172974.312800603132927790284
+Age  36 month  9 you have $174622.966473605367355048656
+Age  36 month 10 you have $176277.802597881382098421454
+Age  36 month 11 you have $177938.844357623427640646696
+Age  37 month  0 you have $179606.115023964492138475180
+Age  37 month  1 you have $181279.637955304351635277271
+Age  37 month  2 you have $182959.436597636726219207048
+Age  37 month  3 you have $184645.534484877862269058824
+Age  37 month  4 you have $186337.955239196133334189653
+Age  37 month  5 you have $188036.722571343096205964684
+Age  37 month  6 you have $189741.860280985623830929399
+Age  37 month  7 you have $191453.392257039318792521954
+Age  37 month  8 you have $193171.342478003207361325622
+Age  37 month  9 you have $194895.735012295714113861322
+Age  37 month 10 you have $196626.594018591800704598427
+Age  37 month 11 you have $198363.943746161501621827483
+Age  38 month  0 you have $200107.808535209594992920756
+Age  38 month  1 you have $201858.212817216612165793777
+Age  38 month  2 you have $203615.181115281156962737441
+Age  38 month  3 you have $205378.738044463447295129299
+Age  38 month  4 you have $207148.908312130166450515389
+Age  38 month  5 you have $208925.716718300624052062631
+Age  38 month  6 you have $210709.188155994226690381765
+Age  38 month  7 you have $212499.347611579200020059943
+Age  38 month  8 you have $214296.220165122591424733400
+Age  38 month  9 you have $216099.830990741786081343889
+Age  38 month 10 you have $217910.205356957041658461094
+Age  38 month 11 you have $219727.368627045623725280166
+Age  39 month  0 you have $221551.346259397018002346158
+Age  39 month  1 you have $223382.163807869743322953582
+Age  39 month  2 you have $225219.846922149241436272860
+Age  39 month  3 you have $227064.421348107280209660530
+Age  39 month  4 you have $228915.912928162666503340006
+Age  39 month  5 you have $230774.347601643268717452884
+Age  39 month  6 you have $232639.751405149407219141722
+Age  39 month  7 you have $234512.150472918699961155653
+Age  39 month  8 you have $236391.571037192130461335182
+Age  39 month  9 you have $238278.039428581570973619819
+Age  39 month 10 you have $240171.582076438731746748090
+Age  39 month 11 you have $242072.225509225361747667193
+Age  40 month  0 you have $243979.996354884933680295944
+Age  40 month  1 you have $245894.921341215725988149643
+Age  40 month  2 you have $247817.027296245272736996412
+Age  40 month  3 you have $249746.341148606181377544999
+Age  40 month  4 you have $251682.889927913434803485870
+Age  40 month  5 you have $253626.700765143090393394232
+Age  40 month  6 you have $255577.800893012346932664514
+Age  40 month  7 you have $257536.217646361124934628606
+Age  40 month  8 you have $259501.978462534956634044647
+Age  40 month  9 you have $261475.110881769447587430477
+Age  40 month 10 you have $263455.642547576047945767641
+Age  40 month 11 you have $265443.601207129424437880516
+Age  41 month  0 you have $267439.014711656142026185989
+Age  41 month  1 you have $269441.911016824829857796431
+Age  41 month  2 you have $271452.318183137918822467327
+Age  41 month  3 you have $273470.264376324659679085016
+Age  41 month  4 you have $275495.777867735829204320908
+Age  41 month  5 you have $277528.887034739833325147629
+Age  41 month  6 you have $279569.620361120090819895267
+Age  41 month  7 you have $281618.006437474279664456844
+Age  41 month  8 you have $283674.073961614805739372969
+Age  41 month  9 you have $285737.851738970843143761158
+Age  41 month 10 you have $287809.368682991946116089821
+Age  41 month 11 you have $289888.653815553116146475077
+Age  42 month  0 you have $291975.736267361440695822239
+Age  42 month  1 you have $294070.645278364012483507395
+Age  42 month  2 you have $296173.410198157827835530043
+Age  42 month  3 you have $298284.060486400907393544912
+Age  42 month  4 you have $300402.625713224872015416622
+Age  42 month  5 you have $302529.135559649439528584480
+Age  42 month  6 you have $304663.619817998085636645555
+Age  42 month  7 you have $306806.108392315567471086979
+Age  42 month  8 you have $308956.631298786727711558342
+Age  42 month  9 you have $311115.218666157161351293325
+Age  42 month 10 you have $313281.900736155221238732338
+Age  42 month 11 you have $315456.707863915769848972559
+Age  43 month  0 you have $317639.670518405444454401731
+Age  43 month  1 you have $319830.819282849435694515705
+Age  43 month  2 you have $322030.184855160070583224297
+Age  43 month  3 you have $324237.798048366908915340900
+Age  43 month  4 you have $326453.689791048236656934023
+Age  43 month  5 you have $328677.891127764654811471701
+Age  43 month  6 you have $330910.433219493774231523275
+Age  43 month  7 you have $333151.347344066831283271313
+Age  43 month  8 you have $335400.664896607049740850925
+Age  43 month  9 you have $337658.417389969283249229193
+Age  43 month 10 you have $339924.636455181636847555637
+Age  43 month 11 you have $342199.353841888543684035540
+Age  44 month  0 you have $344482.601418795587960630655
+Age  44 month  1 you have $346774.411174116015899926424
+Age  44 month  2 you have $349074.815216018934734165668
+Age  44 month  3 you have $351383.845773078966885805130
+Age  44 month  4 you have $353701.535194727999623864889
+Age  44 month  5 you have $356027.915951708215288817883
+Age  44 month  6 you have $358363.020636527100577950478
+Age  44 month  7 you have $360706.881963914027437567711
+Age  44 month  8 you have $363059.532771278696600347757
+Age  44 month  9 you have $365421.006019170978106558323
+Age  44 month 10 you have $367791.334791742847301065922
+Age  44 month 11 you have $370170.552297211834229528904
+Age  45 month  0 you have $372558.691868326335679739714
+Age  45 month  1 you have $374955.786962832557037472725
+Age  45 month  2 you have $377361.871163943142164498568
+Age  45 month  3 you have $379776.978180807898752391338
+Age  45 month  4 you have $382201.141848985920660197735
+Age  45 month  5 you have $384634.396130919572897255421
+Age  45 month  6 you have $387076.775116410513874143362
+Age  45 month  7 you have $389528.313023096998222172260
+Age  45 month  8 you have $391989.044196933566126972437
+Age  45 month  9 you have $394459.003112672013230621815
+Age  45 month 10 you have $396938.224374344514217227697
+Age  45 month 11 you have $399426.742715748259797692299
+Age  46 month  0 you have $401924.593000932305585592985
+Age  46 month  1 you have $404431.810224685759749263525
+Age  46 month  2 you have $406948.429513028298970311880
+Age  46 month  3 you have $409474.486123702139593660831
+Age  46 month  4 you have $412010.015446665987838059664
+Age  46 month  5 you have $414555.053004590969067066908
+Age  46 month  6 you have $417109.634453358128666877747
+Age  46 month  7 you have $419673.795582558203022927046
+Age  46 month  8 you have $422247.572315992787480354309
+Age  46 month  9 you have $424831.000712177716195583344
+Age  46 month 10 you have $427424.116964848362840712070
+Age  46 month 11 you have $430026.957403466512914747000
+Age  47 month  0 you have $432639.558493729506153613329
+Age  47 month  1 you have $435261.956838080950547009706
+Age  47 month  2 you have $437894.189176223706454038620
+Age  47 month  3 you have $440536.292385634500533342361
+Age  47 month  4 you have $443188.303482080576941370964
+Age  47 month  5 you have $445850.259620138327591121197
+Age  47 month  6 you have $448522.198093713785056024790
+Age  47 month  7 you have $451204.156336565152741968632
+Age  47 month  8 you have $453896.171922827255912125111
+Age  47 month  9 you have $456598.282567537797149270773
+Age  47 month 10 you have $459310.526127165998332202435
+Age  47 month 11 you have $462032.940600142814218997955
+Age  48 month  0 you have $464765.564127393299713730812
+Age  48 month  1 you have $467508.434992871014401316643
+Age  48 month  2 you have $470261.591624094231519848108
+Age  48 month  3 you have $473025.072592684533447027206
+Age  48 month  4 you have $475798.916614907037001103163
+Age  48 month  5 you have $478583.162552212888840585947
+Age  48 month  6 you have $481377.849411783623509109020
+Age  48 month  7 you have $484183.016347077791579067707
+Age  48 month  8 you have $486998.702658379275817424059
+Age  48 month  9 you have $489824.947793348168488591909
+Age  48 month 10 you have $492661.791347573162056505680
+Age  48 month 11 you have $495509.273065126501023769379
+Age  49 month  0 you have $498367.432839120680000633001
+Age  49 month  1 you have $501236.310712267353665083647
+Age  49 month  2 you have $504115.946877438342198729515
+Age  49 month  3 you have $507006.381678228673990815878
+Age  49 month  4 you have $509907.655609522014856338501
+Age  49 month  5 you have $512819.809318057668861001730
+Age  49 month  6 you have $515742.883603000373113900423
+Age  49 month  7 you have $518676.919416511605959385633
+Age  49 month  8 you have $521621.957864323456306010485
+Age  49 month  9 you have $524578.040206314646638929844
+Age  49 month 10 you have $527545.207857088302262127399
+Age  49 month 11 you have $530523.502386552398093044758
+Age  50 month  0 you have $533512.965520501951687037945
+Age  50 month  1 you have $536513.639141203835606575012
+Age  50 month  2 you have $539525.565287983277812600136
+Age  50 month  3 you have $542548.786157813156023621559
+Age  50 month  4 you have $545583.344105904921889305115
+Age  50 month  5 you have $548629.281646301969885826111
+Age  50 month  6 you have $551686.641452475567348301411
+Age  50 month  7 you have $554755.466357922297902405262
+Age  50 month  8 you have $557835.799356764415279030800
+Age  50 month  9 you have $560927.683604352292604744434
+Age  50 month 10 you have $564031.162417868617922067642
+Age  50 month 11 you have $567146.279276935616508126259
+Age  51 month  0 you have $570273.077824224135838449001
+Age  51 month  1 you have $573411.601866064942441880703
+Age  51 month  2 you have $576561.895373062696307897568
+Age  51 month  3 you have $579724.002480711671523749828
+Age  51 month  4 you have $582897.967490014270879328251
+Age  51 month  5 you have $586083.834868101752363145351
+Age  51 month  6 you have $589281.649248857051134109497
+Age  51 month  7 you have $592491.455433540162630379200
+Age  51 month  8 you have $595713.298391415853984653950
+Age  51 month  9 you have $598947.223260383587330579758
+Age  51 month 10 you have $602193.275347610004246234894
+Age  51 month 11 you have $605451.500130163505673408508
+Age  52 month  0 you have $608721.943255651625804603100
+Age  52 month  1 you have $612004.650542860268615186214
+Age  52 month  2 you have $615299.667982395971193909645
+Age  52 month  3 you have $618607.041737329913303256035
+Age  52 month  4 you have $621926.818143844837322831154
+Age  52 month  5 you have $625259.043711884180083870888
+Age  52 month  6 you have $628603.765125803649425506592
+Age  52 month  7 you have $631961.029245025361888110638
+Age  52 month  8 you have $635330.883104694192297756672
+Age  52 month  9 you have $638713.373916336800903081894
+Age  52 month 10 you have $642108.549068522988818585873
+Age  52 month 11 you have $645516.456127529847435653210
+Age  53 month  0 you have $648937.142838008003309369087
+Age  53 month  1 you have $652370.657123650424182415009
+Age  53 month  2 you have $655817.047087864018976688385
+Age  53 month  3 you have $659276.361014443449676036835
+Age  53 month  4 you have $662748.647368247504346072674
+Age  53 month  5 you have $666233.954795878380537033081
+Age  53 month  6 you have $669732.332126362831331789494
+Age  53 month  7 you have $673243.828371836687438189983
+Age  53 month  8 you have $676768.492728231009095907211
+Age  53 month  9 you have $680306.374575961846858263016
+Age  53 month 10 you have $683857.523480621632188558578
+Age  53 month 11 you have $687421.989193673944100737572
+Age  54 month  0 you have $690999.821653150138445198536
+Age  54 month  1 you have $694591.070984349353238940239
+Age  54 month  2 you have $698195.787500540609471499920
+Age  54 month  3 you have $701814.021703667589463293552
+Age  54 month  4 you have $705445.824285056325607001781
+Age  54 month  5 you have $709091.246126125217415392399
+Age  54 month  6 you have $712750.338299098075367510319
+Age  54 month  7 you have $716423.152067719609476625919
+Age  54 month  8 you have $720109.738887973478995263577
+Age  54 month  9 you have $723810.150408803368918597698
+Age  54 month 10 you have $727524.438472836278378963470
+Age  54 month 11 you have $731252.655117109301500022411
+Age  55 month  0 you have $734994.852573798387311398983
+Age  55 month  1 you have $738751.083270950126461684704
+Age  55 month  2 you have $742521.399833216099068522453
+Age  55 month  3 you have $746305.855082590598613023758
+Age  55 month  4 you have $750104.502039150218479335308
+Age  55 month  5 you have $753917.393921796930953860283
+Age  55 month  6 you have $757744.584149003610946238041
+Age  55 month  7 you have $761586.126339562353678047657
+Age  55 month  8 you have $765442.074313335702754557133
+Age  55 month  9 you have $769312.482092010672204196453
+Age  55 month 10 you have $773197.403899855678901076317
+Age  55 month 11 you have $777096.894164480036124587059
+Age  56 month  0 you have $781011.007517596823163330555
+Age  56 month  1 you have $784939.798795787733979523182
+Age  56 month  2 you have $788883.323041271883994340897
+Age  56 month  3 you have $792841.635502676595933735371
+Age  56 month  4 you have $796814.791635811561718583107
+Age  56 month  5 you have $800802.847104445798322558403
+Age  56 month  6 you have $804805.857781087397597730160
+Age  56 month  7 you have $808823.879747766419313848019
+Age  56 month  8 you have $812856.969296820461750030518
+Age  56 month  9 you have $816905.182931683491915464401
+Age  56 month 10 you have $820968.577367677236907184124
+Age  56 month 11 you have $825047.209532805951312184334
+Age  57 month  0 you have $829141.136568553862161934376
+Age  57 month  1 you have $833250.415830685873515903950
+Age  57 month  2 you have $837375.104890050832182168961
+Age  57 month  3 you have $841515.261533388402312994003
+Age  57 month  4 you have $845670.943764138501137495041
+Age  57 month  5 you have $849842.209803253994323313236
+Age  57 month  6 you have $854029.118090016185306012630
+Age  57 month  7 you have $858231.727282853680662810802
+Age  57 month  8 you have $862450.096260164282284677029
+Age  57 month  9 you have $866684.284121139789931476116
+Age  57 month 10 you have $870934.350186593947000801563
+Age  57 month 11 you have $875200.353999793645925819874
+Age  58 month  0 you have $879482.355327292811125516891
+Age  58 month  1 you have $883780.414159770123660564423
+Age  58 month  2 you have $888094.590712869190610945225
+Age  58 month  3 you have $892424.945428042323328554630
+Age  58 month  4 you have $896771.538973397458903491497
+Age  58 month  5 you have $901134.432244547642767429352
+Age  58 month  6 you have $905513.686365464585833251476
+Age  58 month  7 you have $909909.362689335015602409840
+Age  58 month  8 you have $914321.522799419937655329704
+Age  58 month  9 you have $918750.228509917738847434521
+Age  58 month 10 you have $923195.541866829851642251015
+Age  58 month 11 you have $927657.525148830376565456390
+Age  59 month  0 you have $932136.240868138382211327553
+Age  59 month  1 you have $936631.751771393814124166965
+Age  59 month  2 you have $941144.120840536430478096008
+Age  59 month  3 you have $945673.411293688346631824970
+Age  59 month  4 you have $950219.686586039606481790543
+Age  59 month  5 you have $954783.010410737129859626293
+Age  59 month  6 you have $959363.446699777268804609776
+Age  59 month  7 you have $963961.059624901390634477139
+Age  59 month  8 you have $968575.913598494720645248890
+Age  59 month  9 you have $973208.073274489026516675949
+Age  59 month 10 you have $977857.603549268329516053200
+Age  59 month 11 you have $982524.569562577991746366024
+Age  60 month  0 you have $987209.036698437528684735298
+Age  60 month  1 you have $991911.070586056564934551716
+Age  60 month  2 you have $996630.737100754166021943092
+Age  60 month  3 you have $1001368.102364881895482540131
+Age  60 month  4 you have $1006123.232748750131577253342
+Age  60 month  5 you have $1010896.194871557876467704773
+Age  60 month  6 you have $1015687.055602326174266636372
+Age  60 month  7 you have $1020495.882060834788717329502
+Age  60 month  8 you have $1025322.741618562838993966579
+Age  60 month  9 you have $1030167.701899632345885038376
+Age  60 month 10 you have $1035030.830781755852513015270
+Age  60 month 11 you have $1039912.196397187304683029652
+Age  61 month  0 you have $1044811.867133676656521856785
+Age  61 month  1 you have $1049729.911635427968576550484
+Age  61 month  2 you have $1054666.398804060649126768112
+Age  61 month  3 you have $1059621.397799575701355934143
+Age  61 month  4 you have $1064594.978041324065998196602
+Age  61 month  5 you have $1069587.209208979038521647453
+Age  61 month  6 you have $1074598.161243512528017163277
+Age  61 month  7 you have $1079627.904348175507038831711
+Age  61 month  8 you have $1084676.508989481022581458092
+Age  61 month  9 you have $1089744.045898191398009657860
+Age  61 month 10 you have $1094830.586070309625938534737
+Age  61 month 11 you have $1099936.200768073089420795441
+Age  62 month  0 you have $1105060.961520953336730599403
+Age  62 month  1 you have $1110204.940126656787469983101
+Age  62 month  2 you have $1115368.208652131725102663040
+Age  62 month  3 you have $1120550.839434577152132987976
+Age  62 month  4 you have $1125752.905082456767559051514
+Age  62 month  5 you have $1130974.478476515971124172211
+Age  62 month  6 you have $1136215.632770802825689315796
+Age  62 month  7 you have $1141476.441393693210557103157
+Age  62 month  8 you have $1146756.978048919467255473137
+Age  62 month  9 you have $1152057.316716602770611643791
+Age  62 month 10 you have $1157377.531654289923608303070
+Age  62 month 11 you have $1162717.697397993411868810654
+Age  63 month  0 you have $1168077.888763235881924629211
+Age  63 month  1 you have $1173458.180846097879111766815
+Age  63 month  2 you have $1178858.649024270707741379738
+Age  63 month  3 you have $1184279.368958111619576811790
+Age  63 month  4 you have $1189720.416591704357415437698
+Age  63 month  5 you have $1195181.868153923191130161285
+Age  63 month  6 you have $1200663.800159500213339924812
+Age  63 month  7 you have $1206166.289410098223015666008
+Age  63 month  8 you have $1211689.412995385937392711639
+Age  63 month  9 you have $1217233.248294118558987975121
+Age  63 month 10 you have $1222797.872975221369415521622
+Age  63 month 11 you have $1228383.364998878445476293564
+Age  64 month  0 you have $1233989.802617624169215559959
+Age  64 month  1 you have $1239617.264377440093085169792
+Age  64 month  2 you have $1245265.829118855297565460205
+Age  64 month  3 you have $1250935.575978050939738750458
+Age  64 month  4 you have $1256626.584387968527153134346
+Age  64 month  5 you have $1262338.934079423313960433006
+Age  64 month  6 you have $1268072.705082220956683158875
+Age  64 month  7 you have $1273827.977726279292255640030
+Age  64 month  8 you have $1279604.832642752677202224731
+Age  64 month  9 you have $1285403.350765162846073508263
+Age  64 month 10 you have $1291223.613330532098188996315
+Age  64 month 11 you have $1297065.701880521606653928757
+Age  65 month  0 you have $1302929.698262573452666401863
+Age  65 month  1 you have $1308815.684631058014929294586
+Age  65 month  2 you have $1314723.743448424385860562325
+Age  65 month  3 you have $1320653.957486355910077691078
+Age  65 month  4 you have $1326606.409826929681003093719
+Age  65 month  5 you have $1332581.183863780461251735687
+Age  65 month  6 you have $1338578.363303269492462277412
+Age  65 month  7 you have $1344598.032165656564757227898
+Age  65 month  8 you have $1350640.274786277674138545990
+Age  65 month  9 you have $1356705.175816726172342896461
+Age  65 month 10 you have $1362792.820226038806140422821
+Age  65 month 11 you have $1368903.293301886413246393204
+Age  66 month  0 you have $1375036.680651768343523144722
+Age  66 month  1 you have $1381193.068204212468117475510
+Age  66 month  2 you have $1387372.542209978215396404266
+Age  66 month  3 you have $1393575.189243265427649021149
+Age  66 month  4 you have $1399801.096202927641570568085
+Age  66 month  5 you have $1406050.350313688395544886589
+Age  66 month  6 you have $1412323.039127364521846175194
+Age  66 month  7 you have $1418619.250524091999977827072
+Age  66 month  8 you have $1424939.072713557165116071701
+Age  66 month  9 you have $1431282.594236232805997133255
+Age  66 month 10 you have $1437649.903964618453755974770
+Age  66 month 11 you have $1444041.091104485560208559036
+Age  67 month  0 you have $1450456.245196127332746982574
+Age  67 month  1 you have $1456895.456115612760186195374
+Age  67 month  2 you have $1463358.814076046226546168327
+Age  67 month  3 you have $1469846.409628831315785646439
+Age  67 month  4 you have $1476358.333664939273148775101
+Age  67 month  5 you have $1482894.677416182588785886765
+Age  67 month  6 you have $1489455.532456493237987160683
+Age  67 month  7 you have $1496040.990703204879537224770
+Age  67 month  8 you have $1502651.144418341806158423424
+Age  67 month  9 you have $1509286.086209910456091165543
+Age  67 month 10 you have $1515945.909033197443932294846
+Age  67 month 11 you have $1522630.706192071782425045967
+Age  68 month  0 you have $1529340.571340291993692517281
+Age  68 month  1 you have $1526615.021816408727318048477
+Age  68 month  2 you have $1523887.201001255540177226067
+Age  68 month  3 you have $1521157.107002089731395244598
+Age  68 month  4 you have $1518424.737924591405317187309
+Age  68 month  5 you have $1515690.091872861841693520546
+Age  68 month  6 you have $1512953.166949422331526875496
+Age  68 month  7 you have $1510213.961255213478580117226
+Age  68 month  8 you have $1507472.472889592638239264488
+Age  68 month  9 you have $1504728.699950333917513489723
+Age  68 month 10 you have $1501982.640533625613898038864
+Age  68 month 11 you have $1499234.292734070215374231339
+Age  69 month  0 you have $1496483.654644681839272379875
+Age  69 month  1 you have $1493730.724356885533779859543
+Age  69 month  2 you have $1490975.499960516113787889481
+Age  69 month  3 you have $1488217.979543816298246383667
+Age  69 month  4 you have $1485458.161193436011672019958
+Age  69 month  5 you have $1482696.042994430521503090858
+Age  69 month  6 you have $1479931.623030259041115641594
+Age  69 month  7 you have $1477164.899382784031331539154
+Age  69 month  8 you have $1474395.870132269570603966713
+Age  69 month  9 you have $1471624.533357379725202918053
+Age  69 month 10 you have $1468850.887135177385061979294
+Age  69 month 11 you have $1466074.929541123332455754280
+Age  70 month  0 you have $1463296.658649074146524071693
+Age  70 month  1 you have $1460516.072531281504780054092
+Age  70 month  2 you have $1457733.169258390786126255989
+Age  70 month  3 you have $1454947.946899439208209514618
+Age  70 month  4 you have $1452160.403521855361759662628
+Age  70 month  5 you have $1449370.537191456882283091545
+Age  70 month  6 you have $1446578.345972449518740177155
+Age  70 month  7 you have $1443783.827927426435053348541
+Age  70 month  8 you have $1440986.981117365881800651550
+Age  70 month  9 you have $1438187.803601630264893174171
+Age  70 month 10 you have $1435386.293437964748591184616
+Age  70 month 11 you have $1432582.448682496324181556702
+Age  71 month  0 you have $1429776.267389731714501976967
+Age  71 month  1 you have $1426967.747612556442618370056
+Age  71 month  2 you have $1424156.887402233434841036797
+Age  71 month  3 you have $1421343.684808401856571435928
+Age  71 month  4 you have $1418528.137879075482487678528
+Age  71 month  5 you have $1415710.244660641299560666084
+Age  71 month  6 you have $1412890.003197858342900872231
+Age  71 month  7 you have $1410067.411533856531605124474
+Age  71 month  8 you have $1407242.467710134573280811310
+Age  71 month  9 you have $1404415.169766559498384594917
+Age  71 month 10 you have $1401585.515741364797577261925
+Age  71 month 11 you have $1398753.503671149024739861488
+Age  72 month  0 you have $1395919.131590874865651130676
+Age  72 month  1 you have $1393082.397533867042511701584
+Age  72 month  2 you have $1390243.299531811848282814026
+Age  72 month  3 you have $1387401.835614754818379878998
+Age  72 month  4 you have $1384558.003811100265011191368
+Age  72 month  5 you have $1381711.802147609414532780647
+Age  72 month  6 you have $1378863.228649399010464549065
+Age  72 month  7 you have $1376012.281339940149337053299
+Age  72 month  8 you have $1373158.958241056650876998901
+Age  72 month  9 you have $1370303.257372924126684665680
+Age  72 month 10 you have $1367445.176754068117588758469
+Age  72 month 11 you have $1364584.714401363162323832512
+Age  73 month  0 you have $1361721.868330030934885144234
+Age  73 month  1 you have $1358856.636553639080375432968
+Age  73 month  2 you have $1355989.017084100283682346344
+Age  73 month  3 you have $1353119.007931670174002647400
+Age  73 month  4 you have $1350246.607104946393519639969
+Age  73 month  5 you have $1347371.812610866967588663101
+Age  73 month  6 you have $1344494.622454709140583872795
+Age  73 month  7 you have $1341615.034640087978914380074
+Age  73 month  8 you have $1338733.047168954508379101753
+Age  73 month  9 you have $1335848.658041595248505473137
+Age  73 month 10 you have $1332961.865256629884243011475
+Age  73 month 11 you have $1330072.666811010334640741348
+Age  74 month  0 you have $1327181.060700019355863332748
+Age  74 month  1 you have $1324287.044917269144207239151
+Age  74 month  2 you have $1321390.617454700171947479248
+Age  74 month  3 you have $1318491.776302578859031200409
+Age  74 month  4 you have $1315590.519449497573077678680
+Age  74 month  5 you have $1312686.844882372068241238594
+Age  74 month  6 you have $1309780.750586440553888678551
+Age  74 month  7 you have $1306872.234545262530446052551
+Age  74 month  8 you have $1303961.294740716693922877312
+Age  74 month  9 you have $1301047.929153000470250844955
+Age  74 month 10 you have $1298132.135760627919808030128
+Age  74 month 11 you have $1295213.912540428340435028076
+Age  75 month  0 you have $1292293.257467545336112380028
+Age  75 month  1 you have $1289370.168515434954315423965
+Age  75 month  2 you have $1286444.643655864289030432701
+Age  75 month  3 you have $1283516.680858910782262682915
+Age  75 month  4 you have $1280586.278092959662899374962
+Age  75 month  5 you have $1277653.433324703713878989220
+Age  75 month  6 you have $1274718.144519140943884849548
+Age  75 month  7 you have $1271780.409639573423191905022
+Age  75 month  8 you have $1268840.226647606352344155312
+Age  75 month  9 you have $1265897.593503145966678857803
+Age  75 month 10 you have $1262952.508164398372173309326
+Age  75 month 11 you have $1260004.968587868614122271538
+Age  76 month  0 you have $1257054.972728358348831534386
+Age  76 month  1 you have $1254102.518538965145125985146
+Age  76 month  2 you have $1251147.603971080854535102844
+Age  76 month  3 you have $1248190.226974389981478452682
+Age  76 month  4 you have $1245230.385496868519112467766
+Age  76 month  5 you have $1242268.077484782552346587181
+Age  76 month  6 you have $1239303.300882686395198106766
+Age  76 month  7 you have $1236336.053633421892300248146
+Age  76 month  8 you have $1233366.333678116323426365852
+Age  76 month  9 you have $1230394.138956181239336729050
+Age  76 month 10 you have $1227419.467405311297625303268
+Age  76 month 11 you have $1224442.316961482167243957520
+Age  77 month  0 you have $1221462.685558950062841176987
+Age  77 month  1 you have $1218480.571130249183624982834
+Age  77 month  2 you have $1215495.971606191014871001244
+Age  77 month  3 you have $1212508.884915862698107957840
+Age  77 month  4 you have $1209519.308986625866964459419
+Age  77 month  5 you have $1206527.241744114551693201065
+Age  77 month  6 you have $1203532.681112234480679035187
+Age  77 month  7 you have $1200535.625013161217793822289
+Age  77 month  8 you have $1197536.071367338765412569046
+Age  77 month  9 you have $1194534.018093478167429566383
+Age  77 month 10 you have $1191529.463108555879443883896
+Age  77 month 11 you have $1188522.404327812837436795235
+Age  78 month  0 you have $1185512.839664752595126628876
+Age  78 month  1 you have $1182500.767031139694154262543
+Age  78 month  2 you have $1179486.184336998965591192245
+Age  78 month  3 you have $1176469.089490612968802452087
+Age  78 month  4 you have $1173449.480398521758615970612
+Age  78 month  5 you have $1170427.354965520324185490608
+Age  78 month  6 you have $1167402.711094658123329281807
+Age  78 month  7 you have $1164375.546687236987054347992
+Age  78 month  8 you have $1161345.859642809489741921425
+Age  78 month  9 you have $1158313.647859178483486175537
+Age  78 month 10 you have $1155278.909232394304126501083
+Age  78 month 11 you have $1152241.641656754538416862488
+Age  79 month  0 you have $1149201.843024801695719361305
+Age  79 month  1 you have $1146159.511227322276681661606
+Age  79 month  2 you have $1143114.644153344910591840744
+Age  79 month  3 you have $1140067.239690139191225171089
+Age  79 month  4 you have $1137017.295723214279860258102
+Age  79 month  5 you have $1133964.810136316809803247452
+Age  79 month  6 you have $1130909.780811430187895894051
+Age  79 month  7 you have $1127852.205628772964701056480
+Age  79 month  8 you have $1124792.082466796739026904106
+Age  79 month  9 you have $1121729.409202185692265629768
+Age  79 month 10 you have $1118664.183709854027256369591
+Age  79 month 11 you have $1115596.403862945502623915672
+Age  80 month  0 you have $1112526.067532831104472279549
+Age  80 month  1 you have $1109453.172589108347892761230
+Age  80 month  2 you have $1106377.716899599181488156319
+Age  80 month  3 you have $1103299.698330348823219537735
+Age  80 month  4 you have $1100219.114745623897761106491
+Age  80 month  5 you have $1097135.964007911738008260727
+Age  80 month  6 you have $1094050.243977918289601802826
+Age  80 month  7 you have $1090961.952514566481113433838
+Age  80 month  8 you have $1087871.087474995292723178864
+Age  80 month  9 you have $1084777.646714557660743594170
+Age  80 month 10 you have $1081681.628086819779127836227
+Age  80 month 11 you have $1078583.029443558771163225174
+Age  81 month  0 you have $1075481.848634761525318026543
+Age  81 month  1 you have $1072378.083508623763918876648
+Age  81 month  2 you have $1069271.731911547482013702393
+Age  81 month  3 you have $1066162.791688140248879790306
+Age  81 month  4 you have $1063051.260681213578209280968
+Age  81 month  5 you have $1059937.136731781065464019775
+Age  81 month  6 you have $1056820.417679057456552982330
+Age  81 month  7 you have $1053701.101360456552356481552
+Age  81 month  8 you have $1050579.185611590277403593063
+Age  81 month  9 you have $1047454.668266266584396362305
+Age  81 month 10 you have $1044327.547156488406471908092
+Age  81 month 11 you have $1041197.820112452027387917042
+Age  82 month  0 you have $1038065.484962545684538781643
+Age  82 month  1 you have $1034930.539533347706310451031
+Age  82 month  2 you have $1031792.981649625347927212715
+Age  82 month  3 you have $1028652.809134333278052508831
+Age  82 month  4 you have $1025510.019808611832559108734
+Age  82 month  5 you have $1022364.611491785617545247078
+Age  82 month  6 you have $1019216.582001361995935440063
+Age  82 month  7 you have $1016065.929153029690496623516
+Age  82 month  8 you have $1012912.650760657154023647308
+Age  82 month  9 you have $1009756.744636290939524769783
+Age  82 month 10 you have $1006598.208590154419653117657
+Age  82 month 11 you have $1003437.040430646156892180443
+Age  83 month  0 you have $1000273.237964338273741304874
+Age  83 month  1 you have $997106.798995975172147154808
+Age  83 month  2 you have $993937.721328471670858561993
+Age  83 month  3 you have $990766.002762911957688629627
+Age  83 month  4 you have $987591.641098547610454261303
+Age  83 month  5 you have $984414.634132796316407620907
+Age  83 month  6 you have $981234.979661240242421627045
+Age  83 month  7 you have $978052.675477624521590769291
+Age  83 month  8 you have $974867.719373855739831924438
+Age  83 month  9 you have $971680.109140000538900494576
+Age  83 month 10 you have $968489.842564283753745257854
+Age  83 month 11 you have $965296.917433087248355150223
+Age  84 month  0 you have $962101.331530948053114116192
+Age  84 month  1 you have $958903.082640557084232568741
+Age  84 month  2 you have $955702.168542757513932883739
+Age  84 month  3 you have $952498.587016543024219572544
+Age  84 month  4 you have $949292.335839056759141385555
+Age  84 month  5 you have $946083.412785589229315519333
+Age  84 month  6 you have $942871.815629577147774398327
+Age  84 month  7 you have $939657.542142601683735847473
+Age  84 month  8 you have $936440.590094387065619230270
+Age  84 month  9 you have $933220.957252798951230943203
+Age  84 month 10 you have $929998.641383842914365231991
+Age  84 month 11 you have $926773.640251662698574364185
+Age  85 month  0 you have $923545.951618539053015410900
+Age  85 month  1 you have $920315.573244887753389775753
+Age  85 month  2 you have $917082.502889258437789976597
+Age  85 month  3 you have $913846.738308332744054496288
+Age  85 month  4 you have $910608.277256922912783920765
+Age  85 month  5 you have $907367.117487970273941755295
+Age  85 month  6 you have $904123.256752543500624597073
+Age  85 month  7 you have $900876.692799837212078273296
+Age  85 month  8 you have $897627.423377170343883335590
+Age  85 month  9 you have $894375.446229984518140554428
+Age  85 month 10 you have $891120.759101842762902379036
+Age  85 month 11 you have $887863.359734427533112466335
+Age  86 month  0 you have $884603.245867539430037140846
+Age  86 month  1 you have $881340.415239095687866210938
+Age  86 month  2 you have $878074.865585128194652497768
+Age  86 month  3 you have $874806.594639782444573938847
+Age  86 month  4 you have $871535.600135315558873116970
+Age  86 month  5 you have $868261.879802094888873398304
+Age  86 month  6 you have $864985.431368596502579748631
+Age  86 month  7 you have $861706.252561403554864227772
+Age  86 month  8 you have $858424.341105204657651484013
+Age  86 month  9 you have $855139.694722792250104248524
+Age  86 month 10 you have $851852.311135061201639473438
+Age  86 month 11 you have $848562.188061007065698504448
+Age  87 month  0 you have $845269.323217724449932575226
+Age  87 month  1 you have $841973.714320405852049589157
+Age  87 month  2 you have $838675.359082339447923004627
+Age  87 month  3 you have $835374.255214908043853938580
+Age  87 month  4 you have $832070.400427587097510695457
+Age  87 month  5 you have $828763.792427943320944905281
+Age  87 month  6 you have $825454.428921633167192339897
+Age  87 month  7 you have $822142.307612401084043085575
+Age  87 month  8 you have $818827.426202078000642359257
+Age  87 month  9 you have $815509.782390579697676002979
+Age  87 month 10 you have $812189.373875905061140656471
+Age  87 month 11 you have $808866.198354134918190538883
+Age  88 month  0 you have $805540.253519429941661655903
+Age  88 month  1 you have $802211.537064029369503259659
+Age  88 month  2 you have $798880.046678249374963343143
+Age  88 month  3 you have $795545.780050481203943490982
+Age  88 month  4 you have $792208.734867189894430339336
+Age  88 month  5 you have $788868.908812912530265748501
+Age  88 month  6 you have $785526.299570256494916975498
+Age  88 month  7 you have $782180.904819898307323455811
+Age  88 month  8 you have $778832.722240581526421010494
+Age  88 month  9 you have $775481.749509115237742662430
+Age  88 month 10 you have $772127.984300372772850096226
+Age  88 month 11 you have $768771.424287289730273187160
+Age  89 month  0 you have $765412.067140862345695495605
+Age  89 month  1 you have $762049.910530146327801048756
+Age  89 month  2 you have $758684.952122254762798547745
+Age  89 month  3 you have $755317.189582356601022183895
+Age  89 month  4 you have $751946.620573675143532454967
+Age  89 month  5 you have $748573.242757486412301659584
+Age  89 month  6 you have $745197.053793117636814713478
+Age  89 month  7 you have $741818.051337945158593356609
+Age  89 month  8 you have $738436.233047393383458256721
+Age  89 month  9 you have $735051.596574932802468538284
+Age  89 month 10 you have $731664.139572078478522598743
+Age  89 month 11 you have $728273.859688388532958924770
+Age  90 month  0 you have $724880.754571462166495621204
+Age  90 month  1 you have $721484.821866938262246549129
+Age  90 month  2 you have $718086.059218493988737463951
+Age  90 month  3 you have $714684.464267842704430222511
+Age  90 month  4 you have $711280.034654732560738921165
+Age  90 month  5 you have $707872.768016944755800068378
+Age  90 month  6 you have $704462.661990292137488722801
+Age  90 month  7 you have $701049.714208617340773344040
+Age  90 month  8 you have $697633.922303791157901287079
+Age  90 month  9 you have $694215.283905710908584296703
+Age  90 month 10 you have $690793.796642298926599323750
+Age  90 month 11 you have $687369.458139500813558697701
+Age  91 month  0 you have $683942.266021283692680299282
+Age  91 month  1 you have $680512.217909634695388376713
+Age  91 month  2 you have $677079.311424559331499040127
+Age  91 month  3 you have $673643.544184079742990434170
+Age  91 month  4 you have $670204.913804233074188232422
+Age  91 month  5 you have $666763.417899069841951131821
+Age  91 month  6 you have $663319.054080652305856347084
+Age  91 month  7 you have $659871.819959052838385105133
+Age  91 month  8 you have $656421.713142351945862174034
+Age  91 month  9 you have $652968.731236637220717966557
+Age  91 month 10 you have $649512.871846001013182103634
+Age  91 month 11 you have $646054.132572539267130196095
+Age  92 month  0 you have $642592.511016349657438695431
+Age  92 month  1 you have $639128.004775529843755066395
+Age  92 month  2 you have $635660.611446176073513925076
+Age  92 month  3 you have $632190.328622381202876567841
+Age  92 month  4 you have $628717.153896233183331787586
+Age  92 month  5 you have $625241.084857813315466046333
+Age  92 month  6 you have $621762.119095194735564291477
+Age  92 month  7 you have $618280.254194440669380128384
+Age  92 month  8 you have $614795.487739602685905992985
+Age  92 month  9 you have $611307.817312718951143324375
+Age  92 month 10 you have $607817.240493812831118702888
+Age  92 month 11 you have $604323.754860890912823379040
+Age  93 month  0 you have $600827.357989941607229411602
+Age  93 month  1 you have $597328.047454933170229196548
+Age  93 month  2 you have $593825.820827812189236283302
+Age  93 month  3 you have $590320.675678501953370869160
+Age  93 month  4 you have $586812.609574900707229971886
+Age  93 month  5 you have $583301.620082879788242280483
+Age  93 month  6 you have $579787.704766282113268971443
+Age  93 month  7 you have $576270.861186920665204524994
+Age  93 month  8 you have $572751.086904576397500932217
+Age  93 month  9 you have $569228.379476996837183833122
+Age  93 month 10 you have $565702.736459894338622689247
+Age  93 month 11 you have $562174.155406944220885634422
+Age  94 month  0 you have $558642.633869783254340291023
+Age  94 month  1 you have $555108.169398008030839264393
+Age  94 month  2 you have $551570.759539172984659671783
+Age  94 month  3 you have $548030.401838788879103958607
+Age  94 month  4 you have $544487.093840321176685392857
+Age  94 month  5 you have $540940.833085188060067594051
+Age  94 month  6 you have $537391.617112759035080671310
+Age  94 month  7 you have $533839.443460352951660752296
+Age  94 month  8 you have $530284.309663236490450799465
+Age  94 month  9 you have $526726.213254622416570782661
+Age  94 month 10 you have $523165.151765667833387851715
+Age  94 month 11 you have $519601.122725472494494169950
+Age  95 month  0 you have $516034.123661076999269425869
+Age  95 month  1 you have $512464.152097461163066327572
+Age  95 month  2 you have $508891.205557542329188436270
+Age  95 month  3 you have $505315.281562173564452677965
+Age  95 month  4 you have $501736.377630141971167176962
+Age  95 month  5 you have $498154.491278167057316750288
+Age  95 month  6 you have $494569.620020898815710097551
+Age  95 month  7 you have $490981.761370916210580617189
+Age  95 month  8 you have $487390.912838725256733596325
+Age  95 month  9 you have $483797.071932757506147027016
+Age  95 month 10 you have $480200.236159368068911135197
+Age  95 month 11 you have $476600.403022834158036857843
+Age  96 month  0 you have $472997.570025353168603032827
+Age  96 month  1 you have $469391.734667040931526571512
+Age  96 month  2 you have $465782.894445930083747953176
+Age  96 month  3 you have $462171.046857968322001397610
+Age  96 month  4 you have $458556.189397016598377376795
+Age  96 month  5 you have $454938.319554847432300448418
+Age  96 month  6 you have $451317.434821143106091767550
+Age  96 month  7 you have $447693.532683494035154581070
+Age  96 month  8 you have $444066.610627396905329078436
+Age  96 month  9 you have $440436.666136253043077886105
+Age  96 month 10 you have $436803.696691366552840918303
+Age  96 month 11 you have $433167.699771942629013210535
+Age  97 month  0 you have $429528.672855085867922753096
+Age  97 month  1 you have $425886.613415798405185341835
+Age  97 month  2 you have $422241.518926978169474750757
+Age  97 month  3 you have $418593.386859417252708226442
+Age  97 month  4 you have $414942.214681800047401338816
+Age  97 month  5 you have $411287.999860701500438153744
+Age  97 month  6 you have $407630.739860585366841405630
+Age  97 month  7 you have $403970.432143802463542670012
+Age  97 month  8 you have $400307.074170588923152536154
+Age  97 month  9 you have $396640.663399064389523118734
+Age  97 month 10 you have $392971.197285230213310569525
+Age  97 month 11 you have $389298.673282967880368232727
+Age  98 month  0 you have $385623.088844036974478513002
+Age  98 month  1 you have $381944.441418073663953691721
+Age  98 month  2 you have $378262.728452588664367794991
+Age  98 month  3 you have $374577.947392965783365070820
+Age  98 month  4 you have $370890.095682459883391857147
+Age  98 month  5 you have $367199.170762195251882076263
+Age  98 month  6 you have $363505.170071163738612085581
+Age  98 month  7 you have $359808.091046223009470850229
+Age  98 month  8 you have $356107.931122094800230115652
+Age  98 month  9 you have $352404.687731363170314580202
+Age  98 month 10 you have $348698.358304472581949084997
+Age  98 month 11 you have $344988.940269726270344108343
+Age  99 month  0 you have $341276.431053284322842955589
+Age  99 month  1 you have $337560.828079162049107253551
+Age  99 month  2 you have $333842.128769228002056479454
+Age  99 month  3 you have $330120.330543202348053455353
+Age  99 month  4 you have $326395.430818655004259198904
+Age  99 month  5 you have $322667.427011003834195435047
+Age  99 month  6 you have $318936.316533512959722429514
+Age  99 month  7 you have $315202.096797290840186178684
+Age  99 month  8 you have $311464.765211288526188582182
+Age  99 month  9 you have $307724.319182297913357615471
+Age  99 month 10 you have $303980.756114949821494519711
+Age  99 month 11 you have $300234.073411712248343974352
 
 Overall Grade: F
