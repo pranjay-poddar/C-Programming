@@ -11,7 +11,7 @@ typedef struct _retire_info retire_info;
 double balanceUpdate (retire_info period,double balance, int age){
   int n = period.months;
   for (int i=1; i<= n; i++){
-    printf("Age %3d month %2d you have $%.21f\n",age/12,age%12,balance);
+    printf("Age %3d month %2d you have $%.2f\n",age/12,age%12,balance);
     balance = balance*(1+period.rate_of_return)+period.contribution;
     age++;
   }
