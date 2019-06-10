@@ -6,7 +6,7 @@
 
 void assert_card_valid(card_t c) {
   assert(c.value >= 2 && c.value <= VALUE_ACE);
-  assert(suit>=0 && suit <= 3);
+  assert(c.suit>=0 && c.suit <= 3);
 }
 
 const char * ranking_to_string(hand_ranking_t r) {
@@ -19,7 +19,7 @@ const char * ranking_to_string(hand_ranking_t r) {
     "THREE_OF_A_KIND",
     "TWO_PAIR",
     "PAIR",
-    "NOTHING"}
+    "NOTHING"};
   return handName[r];
 }
 
@@ -27,16 +27,17 @@ char value_letter(card_t c) {
   switch (c.value){
   case 10 :
     return '0';
-  case 11:
+  case 11 :
     return 'J';
-  case 12:
-      return 'Q';
-  case 13:
-      return 'K';
-  case 14:
-      return 'A';
-  default:
-    char dum = '0' + c.value;
+  case 12 : 
+    return 'Q';
+  case 13 :
+    return 'K';
+  case 14 :
+    return 'A';
+  default : ;
+    char dum1 = '0';
+    char dum = dum1 + c.value;
     return dum;
   }
   //return 'x';
