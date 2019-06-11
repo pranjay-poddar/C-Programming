@@ -45,11 +45,22 @@ char value_letter(card_t c) {
 
 
 char suit_letter(card_t c) {
-  return 'x';
-  
+  switch (c.suit){
+  case 0 :
+    return 's';
+  case 1 :
+    return 'h';
+  case 2 :
+    return 'd';
+  case 3 :
+    return 'c';
+  default :
+    return '0';
+  }
 }
 
 void print_card(card_t c) {
+  printf("%c%c",value_letter(c),suit_letter(c));
 
 }
 
