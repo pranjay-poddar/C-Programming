@@ -1,4 +1,4 @@
-Grading at Mon Jun 10 22:37:06 UTC 2019
+Grading at Tue Jun 11 00:35:22 UTC 2019
 Compiling cards.c
 Testing card_from_letters
 For card_from_letters('0','c'), I expected 0c but got 0s
