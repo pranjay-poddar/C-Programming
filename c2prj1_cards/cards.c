@@ -66,6 +66,41 @@ void print_card(card_t c) {
 
 card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
+  switch (suit_let){
+  case 's' :
+    temp.suit = SPADES;
+    break;
+  case 'h':
+    temp.suit = HEARTS;
+    break;
+  case 'd' :
+    temp.suit = DIAMONDS;
+    break;
+  case 'c' :
+    temp.suit = CLUBS;
+    break;
+  default :
+    printf("please enter a valid suit\n");
+    break;
+  }
+  switch (value_let){
+  case 'A' :
+    temp.value = 14;
+    break;
+  case 'K' :
+    temp.value = 13;
+    break;
+  case 'Q' :
+    temp.value = 12;
+    break;
+  case 'J' :
+    temp.value = 11;
+    break;
+  default  :;
+    int dd = value_let - '0';
+    temp.value = dd;
+    break;
+  }
   return temp;
 }
 
