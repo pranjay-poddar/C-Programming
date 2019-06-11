@@ -96,6 +96,9 @@ card_t card_from_letters(char value_let, char suit_let) {
   case 'J' :
     temp.value = 11;
     break;
+  case '0':
+    temp.value = 10;
+    break;
   default  :;
     int dd = value_let - '0';
     temp.value = dd;
