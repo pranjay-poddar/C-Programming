@@ -106,5 +106,22 @@ card_t card_from_letters(char value_let, char suit_let) {
 
 card_t card_from_num(unsigned c) {
   card_t temp;
+  int ddd = c/13;
+  int remainder = c % 13;
+  temp.value = remainder + 2;
+  switch (ddd){
+  case 0 :
+    temp.suit = SPADES;
+    break;
+  case 1 :
+    temp.suit = HEARTS;
+    break;
+  case 2 :
+    temp.suit = DIAMONDS;
+    break;
+  case 3:
+    temp.suit = CLUBS;
+    break;
+  }
   return temp;
 }
