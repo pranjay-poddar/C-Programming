@@ -9,9 +9,9 @@ size_t maxSeq(int * array, size_t n){
     int best = 1;
     for (int i = 1; i < n; i++){
       if (array[i]>array[i-1]){
-	printf("%d is larger than %d so i increased the counter\n",array[i],array[i-1]);
+	/*	printf("%d is larger than %d so i increased the counter\n",array[i],array[i-1]);*/
 	count++;
-	printf("the counter now is %d\n",count);
+	//printf("the counter now is %d\n",count);
       }
       else{
 	if (count>best){
