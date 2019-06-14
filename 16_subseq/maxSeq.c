@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 size_t maxSeq(int * array, size_t n){
   if (n <= 1){
     return n;
@@ -19,5 +21,6 @@ size_t maxSeq(int * array, size_t n){
 	}
       }
     }
+    return best;
   }
 }
