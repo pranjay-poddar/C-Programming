@@ -3,9 +3,9 @@
 size_t maxSeq(int * array, size_t n);
 
 int main(){
-  int test1[] = {1,5,7,0,8,9};
-  int n1 = 3;
-  int L1 = 6;
+  int test1[] = {0,0,0,10,0,0,0};
+  int n1 = 2;
+  int L1 = 7;
 
   int test2[] = {-5,0,-2,-1};
   int n2 = 2;
@@ -37,14 +37,19 @@ int main(){
   int n8 = 4;
   int L8 = 9;
 
-  /*  int test9[] = {-4,-1,0,1,7,10,5,0,1,3,4,5,7,8};
+  int test9[] = {-4,-1,0,1,7,10,5,0,1,3,4,5,7,8};
   int n9 = 7;
-  int L9 = 14;*/
-  int nn[] = {n1,n2,n3,n4,n5,n6,n7,n8};
-  int * a[] = {test1, test2, test3, test4, test5, test6, test7,test8};
-  int L[] = {L1, L2, L3, L4, L5,L6,L7,L8};
+  int L9 = 14;
+
+  int test10[]={1,2,3,4,3,2,0,3,4,5,6,7,8,3,2,5,6,7};
+  int n10 = 7;
+  int L10 = 18;
   
-  for (int i=0; i<8; i++){
+  int nn[] = {n1,n2,n3,n4,n5,n6,n7,n8,n9, n10};
+  int * a[] = {test1, test2, test3, test4, test5, test6, test7,test8,test9, test10};
+  int L[] = {L1, L2, L3, L4, L5,L6,L7,L8,L9, L10};
+  
+  for (int i=0; i<10; i++){
     if (maxSeq(a[i],L[i]) != nn[i]){
       printf("problem found in\n");
       for (int ii =0; ii < L[ii]; ii++){
@@ -54,6 +59,9 @@ int main(){
       printf("\n");
       printf ("the funciton output is %lu\n",maxSeq(a[i],L[i]));
       return EXIT_FAILURE;
+    }
+    else{
+      printf("Congratulations\n");
     }
   }
   return EXIT_SUCCESS;
