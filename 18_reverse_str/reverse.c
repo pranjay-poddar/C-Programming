@@ -11,17 +11,14 @@ void reverse(char * str) {
   }
   str -= count;
   if (count > 1){
-  char dum_str[count+1];
-  //char * dum = str
-  for (int j=0; j < count; j++){
+    char dum_str[count+1];
+    for (int j=0; j < count; j++){
     dum_str[count-j-1]= str[j];
-  }
-  dum_str[count]='\0';
-  for (int cc = 0; cc < count ; cc++){
+    }
+    dum_str[count]='\0';
+    for (int cc = 0; cc < count ; cc++){
     str[cc] = dum_str[cc];
-  }
-  //  str = dum_str;
-  //  printf("\n%d\n",count);
+    }
   }
 }
 
