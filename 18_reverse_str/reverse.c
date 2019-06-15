@@ -4,6 +4,9 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  if (str == NULL){
+    return;
+  }
   int count = 0;
   while (*str != '\0'){
     str++;
