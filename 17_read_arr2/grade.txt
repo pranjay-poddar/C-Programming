@@ -1,0 +1,8 @@
+Grading at Sat Jun 15 20:01:12 UTC 2019
+Attempting to compile test.c
+gcc -std=gnu99 test.c -o run
+compiled
+Your file matched the expected output
+Your output matched what we expected
+
+Overall Grade: A
