@@ -1,0 +1,107 @@
+Grading at Fri Jun 21 21:46:45 UTC 2019
+**Testing broken implementation 10 **
+-------------------------------------
+
+success
+success
+success
+success
+Failed at x= -1 , y=2 , i =4
+
+**Testing broken implementation 11 **
+-------------------------------------
+
+success
+success
+success
+success
+Failed at x= -1 , y=2 , i =4
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+success
+success
+Failed at x= 2 , y=1 , i =2
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+success
+Failed at x= 1 , y=0 , i =1
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+Failed at x= 0 , y=0 , i =0
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+success
+success
+success
+success
+success
+success
+success
+success
+Failed at x= -1 , y=3 , i =8
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+success
+success
+success
+success
+Failed at x= -1 , y=2 , i =4
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+success
+success
+success
+Failed at x= 0 , y=5 , i =3
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+success
+success
+Failed at x= 2 , y=1 , i =2
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+success
+success
+success
+success
+Failed at x= -1 , y=2 , i =4
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+success
+success
+Failed at x= 2 , y=1 , i =2
+
+**Testing correct implementation **
+-------------------------------------
+
+success
+success
+success
+success
+success
+success
+success
+success
+success
+
+All tests were ok.
+
+
+Overall Grade: PASSED
