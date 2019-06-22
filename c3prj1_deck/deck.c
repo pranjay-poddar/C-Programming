@@ -36,7 +36,7 @@ void shuffle(deck_t * d){
 }
 
 void assert_full_deck(deck_t * d) {
-  for (int c=0; c<52; c++){
-    assert(dock_contains(d, c));
+  for (unsigned c=0; c<52; c++){
+    assert(deck_contains(d,card_from_num(c)));
   }
 }
