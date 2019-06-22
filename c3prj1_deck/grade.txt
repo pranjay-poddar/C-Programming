@@ -1,0 +1,11 @@
+Grading at Sat Jun 22 02:50:16 UTC 2019
+Compiling deck.c
+In file included from deck.c:3:0:
+deck.c: In function ‘assert_full_deck’:
+deck.c:40:12: error: implicit declaration of function ‘dock_contains’ [-Werror=implicit-function-declaration]
+     assert(dock_contains(d, c));
+            ^
+cc1: all warnings being treated as errors
+Could not compile your deck.c!
+
+Overall Grade: FAILED
