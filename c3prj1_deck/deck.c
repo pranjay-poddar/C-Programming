@@ -22,10 +22,9 @@ int deck_contains(deck_t * d, card_t c) {
 }
 
 void shuffle(deck_t * d){
-  int n =52; // no of shuffles
   card_t * dum_address;
   card_t ** array= d->cards;
-  for (int i=0; i<n; i++){
+  for (int i=0; i<d->n_cards; i++){
     int n1 = rand()% d->n_cards;
     // int n2 = rand()% d->n_cards;
     dum_address = array[i];
