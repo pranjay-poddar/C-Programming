@@ -1,4 +1,4 @@
-Grading at Thu Jul  4 16:23:57 UTC 2019
+Grading at Thu Jul  4 16:25:40 UTC 2019
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -7,494 +7,126 @@ cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o cards.o cards.c
 gcc -o test-eval -ggdb3 deck.o deck-c4.o eval-c4.o eval.o test-eval.o cards.o input.o future.o
 Testcase 1: Trying hands with nothing
 Valgrind returned an error status
-==391== Memcheck, a memory error detector
-==391== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==391== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==391== Command: ./test-eval inp.1.txt
-==391== Parent PID: 390
-==391== 
-==391== Invalid read of size 8
-==391==    at 0x4029CD: ranking_to_string (cards.c:23)
-==391==    by 0x4025B1: describe_hand (test-eval.c:69)
-==391==    by 0x4027D2: main (test-eval.c:116)
-==391==  Address 0x102802b0b0 is not stack'd, malloc'd or (recently) free'd
-==391== 
-==391== 
-==391== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==391==  Access not within mapped region at address 0x102802B0B0
-==391==    at 0x4029CD: ranking_to_string (cards.c:23)
-==391==    by 0x4025B1: describe_hand (test-eval.c:69)
-==391==    by 0x4027D2: main (test-eval.c:116)
-==391==  If you believe this happened as a result of a stack
-==391==  overflow in your program's main thread (unlikely but
-==391==  possible), you can try to increase the size of the
-==391==  main thread stack using the --main-stacksize= flag.
-==391==  The main thread stack size used in this run was 8388608.
-==391== 
-==391== HEAP SUMMARY:
-==391==     in use at exit: 896 bytes in 18 blocks
-==391==   total heap usage: 32 allocs, 14 frees, 9,376 bytes allocated
-==391== 
-==391== LEAK SUMMARY:
-==391==    definitely lost: 0 bytes in 0 blocks
-==391==    indirectly lost: 0 bytes in 0 blocks
-==391==      possibly lost: 0 bytes in 0 blocks
-==391==    still reachable: 896 bytes in 18 blocks
-==391==         suppressed: 0 bytes in 0 blocks
-==391== Rerun with --leak-check=full to see details of leaked memory
-==391== 
-==391== For counts of detected and suppressed errors, rerun with: -v
-==391== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==608== Memcheck, a memory error detector
+==608== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==608== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==608== Command: ./test-eval inp.1.txt
+==608== Parent PID: 607
+==608== 
+==608== Invalid read of size 8
+==608==    at 0x4029B9: ranking_to_string (cards.c:23)
+==608==    by 0x40259D: describe_hand (test-eval.c:69)
+==608==    by 0x4027BE: main (test-eval.c:116)
+==608==  Address 0x102802b0b0 is not stack'd, malloc'd or (recently) free'd
+==608== 
+==608== 
+==608== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==608==  Access not within mapped region at address 0x102802B0B0
+==608==    at 0x4029B9: ranking_to_string (cards.c:23)
+==608==    by 0x40259D: describe_hand (test-eval.c:69)
+==608==    by 0x4027BE: main (test-eval.c:116)
+==608==  If you believe this happened as a result of a stack
+==608==  overflow in your program's main thread (unlikely but
+==608==  possible), you can try to increase the size of the
+==608==  main thread stack using the --main-stacksize= flag.
+==608==  The main thread stack size used in this run was 8388608.
+==608== 
+==608== HEAP SUMMARY:
+==608==     in use at exit: 896 bytes in 18 blocks
+==608==   total heap usage: 32 allocs, 14 frees, 9,376 bytes allocated
+==608== 
+==608== LEAK SUMMARY:
+==608==    definitely lost: 0 bytes in 0 blocks
+==608==    indirectly lost: 0 bytes in 0 blocks
+==608==      possibly lost: 0 bytes in 0 blocks
+==608==    still reachable: 896 bytes in 18 blocks
+==608==         suppressed: 0 bytes in 0 blocks
+==608== Rerun with --leak-check=full to see details of leaked memory
+==608== 
+==608== For counts of detected and suppressed errors, rerun with: -v
+==608== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 Testcase 2: Trying hands with pairs
 Valgrind returned an error status
-==396== Memcheck, a memory error detector
-==396== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==396== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==396== Command: ./test-eval inp.2.txt
-==396== Parent PID: 395
-==396== 
-==396== Use of uninitialised value of size 8
-==396==    at 0x400C0D: print_hand (deck.c:8)
-==396==    by 0x4025F2: describe_hand (test-eval.c:74)
-==396==    by 0x4027D2: main (test-eval.c:116)
-==396== 
-==396== Invalid read of size 8
-==396==    at 0x400C0D: print_hand (deck.c:8)
-==396==    by 0x4025F2: describe_hand (test-eval.c:74)
-==396==    by 0x4027D2: main (test-eval.c:116)
-==396==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==396== 
-==396== 
-==396== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==396==  Access not within mapped region at address 0x0
-==396==    at 0x400C0D: print_hand (deck.c:8)
-==396==    by 0x4025F2: describe_hand (test-eval.c:74)
-==396==    by 0x4027D2: main (test-eval.c:116)
-==396==  If you believe this happened as a result of a stack
-==396==  overflow in your program's main thread (unlikely but
-==396==  possible), you can try to increase the size of the
-==396==  main thread stack using the --main-stacksize= flag.
-==396==  The main thread stack size used in this run was 8388608.
-==396== 
-==396== HEAP SUMMARY:
-==396==     in use at exit: 880 bytes in 17 blocks
-==396==   total heap usage: 30 allocs, 13 frees, 9,320 bytes allocated
-==396== 
-==396== LEAK SUMMARY:
-==396==    definitely lost: 0 bytes in 0 blocks
-==396==    indirectly lost: 0 bytes in 0 blocks
-==396==      possibly lost: 0 bytes in 0 blocks
-==396==    still reachable: 880 bytes in 17 blocks
-==396==         suppressed: 0 bytes in 0 blocks
-==396== Rerun with --leak-check=full to see details of leaked memory
-==396== 
-==396== For counts of detected and suppressed errors, rerun with: -v
-==396== Use --track-origins=yes to see where uninitialised values come from
-==396== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==613== Memcheck, a memory error detector
+==613== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==613== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==613== Command: ./test-eval inp.2.txt
+==613== Parent PID: 612
+==613== 
+==613== Use of uninitialised value of size 8
+==613==    at 0x400C0D: print_hand (deck.c:8)
+==613==    by 0x4025DE: describe_hand (test-eval.c:74)
+==613==    by 0x4027BE: main (test-eval.c:116)
+==613== 
+==613== Invalid read of size 8
+==613==    at 0x400C0D: print_hand (deck.c:8)
+==613==    by 0x4025DE: describe_hand (test-eval.c:74)
+==613==    by 0x4027BE: main (test-eval.c:116)
+==613==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==613== 
+==613== 
+==613== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==613==  Access not within mapped region at address 0x0
+==613==    at 0x400C0D: print_hand (deck.c:8)
+==613==    by 0x4025DE: describe_hand (test-eval.c:74)
+==613==    by 0x4027BE: main (test-eval.c:116)
+==613==  If you believe this happened as a result of a stack
+==613==  overflow in your program's main thread (unlikely but
+==613==  possible), you can try to increase the size of the
+==613==  main thread stack using the --main-stacksize= flag.
+==613==  The main thread stack size used in this run was 8388608.
+==613== 
+==613== HEAP SUMMARY:
+==613==     in use at exit: 880 bytes in 17 blocks
+==613==   total heap usage: 30 allocs, 13 frees, 9,320 bytes allocated
+==613== 
+==613== LEAK SUMMARY:
+==613==    definitely lost: 0 bytes in 0 blocks
+==613==    indirectly lost: 0 bytes in 0 blocks
+==613==      possibly lost: 0 bytes in 0 blocks
+==613==    still reachable: 880 bytes in 17 blocks
+==613==         suppressed: 0 bytes in 0 blocks
+==613== Rerun with --leak-check=full to see details of leaked memory
+==613== 
+==613== For counts of detected and suppressed errors, rerun with: -v
+==613== Use --track-origins=yes to see where uninitialised values come from
+==613== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 3: Trying hands with 2 pairs
  Checking the output 
-Line_4_did_not_match
-Line_5_did_not_match
-Line_6_did_not_match
-Line_7_did_not_match
 Line_8_did_not_match
-Line_12_did_not_match
-Line_13_did_not_match
-Line_14_did_not_match
-Line_15_did_not_match
 Line_16_did_not_match
-Line_18_did_not_match
-Line_22_did_not_match
-Line_23_did_not_match
-Line_24_did_not_match
-Line_25_did_not_match
-Line_26_did_not_match
-Line_30_did_not_match
-Line_31_did_not_match
-Line_32_did_not_match
-Line_33_did_not_match
-Line_34_did_not_match
-Line_35_did_not_match
+Line_28_did_not_match
 Line_36_did_not_match
-Line_37_did_not_match
-Line_38_did_not_match
-Line_39_did_not_match
-Line_40_did_not_match
-Line_41_did_not_match
-Line_42_did_not_match
-Line_43_did_not_match
-Line_44_did_not_match
-Line_45_did_not_match
-Line_46_did_not_match
-Line_54_did_not_match
-Line_55_did_not_match
+Line_48_did_not_match
 Line_56_did_not_match
-Line_57_did_not_match
-Line_58_did_not_match
-Line_62_did_not_match
-Line_63_did_not_match
-Line_64_did_not_match
-Line_65_did_not_match
-Line_66_did_not_match
 Line_68_did_not_match
-Line_72_did_not_match
-Line_73_did_not_match
-Line_74_did_not_match
-Line_75_did_not_match
 Line_76_did_not_match
-Line_80_did_not_match
-Line_81_did_not_match
-Line_82_did_not_match
-Line_83_did_not_match
-Line_84_did_not_match
-Line_85_did_not_match
-Line_86_did_not_match
-Line_87_did_not_match
-Line_88_did_not_match
-Line_89_did_not_match
-Line_90_did_not_match
-Line_91_did_not_match
-Line_92_did_not_match
-Line_93_did_not_match
-Line_94_did_not_match
-Line_95_did_not_match
-Line_96_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
-Line_107_did_not_match
-Line_108_did_not_match
-Line_112_did_not_match
-Line_113_did_not_match
-Line_114_did_not_match
-Line_115_did_not_match
-Line_116_did_not_match
-Line_118_did_not_match
-Line_122_did_not_match
-Line_123_did_not_match
-Line_124_did_not_match
-Line_125_did_not_match
-Line_126_did_not_match
-Line_130_did_not_match
-Line_131_did_not_match
-Line_132_did_not_match
-Line_133_did_not_match
-Line_134_did_not_match
-Line_135_did_not_match
+Line_128_did_not_match
 Line_136_did_not_match
-Line_137_did_not_match
-Line_138_did_not_match
-Line_139_did_not_match
-Line_140_did_not_match
-Line_141_did_not_match
-Line_142_did_not_match
-Line_143_did_not_match
-Line_144_did_not_match
-Line_145_did_not_match
-Line_146_did_not_match
-Line_154_did_not_match
-Line_155_did_not_match
+Line_148_did_not_match
 Line_156_did_not_match
-Line_157_did_not_match
-Line_158_did_not_match
-Line_162_did_not_match
-Line_163_did_not_match
-Line_164_did_not_match
-Line_165_did_not_match
-Line_166_did_not_match
 Line_168_did_not_match
-Line_172_did_not_match
-Line_173_did_not_match
-Line_174_did_not_match
-Line_175_did_not_match
 Line_176_did_not_match
-Line_180_did_not_match
-Line_181_did_not_match
-Line_182_did_not_match
-Line_183_did_not_match
-Line_184_did_not_match
-Line_185_did_not_match
-Line_186_did_not_match
-Line_187_did_not_match
 Line_188_did_not_match
-Line_189_did_not_match
-Line_190_did_not_match
-Line_191_did_not_match
-Line_192_did_not_match
-Line_193_did_not_match
-Line_194_did_not_match
-Line_195_did_not_match
 Line_196_did_not_match
-Line_204_did_not_match
-Line_205_did_not_match
-Line_206_did_not_match
-Line_207_did_not_match
-Line_208_did_not_match
-Line_209_did_not_match
-Line_213_did_not_match
-Line_214_did_not_match
-Line_215_did_not_match
-Line_216_did_not_match
-Line_217_did_not_match
-Line_218_did_not_match
-Line_224_did_not_match
-Line_225_did_not_match
-Line_226_did_not_match
-Line_227_did_not_match
-Line_228_did_not_match
-Line_229_did_not_match
-Line_233_did_not_match
-Line_234_did_not_match
-Line_235_did_not_match
-Line_236_did_not_match
-Line_237_did_not_match
-Line_238_did_not_match
-Line_241_did_not_match
-Line_242_did_not_match
-Line_243_did_not_match
-Line_244_did_not_match
-Line_245_did_not_match
-Line_246_did_not_match
-Line_247_did_not_match
-Line_248_did_not_match
-Line_249_did_not_match
-Line_250_did_not_match
-Line_251_did_not_match
-Line_252_did_not_match
-Line_260_did_not_match
-Line_261_did_not_match
-Line_262_did_not_match
-Line_263_did_not_match
-Line_264_did_not_match
-Line_265_did_not_match
-Line_269_did_not_match
-Line_270_did_not_match
-Line_271_did_not_match
-Line_272_did_not_match
-Line_273_did_not_match
-Line_274_did_not_match
-Line_280_did_not_match
-Line_281_did_not_match
-Line_282_did_not_match
-Line_283_did_not_match
-Line_284_did_not_match
-Line_285_did_not_match
-Line_289_did_not_match
-Line_290_did_not_match
-Line_291_did_not_match
-Line_292_did_not_match
-Line_293_did_not_match
-Line_294_did_not_match
-Line_297_did_not_match
-Line_298_did_not_match
-Line_299_did_not_match
-Line_300_did_not_match
-Line_301_did_not_match
-Line_302_did_not_match
-Line_303_did_not_match
-Line_304_did_not_match
-Line_305_did_not_match
-Line_306_did_not_match
-Line_307_did_not_match
-Line_308_did_not_match
-Line_316_did_not_match
-Line_317_did_not_match
-Line_318_did_not_match
-Line_319_did_not_match
-Line_320_did_not_match
-Line_321_did_not_match
-Line_325_did_not_match
-Line_326_did_not_match
-Line_327_did_not_match
-Line_328_did_not_match
-Line_329_did_not_match
-Line_330_did_not_match
-Line_332_did_not_match
-Line_336_did_not_match
-Line_337_did_not_match
-Line_338_did_not_match
-Line_339_did_not_match
-Line_340_did_not_match
-Line_341_did_not_match
-Line_345_did_not_match
-Line_346_did_not_match
-Line_347_did_not_match
-Line_348_did_not_match
-Line_349_did_not_match
-Line_350_did_not_match
-Line_351_did_not_match
-Line_352_did_not_match
-Line_353_did_not_match
-Line_354_did_not_match
-Line_355_did_not_match
-Line_356_did_not_match
-Line_357_did_not_match
-Line_358_did_not_match
-Line_359_did_not_match
-Line_360_did_not_match
-Line_361_did_not_match
-Line_362_did_not_match
-Line_363_did_not_match
-Line_364_did_not_match
-Line_372_did_not_match
-Line_373_did_not_match
-Line_374_did_not_match
-Line_375_did_not_match
-Line_376_did_not_match
-Line_377_did_not_match
-Line_381_did_not_match
-Line_382_did_not_match
-Line_383_did_not_match
-Line_384_did_not_match
-Line_385_did_not_match
-Line_386_did_not_match
-Line_388_did_not_match
-Line_392_did_not_match
-Line_393_did_not_match
-Line_394_did_not_match
-Line_395_did_not_match
-Line_396_did_not_match
-Line_397_did_not_match
-Line_401_did_not_match
-Line_402_did_not_match
-Line_403_did_not_match
-Line_404_did_not_match
-Line_405_did_not_match
-Line_406_did_not_match
-Line_407_did_not_match
-Line_408_did_not_match
-Line_409_did_not_match
-Line_410_did_not_match
-Line_411_did_not_match
-Line_412_did_not_match
-Line_413_did_not_match
-Line_414_did_not_match
-Line_415_did_not_match
-Line_416_did_not_match
-Line_417_did_not_match
-Line_418_did_not_match
-Line_419_did_not_match
-Line_420_did_not_match
-Line_428_did_not_match
-Line_429_did_not_match
-Line_430_did_not_match
-Line_431_did_not_match
-Line_432_did_not_match
-Line_433_did_not_match
-Line_437_did_not_match
-Line_438_did_not_match
-Line_439_did_not_match
-Line_440_did_not_match
-Line_441_did_not_match
-Line_442_did_not_match
-Line_444_did_not_match
-Line_448_did_not_match
-Line_449_did_not_match
-Line_450_did_not_match
-Line_451_did_not_match
-Line_452_did_not_match
-Line_453_did_not_match
-Line_457_did_not_match
-Line_458_did_not_match
-Line_459_did_not_match
-Line_460_did_not_match
-Line_461_did_not_match
-Line_462_did_not_match
-Line_463_did_not_match
-Line_464_did_not_match
-Line_465_did_not_match
-Line_466_did_not_match
-Line_467_did_not_match
-Line_468_did_not_match
-Line_469_did_not_match
-Line_470_did_not_match
-Line_471_did_not_match
-Line_472_did_not_match
-Line_473_did_not_match
-Line_474_did_not_match
-Line_475_did_not_match
-Line_476_did_not_match
-Line_484_did_not_match
-Line_485_did_not_match
-Line_486_did_not_match
-Line_487_did_not_match
-Line_488_did_not_match
-Line_492_did_not_match
-Line_493_did_not_match
-Line_494_did_not_match
-Line_495_did_not_match
-Line_496_did_not_match
-Line_498_did_not_match
-Line_502_did_not_match
-Line_503_did_not_match
-Line_504_did_not_match
-Line_505_did_not_match
-Line_506_did_not_match
-Line_510_did_not_match
-Line_511_did_not_match
-Line_512_did_not_match
-Line_513_did_not_match
-Line_514_did_not_match
-Line_515_did_not_match
-Line_516_did_not_match
-Line_517_did_not_match
-Line_518_did_not_match
-Line_519_did_not_match
-Line_520_did_not_match
-Line_521_did_not_match
-Line_522_did_not_match
-Line_523_did_not_match
-Line_524_did_not_match
-Line_525_did_not_match
-Line_526_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
 --------							--------
 Ac As Kc Kh 4d 							Ac As Kc Kh 4d 
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value K)				 - Secondary pair at index 2 (value K)
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Ac As Kc Kh 4d 		      |	 - 5 cards used for hand: Ac Kc Kc Kh 4d 
 Hand 2:								Hand 2:
 --------							--------
 Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h 
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value K)				 - Secondary pair at index 2 (value K)
- - evaluate_hand's ranking: TWO_PAIR			      |	2
- - 5 cards used for hand: Ad Ah Kd Ks 3h 		      |	1
-							      >	2
-							      >	0
-							      >	1
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Ad Kd Kd Ks 3h 
-							      >	0
-							      >	3
-							      >	3
-							      >	1
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	2
-							      >	1
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Ad Ah Kd Ks 3h 		      |	 - 5 cards used for hand: Ad Kd Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -502,49 +134,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ac As Kc Kh 4d 							Ac As Kc Kh 4d 
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value K)				 - Secondary pair at index 2 (value K)
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Ac As Kc Kh 4d 		      |	 - 5 cards used for hand: Ac Kc Kc Kh 4d 
 Hand 2:								Hand 2:
 --------							--------
 Ad Ah Qd Qs 3h 							Ad Ah Qd Qs 3h 
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value Q)				 - Secondary pair at index 2 (value Q)
- - evaluate_hand's ranking: TWO_PAIR			      |	2
- - 5 cards used for hand: Ad Ah Qd Qs 3h 		      |	1
-							      >	2
-							      >	0
-							      >	1
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Ad Qd Qd Qs 3h 
-							      >	0
-							      >	3
-							      >	3
-							      >	1
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	2
-							      >	1
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Ad Ah Qd Qs 3h 		      |	 - 5 cards used for hand: Ad Qd Qd Qs 3h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -552,49 +154,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kc Ks Qc Qh 4d 							Kc Ks Qc Qh 4d 
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value K)	 - The most of a kind is 2 of a kind (at index 0 / value K)
  - Secondary pair at index 2 (value Q)				 - Secondary pair at index 2 (value Q)
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Kc Ks Qc Qh 4d 		      |	 - 5 cards used for hand: Kc Qc Qc Qh 4d 
 Hand 2:								Hand 2:
 --------							--------
 Ad Ah Jd Js 3h 							Ad Ah Jd Js 3h 
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value J)				 - Secondary pair at index 2 (value J)
- - evaluate_hand's ranking: TWO_PAIR			      |	2
- - 5 cards used for hand: Ad Ah Jd Js 3h 		      |	1
-							      >	2
-							      >	0
-							      >	1
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Ad Jd Jd Js 3h 
-							      >	0
-							      >	3
-							      >	3
-							      >	1
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	2
-							      >	1
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Ad Ah Jd Js 3h 		      |	 - 5 cards used for hand: Ad Jd Jd Js 3h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -602,49 +174,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kc Ks Qc Qh 4d 							Kc Ks Qc Qh 4d 
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value K)	 - The most of a kind is 2 of a kind (at index 0 / value K)
  - Secondary pair at index 2 (value Q)				 - Secondary pair at index 2 (value Q)
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Kc Ks Qc Qh 4d 		      |	 - 5 cards used for hand: Kc Qc Qc Qh 4d 
 Hand 2:								Hand 2:
 --------							--------
 Ad Ah Qd Qs 3h 							Ad Ah Qd Qs 3h 
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value Q)				 - Secondary pair at index 2 (value Q)
- - evaluate_hand's ranking: TWO_PAIR			      |	2
- - 5 cards used for hand: Ad Ah Qd Qs 3h 		      |	1
-							      >	2
-							      >	0
-							      >	1
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Ad Qd Qd Qs 3h 
-							      >	0
-							      >	3
-							      >	3
-							      >	1
-							      >	2
-							      >	1
-							      >	2
-							      >	0
-							      >	2
-							      >	1
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Ad Ah Qd Qs 3h 		      |	 - 5 cards used for hand: Ad Qd Qd Qs 3h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -652,55 +194,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Js 7c 7h 4s 3d 3h 						Js 7c 7h 4s 3d 3h 
-							      >	0
-							      >	3
-							      >	1
-							      >	0
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 1 / value 7)	 - The most of a kind is 2 of a kind (at index 1 / value 7)
  - Secondary pair at index 4 (value 3)				 - Secondary pair at index 4 (value 3)
-							      >	0
-							      >	3
-							      >	1
-							      >	0
-							      >	2
-							      >	1
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: 7c 7h 3d 3h Js 			 - 5 cards used for hand: 7c 7h 3d 3h Js 
 Hand 2:								Hand 2:
 --------							--------
 Qs 7d 7s 5c 2d 2h 						Qs 7d 7s 5c 2d 2h 
-							      >	0
-							      >	2
-							      >	0
-							      >	3
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 1 / value 7)	 - The most of a kind is 2 of a kind (at index 1 / value 7)
  - Secondary pair at index 4 (value 2)				 - Secondary pair at index 4 (value 2)
-							      >	0
-							      >	2
-							      >	0
-							      >	3
-							      >	2
-							      >	1
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: 7d 7s 2d 2h Qs 			 - 5 cards used for hand: 7d 7s 2d 2h Qs 
-							      >	0
-							      >	1
-							      >	3
-							      >	0
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	0
-							      >	3
-							      >	2
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -708,55 +214,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Js 7c 7h 4s 3d 3h 						Js 7c 7h 4s 3d 3h 
-							      >	0
-							      >	3
-							      >	1
-							      >	0
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 1 / value 7)	 - The most of a kind is 2 of a kind (at index 1 / value 7)
  - Secondary pair at index 4 (value 3)				 - Secondary pair at index 4 (value 3)
-							      >	0
-							      >	3
-							      >	1
-							      >	0
-							      >	2
-							      >	1
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: 7c 7h 3d 3h Js 			 - 5 cards used for hand: 7c 7h 3d 3h Js 
 Hand 2:								Hand 2:
 --------							--------
 Qs 8d 8s 5c 2d 2h 						Qs 8d 8s 5c 2d 2h 
-							      >	0
-							      >	2
-							      >	0
-							      >	3
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 1 / value 8)	 - The most of a kind is 2 of a kind (at index 1 / value 8)
  - Secondary pair at index 4 (value 2)				 - Secondary pair at index 4 (value 2)
-							      >	0
-							      >	2
-							      >	0
-							      >	3
-							      >	2
-							      >	1
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: 8d 8s 2d 2h Qs 			 - 5 cards used for hand: 8d 8s 2d 2h Qs 
-							      >	0
-							      >	1
-							      >	3
-							      >	0
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	0
-							      >	3
-							      >	2
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -764,55 +234,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Jc Js 9d 5c 5s 4h 						Jc Js 9d 5c 5s 4h 
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value J)	 - The most of a kind is 2 of a kind (at index 0 / value J)
  - Secondary pair at index 3 (value 5)				 - Secondary pair at index 3 (value 5)
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Jc Js 5c 5s 9d 		      |	 - 5 cards used for hand: Jc 9d 5c 5s 9d 
 Hand 2:								Hand 2:
 --------							--------
 Jc Js 9d 4c 4s 3h 						Jc Js 9d 4c 4s 3h 
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value J)	 - The most of a kind is 2 of a kind (at index 0 / value J)
  - Secondary pair at index 3 (value 4)				 - Secondary pair at index 3 (value 4)
- - evaluate_hand's ranking: TWO_PAIR			      |	3
- - 5 cards used for hand: Jc Js 4c 4s 9d 		      |	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Jc 9d 4c 4s 9d 
-							      >	0
-							      >	3
-							      >	2
-							      >	0
-							      >	3
-							      >	1
-							      >	0
-							      >	3
-							      >	2
-							      >	0
-							      >	3
-							      >	1
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Jc Js 4c 4s 9d 		      |	 - 5 cards used for hand: Jc 9d 4c 4s 9d 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -820,55 +254,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Jc Js 9d 5c 5s 4h 						Jc Js 9d 5c 5s 4h 
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value J)	 - The most of a kind is 2 of a kind (at index 0 / value J)
  - Secondary pair at index 3 (value 5)				 - Secondary pair at index 3 (value 5)
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Jc Js 5c 5s 9d 		      |	 - 5 cards used for hand: Jc 9d 5c 5s 9d 
 Hand 2:								Hand 2:
 --------							--------
 Qc Qs 9d 5c 5s 3h 						Qc Qs 9d 5c 5s 3h 
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value Q)	 - The most of a kind is 2 of a kind (at index 0 / value Q)
  - Secondary pair at index 3 (value 5)				 - Secondary pair at index 3 (value 5)
- - evaluate_hand's ranking: TWO_PAIR			      |	3
- - 5 cards used for hand: Qc Qs 5c 5s 9d 		      |	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Qc 9d 5c 5s 9d 
-							      >	0
-							      >	3
-							      >	2
-							      >	0
-							      >	3
-							      >	1
-							      >	0
-							      >	3
-							      >	2
-							      >	0
-							      >	3
-							      >	1
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Qc Qs 5c 5s 9d 		      |	 - 5 cards used for hand: Qc 9d 5c 5s 9d 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -876,55 +274,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Jc Js 9d 5c 5s 4h 						Jc Js 9d 5c 5s 4h 
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value J)	 - The most of a kind is 2 of a kind (at index 0 / value J)
  - Secondary pair at index 3 (value 5)				 - Secondary pair at index 3 (value 5)
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Jc Js 5c 5s 9d 		      |	 - 5 cards used for hand: Jc 9d 5c 5s 9d 
 Hand 2:								Hand 2:
 --------							--------
 Jc Js 8d 5c 5s 3h 						Jc Js 8d 5c 5s 3h 
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value J)	 - The most of a kind is 2 of a kind (at index 0 / value J)
  - Secondary pair at index 3 (value 5)				 - Secondary pair at index 3 (value 5)
- - evaluate_hand's ranking: TWO_PAIR			      |	3
- - 5 cards used for hand: Jc Js 5c 5s 8d 		      |	0
-							      >	2
-							      >	3
-							      >	0
-							      >	1
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Jc 8d 5c 5s 8d 
-							      >	0
-							      >	3
-							      >	2
-							      >	0
-							      >	3
-							      >	1
-							      >	0
-							      >	3
-							      >	2
-							      >	0
-							      >	3
-							      >	1
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Jc Js 5c 5s 8d 		      |	 - 5 cards used for hand: Jc 8d 5c 5s 8d 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -932,756 +294,132 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ac As Kc Kh 4d 							Ac As Kc Kh 4d 
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value K)				 - Secondary pair at index 2 (value K)
-							      >	3
-							      >	0
-							      >	3
-							      >	1
-							      >	2
  - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
  - 5 cards used for hand: Ac As Kc Kh 4d 		      |	 - 5 cards used for hand: Ac Kc Kc Kh 4d 
 Hand 2:								Hand 2:
 --------							--------
 Jc Js 8d 5c 5s 							Jc Js 8d 5c 5s 
-							      >	3
-							      >	0
-							      >	2
-							      >	3
-							      >	0
  - No flush							 - No flush
  - The most of a kind is 2 of a kind (at index 0 / value J)	 - The most of a kind is 2 of a kind (at index 0 / value J)
  - Secondary pair at index 3 (value 5)				 - Secondary pair at index 3 (value 5)
- - evaluate_hand's ranking: TWO_PAIR			      |	3
- - 5 cards used for hand: Jc Js 5c 5s 8d 		      |	0
-							      >	2
-							      >	3
-							      >	0
-							      >	 - evaluate_hand's ranking: TWO_PAIR
-							      >	 - 5 cards used for hand: Jc 8d 5c 5s 8d 
-							      >	0
-							      >	3
-							      >	3
-							      >	1
-							      >	2
-							      >	0
-							      >	3
-							      >	2
-							      >	0
-							      >	3
+ - evaluate_hand's ranking: TWO_PAIR				 - evaluate_hand's ranking: TWO_PAIR
+ - 5 cards used for hand: Jc Js 5c 5s 8d 		      |	 - 5 cards used for hand: Jc 8d 5c 5s 8d 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Testcase 4: Trying hands with 3 of a kind
 Valgrind returned an error status
-==414== Memcheck, a memory error detector
-==414== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==414== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==414== Command: ./test-eval inp.4.txt
-==414== Parent PID: 413
-==414== 
-==414== Use of uninitialised value of size 8
-==414==    at 0x400C0D: print_hand (deck.c:8)
-==414==    by 0x4025F2: describe_hand (test-eval.c:74)
-==414==    by 0x4027D2: main (test-eval.c:116)
-==414== 
-==414== Invalid read of size 8
-==414==    at 0x400C0D: print_hand (deck.c:8)
-==414==    by 0x4025F2: describe_hand (test-eval.c:74)
-==414==    by 0x4027D2: main (test-eval.c:116)
-==414==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==414== 
-==414== 
-==414== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==414==  Access not within mapped region at address 0x0
-==414==    at 0x400C0D: print_hand (deck.c:8)
-==414==    by 0x4025F2: describe_hand (test-eval.c:74)
-==414==    by 0x4027D2: main (test-eval.c:116)
-==414==  If you believe this happened as a result of a stack
-==414==  overflow in your program's main thread (unlikely but
-==414==  possible), you can try to increase the size of the
-==414==  main thread stack using the --main-stacksize= flag.
-==414==  The main thread stack size used in this run was 8388608.
-==414== 
-==414== HEAP SUMMARY:
-==414==     in use at exit: 896 bytes in 18 blocks
-==414==   total heap usage: 32 allocs, 14 frees, 9,376 bytes allocated
-==414== 
-==414== LEAK SUMMARY:
-==414==    definitely lost: 0 bytes in 0 blocks
-==414==    indirectly lost: 0 bytes in 0 blocks
-==414==      possibly lost: 0 bytes in 0 blocks
-==414==    still reachable: 896 bytes in 18 blocks
-==414==         suppressed: 0 bytes in 0 blocks
-==414== Rerun with --leak-check=full to see details of leaked memory
-==414== 
-==414== For counts of detected and suppressed errors, rerun with: -v
-==414== Use --track-origins=yes to see where uninitialised values come from
-==414== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==631== Memcheck, a memory error detector
+==631== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==631== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==631== Command: ./test-eval inp.4.txt
+==631== Parent PID: 630
+==631== 
+==631== Use of uninitialised value of size 8
+==631==    at 0x400C0D: print_hand (deck.c:8)
+==631==    by 0x4025DE: describe_hand (test-eval.c:74)
+==631==    by 0x4027BE: main (test-eval.c:116)
+==631== 
+==631== Invalid read of size 8
+==631==    at 0x400C0D: print_hand (deck.c:8)
+==631==    by 0x4025DE: describe_hand (test-eval.c:74)
+==631==    by 0x4027BE: main (test-eval.c:116)
+==631==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==631== 
+==631== 
+==631== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==631==  Access not within mapped region at address 0x0
+==631==    at 0x400C0D: print_hand (deck.c:8)
+==631==    by 0x4025DE: describe_hand (test-eval.c:74)
+==631==    by 0x4027BE: main (test-eval.c:116)
+==631==  If you believe this happened as a result of a stack
+==631==  overflow in your program's main thread (unlikely but
+==631==  possible), you can try to increase the size of the
+==631==  main thread stack using the --main-stacksize= flag.
+==631==  The main thread stack size used in this run was 8388608.
+==631== 
+==631== HEAP SUMMARY:
+==631==     in use at exit: 896 bytes in 18 blocks
+==631==   total heap usage: 32 allocs, 14 frees, 9,376 bytes allocated
+==631== 
+==631== LEAK SUMMARY:
+==631==    definitely lost: 0 bytes in 0 blocks
+==631==    indirectly lost: 0 bytes in 0 blocks
+==631==      possibly lost: 0 bytes in 0 blocks
+==631==    still reachable: 896 bytes in 18 blocks
+==631==         suppressed: 0 bytes in 0 blocks
+==631== Rerun with --leak-check=full to see details of leaked memory
+==631== 
+==631== For counts of detected and suppressed errors, rerun with: -v
+==631== Use --track-origins=yes to see where uninitialised values come from
+==631== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 5: Trying hands with straights
 Valgrind returned an error status
-==419== Memcheck, a memory error detector
-==419== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==419== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==419== Command: ./test-eval inp.5.txt
-==419== Parent PID: 418
-==419== 
-==419== Invalid read of size 8
-==419==    at 0x4029CD: ranking_to_string (cards.c:23)
-==419==    by 0x4025B1: describe_hand (test-eval.c:69)
-==419==    by 0x4027D2: main (test-eval.c:116)
-==419==  Address 0x102802abb0 is not stack'd, malloc'd or (recently) free'd
-==419== 
-==419== 
-==419== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==419==  Access not within mapped region at address 0x102802ABB0
-==419==    at 0x4029CD: ranking_to_string (cards.c:23)
-==419==    by 0x4025B1: describe_hand (test-eval.c:69)
-==419==    by 0x4027D2: main (test-eval.c:116)
-==419==  If you believe this happened as a result of a stack
-==419==  overflow in your program's main thread (unlikely but
-==419==  possible), you can try to increase the size of the
-==419==  main thread stack using the --main-stacksize= flag.
-==419==  The main thread stack size used in this run was 8388608.
-==419== 
-==419== HEAP SUMMARY:
-==419==     in use at exit: 864 bytes in 16 blocks
-==419==   total heap usage: 28 allocs, 12 frees, 9,256 bytes allocated
-==419== 
-==419== LEAK SUMMARY:
-==419==    definitely lost: 0 bytes in 0 blocks
-==419==    indirectly lost: 0 bytes in 0 blocks
-==419==      possibly lost: 0 bytes in 0 blocks
-==419==    still reachable: 864 bytes in 16 blocks
-==419==         suppressed: 0 bytes in 0 blocks
-==419== Rerun with --leak-check=full to see details of leaked memory
-==419== 
-==419== For counts of detected and suppressed errors, rerun with: -v
-==419== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==636== Memcheck, a memory error detector
+==636== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==636== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==636== Command: ./test-eval inp.5.txt
+==636== Parent PID: 635
+==636== 
+==636== Invalid read of size 8
+==636==    at 0x4029B9: ranking_to_string (cards.c:23)
+==636==    by 0x40259D: describe_hand (test-eval.c:69)
+==636==    by 0x4027BE: main (test-eval.c:116)
+==636==  Address 0x102802abb0 is not stack'd, malloc'd or (recently) free'd
+==636== 
+==636== 
+==636== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==636==  Access not within mapped region at address 0x102802ABB0
+==636==    at 0x4029B9: ranking_to_string (cards.c:23)
+==636==    by 0x40259D: describe_hand (test-eval.c:69)
+==636==    by 0x4027BE: main (test-eval.c:116)
+==636==  If you believe this happened as a result of a stack
+==636==  overflow in your program's main thread (unlikely but
+==636==  possible), you can try to increase the size of the
+==636==  main thread stack using the --main-stacksize= flag.
+==636==  The main thread stack size used in this run was 8388608.
+==636== 
+==636== HEAP SUMMARY:
+==636==     in use at exit: 864 bytes in 16 blocks
+==636==   total heap usage: 28 allocs, 12 frees, 9,256 bytes allocated
+==636== 
+==636== LEAK SUMMARY:
+==636==    definitely lost: 0 bytes in 0 blocks
+==636==    indirectly lost: 0 bytes in 0 blocks
+==636==      possibly lost: 0 bytes in 0 blocks
+==636==    still reachable: 864 bytes in 16 blocks
+==636==         suppressed: 0 bytes in 0 blocks
+==636== Rerun with --leak-check=full to see details of leaked memory
+==636== 
+==636== For counts of detected and suppressed errors, rerun with: -v
+==636== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 Testcase 6: Trying hands with flushes
  Checking the output 
-Line_4_did_not_match
-Line_5_did_not_match
-Line_6_did_not_match
-Line_7_did_not_match
-Line_8_did_not_match
-Line_9_did_not_match
-Line_13_did_not_match
-Line_14_did_not_match
-Line_15_did_not_match
-Line_16_did_not_match
-Line_17_did_not_match
-Line_18_did_not_match
-Line_24_did_not_match
-Line_25_did_not_match
-Line_26_did_not_match
-Line_27_did_not_match
-Line_28_did_not_match
-Line_29_did_not_match
-Line_33_did_not_match
-Line_34_did_not_match
-Line_35_did_not_match
-Line_36_did_not_match
-Line_37_did_not_match
-Line_38_did_not_match
-Line_41_did_not_match
-Line_42_did_not_match
-Line_43_did_not_match
-Line_44_did_not_match
-Line_45_did_not_match
-Line_46_did_not_match
-Line_47_did_not_match
-Line_48_did_not_match
-Line_49_did_not_match
-Line_50_did_not_match
-Line_51_did_not_match
-Line_52_did_not_match
-Line_60_did_not_match
-Line_61_did_not_match
-Line_62_did_not_match
-Line_63_did_not_match
-Line_64_did_not_match
-Line_65_did_not_match
-Line_69_did_not_match
-Line_70_did_not_match
-Line_71_did_not_match
-Line_72_did_not_match
-Line_73_did_not_match
-Line_74_did_not_match
-Line_80_did_not_match
-Line_81_did_not_match
-Line_82_did_not_match
-Line_83_did_not_match
-Line_84_did_not_match
-Line_85_did_not_match
-Line_89_did_not_match
-Line_90_did_not_match
-Line_91_did_not_match
-Line_92_did_not_match
-Line_93_did_not_match
-Line_94_did_not_match
-Line_97_did_not_match
-Line_98_did_not_match
-Line_99_did_not_match
-Line_100_did_not_match
-Line_101_did_not_match
-Line_102_did_not_match
-Line_103_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
-Line_107_did_not_match
-Line_108_did_not_match
-Line_116_did_not_match
-Line_117_did_not_match
-Line_118_did_not_match
-Line_119_did_not_match
-Line_120_did_not_match
-Line_121_did_not_match
-Line_122_did_not_match
-Line_126_did_not_match
-Line_127_did_not_match
-Line_128_did_not_match
-Line_129_did_not_match
-Line_130_did_not_match
-Line_131_did_not_match
-Line_132_did_not_match
-Line_138_did_not_match
-Line_139_did_not_match
-Line_140_did_not_match
-Line_141_did_not_match
-Line_142_did_not_match
-Line_143_did_not_match
-Line_144_did_not_match
-Line_148_did_not_match
-Line_149_did_not_match
-Line_150_did_not_match
-Line_151_did_not_match
-Line_152_did_not_match
-Line_153_did_not_match
-Line_154_did_not_match
-Line_157_did_not_match
-Line_158_did_not_match
-Line_159_did_not_match
-Line_160_did_not_match
-Line_161_did_not_match
-Line_162_did_not_match
-Line_163_did_not_match
-Line_164_did_not_match
-Line_165_did_not_match
-Line_166_did_not_match
-Line_167_did_not_match
-Line_168_did_not_match
-Line_169_did_not_match
-Line_170_did_not_match
-Line_173_did_not_match
-Line_178_did_not_match
-Line_179_did_not_match
-Line_180_did_not_match
-Line_181_did_not_match
-Line_182_did_not_match
-Line_183_did_not_match
-Line_184_did_not_match
-Line_188_did_not_match
-Line_189_did_not_match
-Line_190_did_not_match
-Line_191_did_not_match
-Line_192_did_not_match
-Line_193_did_not_match
-Line_194_did_not_match
-Line_200_did_not_match
-Line_201_did_not_match
-Line_202_did_not_match
-Line_203_did_not_match
-Line_204_did_not_match
-Line_205_did_not_match
-Line_206_did_not_match
-Line_210_did_not_match
-Line_211_did_not_match
-Line_212_did_not_match
-Line_213_did_not_match
-Line_214_did_not_match
-Line_215_did_not_match
-Line_216_did_not_match
-Line_219_did_not_match
-Line_220_did_not_match
-Line_221_did_not_match
-Line_222_did_not_match
-Line_223_did_not_match
-Line_224_did_not_match
-Line_225_did_not_match
-Line_226_did_not_match
-Line_227_did_not_match
-Line_228_did_not_match
-Line_229_did_not_match
-Line_230_did_not_match
-Line_231_did_not_match
-Line_232_did_not_match
-Line_240_did_not_match
-Line_241_did_not_match
-Line_242_did_not_match
-Line_243_did_not_match
-Line_244_did_not_match
-Line_245_did_not_match
-Line_246_did_not_match
-Line_250_did_not_match
-Line_251_did_not_match
-Line_252_did_not_match
-Line_253_did_not_match
-Line_254_did_not_match
-Line_255_did_not_match
-Line_256_did_not_match
-Line_262_did_not_match
-Line_263_did_not_match
-Line_264_did_not_match
-Line_265_did_not_match
-Line_266_did_not_match
-Line_267_did_not_match
-Line_268_did_not_match
-Line_272_did_not_match
-Line_273_did_not_match
-Line_274_did_not_match
-Line_275_did_not_match
-Line_276_did_not_match
-Line_277_did_not_match
-Line_278_did_not_match
-Line_281_did_not_match
-Line_282_did_not_match
-Line_283_did_not_match
-Line_284_did_not_match
-Line_285_did_not_match
-Line_286_did_not_match
-Line_287_did_not_match
-Line_288_did_not_match
-Line_289_did_not_match
-Line_290_did_not_match
-Line_291_did_not_match
-Line_292_did_not_match
-Line_293_did_not_match
-Line_294_did_not_match
-Line_302_did_not_match
-Line_303_did_not_match
-Line_304_did_not_match
-Line_305_did_not_match
-Line_306_did_not_match
-Line_307_did_not_match
-Line_311_did_not_match
-Line_312_did_not_match
-Line_313_did_not_match
-Line_314_did_not_match
-Line_315_did_not_match
-Line_316_did_not_match
-Line_322_did_not_match
-Line_323_did_not_match
-Line_324_did_not_match
-Line_325_did_not_match
-Line_326_did_not_match
-Line_327_did_not_match
-Line_331_did_not_match
-Line_332_did_not_match
-Line_333_did_not_match
-Line_334_did_not_match
-Line_335_did_not_match
-Line_336_did_not_match
-Line_339_did_not_match
-Line_340_did_not_match
-Line_341_did_not_match
-Line_342_did_not_match
-Line_343_did_not_match
-Line_344_did_not_match
-Line_345_did_not_match
-Line_346_did_not_match
-Line_347_did_not_match
-Line_348_did_not_match
-Line_349_did_not_match
-Line_350_did_not_match
-Line_358_did_not_match
-Line_359_did_not_match
-Line_360_did_not_match
-Line_361_did_not_match
-Line_362_did_not_match
-Line_363_did_not_match
-Line_367_did_not_match
-Line_368_did_not_match
-Line_369_did_not_match
-Line_370_did_not_match
-Line_371_did_not_match
-Line_372_did_not_match
-Line_378_did_not_match
-Line_379_did_not_match
-Line_380_did_not_match
-Line_381_did_not_match
-Line_382_did_not_match
-Line_383_did_not_match
-Line_387_did_not_match
-Line_388_did_not_match
-Line_389_did_not_match
-Line_390_did_not_match
-Line_391_did_not_match
-Line_392_did_not_match
-Line_395_did_not_match
-Line_396_did_not_match
-Line_397_did_not_match
-Line_398_did_not_match
-Line_399_did_not_match
-Line_400_did_not_match
-Line_401_did_not_match
-Line_402_did_not_match
-Line_403_did_not_match
-Line_404_did_not_match
-Line_405_did_not_match
-Line_406_did_not_match
-Line_414_did_not_match
-Line_415_did_not_match
-Line_416_did_not_match
-Line_417_did_not_match
-Line_418_did_not_match
-Line_419_did_not_match
-Line_423_did_not_match
-Line_424_did_not_match
-Line_425_did_not_match
-Line_426_did_not_match
-Line_427_did_not_match
-Line_428_did_not_match
-Line_434_did_not_match
-Line_435_did_not_match
-Line_436_did_not_match
-Line_437_did_not_match
-Line_438_did_not_match
-Line_439_did_not_match
-Line_443_did_not_match
-Line_444_did_not_match
-Line_445_did_not_match
-Line_446_did_not_match
-Line_447_did_not_match
-Line_448_did_not_match
-Line_451_did_not_match
-Line_452_did_not_match
-Line_453_did_not_match
-Line_454_did_not_match
-Line_455_did_not_match
-Line_456_did_not_match
-Line_457_did_not_match
-Line_458_did_not_match
-Line_459_did_not_match
-Line_460_did_not_match
-Line_461_did_not_match
-Line_462_did_not_match
-Line_470_did_not_match
-Line_471_did_not_match
-Line_472_did_not_match
-Line_473_did_not_match
-Line_474_did_not_match
-Line_475_did_not_match
-Line_479_did_not_match
-Line_480_did_not_match
-Line_481_did_not_match
-Line_482_did_not_match
-Line_483_did_not_match
-Line_484_did_not_match
-Line_490_did_not_match
-Line_491_did_not_match
-Line_492_did_not_match
-Line_493_did_not_match
-Line_494_did_not_match
-Line_495_did_not_match
-Line_499_did_not_match
-Line_500_did_not_match
-Line_501_did_not_match
-Line_502_did_not_match
-Line_503_did_not_match
-Line_504_did_not_match
-Line_507_did_not_match
-Line_508_did_not_match
-Line_509_did_not_match
-Line_510_did_not_match
-Line_511_did_not_match
-Line_512_did_not_match
-Line_513_did_not_match
-Line_514_did_not_match
-Line_515_did_not_match
-Line_516_did_not_match
-Line_517_did_not_match
-Line_518_did_not_match
-Line_526_did_not_match
-Line_527_did_not_match
-Line_528_did_not_match
-Line_529_did_not_match
-Line_530_did_not_match
-Line_531_did_not_match
-Line_535_did_not_match
-Line_536_did_not_match
-Line_537_did_not_match
-Line_538_did_not_match
-Line_539_did_not_match
-Line_540_did_not_match
-Line_546_did_not_match
-Line_547_did_not_match
-Line_548_did_not_match
-Line_549_did_not_match
-Line_550_did_not_match
-Line_551_did_not_match
-Line_555_did_not_match
-Line_556_did_not_match
-Line_557_did_not_match
-Line_558_did_not_match
-Line_559_did_not_match
-Line_560_did_not_match
-Line_563_did_not_match
-Line_564_did_not_match
-Line_565_did_not_match
-Line_566_did_not_match
-Line_567_did_not_match
-Line_568_did_not_match
-Line_569_did_not_match
-Line_570_did_not_match
-Line_571_did_not_match
-Line_572_did_not_match
-Line_573_did_not_match
-Line_574_did_not_match
-Line_582_did_not_match
-Line_583_did_not_match
-Line_584_did_not_match
-Line_585_did_not_match
-Line_586_did_not_match
-Line_587_did_not_match
-Line_591_did_not_match
-Line_592_did_not_match
-Line_593_did_not_match
-Line_594_did_not_match
-Line_595_did_not_match
-Line_596_did_not_match
-Line_602_did_not_match
-Line_603_did_not_match
-Line_604_did_not_match
-Line_605_did_not_match
-Line_606_did_not_match
-Line_607_did_not_match
-Line_611_did_not_match
-Line_612_did_not_match
-Line_613_did_not_match
-Line_614_did_not_match
-Line_615_did_not_match
-Line_616_did_not_match
-Line_619_did_not_match
-Line_620_did_not_match
-Line_621_did_not_match
-Line_622_did_not_match
-Line_623_did_not_match
-Line_624_did_not_match
-Line_625_did_not_match
-Line_626_did_not_match
-Line_627_did_not_match
-Line_628_did_not_match
-Line_629_did_not_match
-Line_630_did_not_match
-Line_638_did_not_match
-Line_639_did_not_match
-Line_640_did_not_match
-Line_641_did_not_match
-Line_642_did_not_match
-Line_643_did_not_match
-Line_647_did_not_match
-Line_648_did_not_match
-Line_649_did_not_match
-Line_650_did_not_match
-Line_651_did_not_match
-Line_652_did_not_match
-Line_658_did_not_match
-Line_659_did_not_match
-Line_660_did_not_match
-Line_661_did_not_match
-Line_662_did_not_match
-Line_663_did_not_match
-Line_667_did_not_match
-Line_668_did_not_match
-Line_669_did_not_match
-Line_670_did_not_match
-Line_671_did_not_match
-Line_672_did_not_match
-Line_675_did_not_match
-Line_676_did_not_match
-Line_677_did_not_match
-Line_678_did_not_match
-Line_679_did_not_match
-Line_680_did_not_match
-Line_681_did_not_match
-Line_682_did_not_match
-Line_683_did_not_match
-Line_684_did_not_match
-Line_685_did_not_match
-Line_686_did_not_match
-Line_694_did_not_match
-Line_695_did_not_match
-Line_696_did_not_match
-Line_697_did_not_match
-Line_698_did_not_match
-Line_699_did_not_match
-Line_703_did_not_match
-Line_704_did_not_match
-Line_705_did_not_match
-Line_706_did_not_match
-Line_707_did_not_match
-Line_708_did_not_match
-Line_714_did_not_match
-Line_715_did_not_match
-Line_716_did_not_match
-Line_717_did_not_match
-Line_718_did_not_match
-Line_719_did_not_match
-Line_723_did_not_match
-Line_724_did_not_match
-Line_725_did_not_match
-Line_726_did_not_match
-Line_727_did_not_match
-Line_728_did_not_match
-Line_731_did_not_match
-Line_732_did_not_match
-Line_733_did_not_match
-Line_734_did_not_match
-Line_735_did_not_match
-Line_736_did_not_match
-Line_737_did_not_match
-Line_738_did_not_match
-Line_739_did_not_match
-Line_740_did_not_match
-Line_741_did_not_match
-Line_742_did_not_match
-Line_750_did_not_match
-Line_751_did_not_match
-Line_752_did_not_match
-Line_753_did_not_match
-Line_754_did_not_match
-Line_755_did_not_match
-Line_759_did_not_match
-Line_760_did_not_match
-Line_761_did_not_match
-Line_762_did_not_match
-Line_763_did_not_match
-Line_764_did_not_match
-Line_770_did_not_match
-Line_771_did_not_match
-Line_772_did_not_match
-Line_773_did_not_match
-Line_774_did_not_match
-Line_775_did_not_match
-Line_779_did_not_match
-Line_780_did_not_match
-Line_781_did_not_match
-Line_782_did_not_match
-Line_783_did_not_match
-Line_784_did_not_match
-Line_787_did_not_match
-Line_788_did_not_match
-Line_789_did_not_match
-Line_790_did_not_match
-Line_791_did_not_match
-Line_792_did_not_match
-Line_793_did_not_match
-Line_794_did_not_match
-Line_795_did_not_match
-Line_796_did_not_match
-Line_797_did_not_match
-Line_798_did_not_match
-Line_806_did_not_match
-Line_807_did_not_match
-Line_808_did_not_match
-Line_809_did_not_match
-Line_810_did_not_match
-Line_811_did_not_match
-Line_815_did_not_match
-Line_816_did_not_match
-Line_817_did_not_match
-Line_818_did_not_match
-Line_819_did_not_match
-Line_820_did_not_match
-Line_826_did_not_match
-Line_827_did_not_match
-Line_828_did_not_match
-Line_829_did_not_match
-Line_830_did_not_match
-Line_831_did_not_match
-Line_835_did_not_match
-Line_836_did_not_match
-Line_837_did_not_match
-Line_838_did_not_match
-Line_839_did_not_match
-Line_840_did_not_match
-Line_843_did_not_match
-Line_844_did_not_match
-Line_845_did_not_match
-Line_846_did_not_match
-Line_847_did_not_match
-Line_848_did_not_match
-Line_849_did_not_match
-Line_850_did_not_match
-Line_851_did_not_match
-Line_852_did_not_match
-Line_853_did_not_match
-Line_854_did_not_match
+Line_59_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
 --------							--------
 As Kc Qs Js 0s 2s 						As Kc Qs Js 0s 2s 
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - Straight at index 0					      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Qs Js 0s 2s 			 - 5 cards used for hand: As Qs Js 0s 2s 
 Hand 2:								Hand 2:
 --------							--------
 As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s 
-							      >	0
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - Straight at index 0					      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	0
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1689,55 +427,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kh Jh 9h 8s 4h 2h 						Kh Jh 9h 8s 4h 2h 
-							      >	1
-							      >	1
-							      >	1
-							      >	0
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	0
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kh Jh 9h 4h 2h 			 - 5 cards used for hand: Kh Jh 9h 4h 2h 
 Hand 2:								Hand 2:
 --------							--------
 Qd 9d 7d 6c 5d 2d 						Qd 9d 7d 6c 5d 2d 
-							      >	2
-							      >	2
-							      >	2
-							      >	3
-							      >	2
-							      >	2
  - Flush in suit d						 - Flush in suit d
  - The most of a kind is 1 of a kind (at index 0 / value Q)	 - The most of a kind is 1 of a kind (at index 0 / value Q)
  - No secondary pair						 - No secondary pair
-							      >	2
-							      >	2
-							      >	2
-							      >	3
-							      >	2
-							      >	2
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Qd 9d 7d 5d 2d 			 - 5 cards used for hand: Qd 9d 7d 5d 2d 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	0
-							      >	2
-							      >	2
-							      >	2
-							      >	3
-							      >	2
-							      >	2
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1745,61 +447,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kc Jc 9c 7h 4c 3c 2h 						Kc Jc 9c 7h 4c 3c 2h 
-							      >	3
-							      >	3
-							      >	3
-							      >	1
-							      >	3
-							      >	3
-							      >	1
  - Flush in suit c						 - Flush in suit c
  - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
  - No secondary pair						 - No secondary pair
-							      >	3
-							      >	3
-							      >	3
-							      >	1
-							      >	3
-							      >	3
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kc Jc 9c 4c 3c 			 - 5 cards used for hand: Kc Jc 9c 4c 3c 
 Hand 2:								Hand 2:
 --------							--------
 Kc Jc 9c 7h 4c 3h 2c 						Kc Jc 9c 7h 4c 3h 2c 
-							      >	3
-							      >	3
-							      >	3
-							      >	1
-							      >	3
-							      >	1
-							      >	3
  - Flush in suit c						 - Flush in suit c
  - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
  - No secondary pair						 - No secondary pair
-							      >	3
-							      >	3
-							      >	3
-							      >	1
-							      >	3
-							      >	1
-							      >	3
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kc Jc 9c 4c 2c 			 - 5 cards used for hand: Kc Jc 9c 4c 2c 
-							      >	3
-							      >	3
-							      >	1
-							      >	3
-							      >	1
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!						      |	Hand 2 wins!
@@ -1807,61 +467,19 @@ Hand 1 wins!						      |	Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ac As Qc Qs 7s 6s 3s 						Ac As Qc Qs 7s 6s 3s 
-							      >	3
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value Q)				 - Secondary pair at index 2 (value Q)
-							      >	3
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Qs 7s 6s 3s 			 - 5 cards used for hand: As Qs 7s 6s 3s 
 Hand 2:								Hand 2:
 --------							--------
 Kc Kh Ks 9h 7h 3h 2h 						Kc Kh Ks 9h 7h 3h 2h 
-							      >	3
-							      >	1
-							      >	0
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 3 of a kind (at index 0 / value K)	 - The most of a kind is 3 of a kind (at index 0 / value K)
  - No secondary pair						 - No secondary pair
-							      >	3
-							      >	1
-							      >	0
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kh 9h 7h 3h 2h 			 - 5 cards used for hand: Kh 9h 7h 3h 2h 
-							      >	0
-							      >	3
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1869,61 +487,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ah Qh 0h 8h 6h 4h 2h 						Ah Qh 0h 8h 6h 4h 2h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 6h 			 - 5 cards used for hand: Ah Qh 0h 8h 6h 
 Hand 2:								Hand 2:
 --------							--------
 Kh Qh 0h 8h 6h 4h 2h 						Kh Qh 0h 8h 6h 4h 2h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kh Qh 0h 8h 6h 			 - 5 cards used for hand: Kh Qh 0h 8h 6h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1931,55 +507,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ad Qd 0d 8d 6d 4d 						Ad Qd 0d 8d 6d 4d 
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - Flush in suit d						 - Flush in suit d
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ad Qd 0d 8d 6d 			 - 5 cards used for hand: Ad Qd 0d 8d 6d 
 Hand 2:								Hand 2:
 --------							--------
 Ad Kd 0d 8d 6d 4d 						Ad Kd 0d 8d 6d 4d 
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - Flush in suit d						 - Flush in suit d
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ad Kd 0d 8d 6d 			 - 5 cards used for hand: Ad Kd 0d 8d 6d 
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1987,55 +527,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ad Qd 0d 8d 6d 4d 						Ad Qd 0d 8d 6d 4d 
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - Flush in suit d						 - Flush in suit d
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ad Qd 0d 8d 6d 			 - 5 cards used for hand: Ad Qd 0d 8d 6d 
 Hand 2:								Hand 2:
 --------							--------
 Ad Jd 0d 8d 6d 4d 						Ad Jd 0d 8d 6d 4d 
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - Flush in suit d						 - Flush in suit d
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ad Jd 0d 8d 6d 			 - 5 cards used for hand: Ad Jd 0d 8d 6d 
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
-							      >	2
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2043,55 +547,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 As Qs 0s 8s 6s 4s 						As Qs 0s 8s 6s 4s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Qs 0s 8s 6s 			 - 5 cards used for hand: As Qs 0s 8s 6s 
 Hand 2:								Hand 2:
 --------							--------
 As Qs Js 8s 6s 4s 						As Qs Js 8s 6s 4s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Qs Js 8s 6s 			 - 5 cards used for hand: As Qs Js 8s 6s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -2099,55 +567,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 As Qs 0s 8s 6s 4s 						As Qs 0s 8s 6s 4s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Qs 0s 8s 6s 			 - 5 cards used for hand: As Qs 0s 8s 6s 
 Hand 2:								Hand 2:
 --------							--------
 As Qs 9s 8s 6s 4s 						As Qs 9s 8s 6s 4s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Qs 9s 8s 6s 			 - 5 cards used for hand: As Qs 9s 8s 6s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2155,55 +587,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ac Qc 0c 8c 6c 4c 						Ac Qc 0c 8c 6c 4c 
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - Flush in suit c						 - Flush in suit c
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ac Qc 0c 8c 6c 			 - 5 cards used for hand: Ac Qc 0c 8c 6c 
 Hand 2:								Hand 2:
 --------							--------
 Ac Qc 0c 9c 6c 4c 						Ac Qc 0c 9c 6c 4c 
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - Flush in suit c						 - Flush in suit c
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ac Qc 0c 9c 6c 			 - 5 cards used for hand: Ac Qc 0c 9c 6c 
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -2211,55 +607,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ac Qc 0c 8c 6c 4c 						Ac Qc 0c 8c 6c 4c 
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - Flush in suit c						 - Flush in suit c
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ac Qc 0c 8c 6c 			 - 5 cards used for hand: Ac Qc 0c 8c 6c 
 Hand 2:								Hand 2:
 --------							--------
 Ac Qc 0c 7c 6c 4c 						Ac Qc 0c 7c 6c 4c 
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - Flush in suit c						 - Flush in suit c
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ac Qc 0c 7c 6c 			 - 5 cards used for hand: Ac Qc 0c 7c 6c 
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2267,55 +627,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ah Qh 0h 8h 6h 4h 						Ah Qh 0h 8h 6h 4h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 6h 			 - 5 cards used for hand: Ah Qh 0h 8h 6h 
 Hand 2:								Hand 2:
 --------							--------
 Ah Qh 0h 8h 7h 4h 						Ah Qh 0h 8h 7h 4h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 7h 			 - 5 cards used for hand: Ah Qh 0h 8h 7h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -2323,55 +647,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ah Qh 0h 8h 6h 4h 						Ah Qh 0h 8h 6h 4h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 6h 			 - 5 cards used for hand: Ah Qh 0h 8h 6h 
 Hand 2:								Hand 2:
 --------							--------
 Ah Qh 0h 8h 5h 4h 						Ah Qh 0h 8h 5h 4h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 5h 			 - 5 cards used for hand: Ah Qh 0h 8h 5h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2379,55 +667,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ah Qh 0h 8h 6h 4h 						Ah Qh 0h 8h 6h 4h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 6h 			 - 5 cards used for hand: Ah Qh 0h 8h 6h 
 Hand 2:								Hand 2:
 --------							--------
 Ah Qh 0h 8h 6h 5h 						Ah Qh 0h 8h 6h 5h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 6h 			 - 5 cards used for hand: Ah Qh 0h 8h 6h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Tie								Tie
@@ -2435,540 +687,56 @@ Tie								Tie
 Hand 1:								Hand 1:
 --------							--------
 Ah Qh 0h 8h 6h 4h 						Ah Qh 0h 8h 6h 4h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 6h 			 - 5 cards used for hand: Ah Qh 0h 8h 6h 
 Hand 2:								Hand 2:
 --------							--------
 Ah Qh 0h 8h 6h 3h 						Ah Qh 0h 8h 6h 3h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - evaluate_hand's ranking: FLUSH				 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Ah Qh 0h 8h 6h 			 - 5 cards used for hand: Ah Qh 0h 8h 6h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Tie								Tie
 ============================					============================
 Testcase 7: Trying hands with full houses
  Checking the output 
-Line_4_did_not_match
-Line_5_did_not_match
-Line_6_did_not_match
-Line_7_did_not_match
 Line_8_did_not_match
-Line_9_did_not_match
-Line_10_did_not_match
-Line_14_did_not_match
-Line_15_did_not_match
 Line_16_did_not_match
-Line_17_did_not_match
-Line_18_did_not_match
 Line_19_did_not_match
-Line_20_did_not_match
-Line_22_did_not_match
-Line_26_did_not_match
-Line_27_did_not_match
 Line_28_did_not_match
-Line_29_did_not_match
-Line_30_did_not_match
-Line_31_did_not_match
-Line_32_did_not_match
 Line_36_did_not_match
-Line_37_did_not_match
-Line_38_did_not_match
-Line_39_did_not_match
-Line_40_did_not_match
-Line_41_did_not_match
-Line_42_did_not_match
-Line_43_did_not_match
-Line_44_did_not_match
-Line_45_did_not_match
-Line_46_did_not_match
-Line_47_did_not_match
 Line_48_did_not_match
-Line_49_did_not_match
-Line_50_did_not_match
-Line_51_did_not_match
-Line_52_did_not_match
-Line_53_did_not_match
-Line_54_did_not_match
-Line_55_did_not_match
 Line_56_did_not_match
-Line_57_did_not_match
-Line_58_did_not_match
-Line_61_did_not_match
-Line_66_did_not_match
-Line_67_did_not_match
 Line_68_did_not_match
-Line_69_did_not_match
-Line_70_did_not_match
-Line_71_did_not_match
-Line_72_did_not_match
 Line_76_did_not_match
-Line_77_did_not_match
-Line_78_did_not_match
-Line_79_did_not_match
-Line_80_did_not_match
-Line_81_did_not_match
-Line_82_did_not_match
-Line_84_did_not_match
 Line_88_did_not_match
-Line_89_did_not_match
-Line_90_did_not_match
-Line_91_did_not_match
-Line_92_did_not_match
-Line_93_did_not_match
-Line_94_did_not_match
-Line_98_did_not_match
-Line_99_did_not_match
-Line_100_did_not_match
-Line_101_did_not_match
-Line_102_did_not_match
-Line_103_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
-Line_107_did_not_match
-Line_108_did_not_match
-Line_109_did_not_match
-Line_110_did_not_match
-Line_111_did_not_match
-Line_112_did_not_match
-Line_113_did_not_match
-Line_114_did_not_match
-Line_115_did_not_match
+Line_96_did_not_match
 Line_116_did_not_match
-Line_117_did_not_match
-Line_118_did_not_match
-Line_119_did_not_match
-Line_120_did_not_match
-Line_128_did_not_match
-Line_129_did_not_match
-Line_130_did_not_match
-Line_131_did_not_match
-Line_132_did_not_match
-Line_133_did_not_match
-Line_134_did_not_match
-Line_138_did_not_match
-Line_139_did_not_match
-Line_140_did_not_match
-Line_141_did_not_match
-Line_142_did_not_match
-Line_143_did_not_match
-Line_144_did_not_match
-Line_146_did_not_match
-Line_150_did_not_match
-Line_151_did_not_match
-Line_152_did_not_match
-Line_153_did_not_match
-Line_154_did_not_match
-Line_155_did_not_match
-Line_156_did_not_match
-Line_160_did_not_match
-Line_161_did_not_match
-Line_162_did_not_match
-Line_163_did_not_match
-Line_164_did_not_match
-Line_165_did_not_match
-Line_166_did_not_match
-Line_167_did_not_match
-Line_168_did_not_match
-Line_169_did_not_match
-Line_170_did_not_match
-Line_171_did_not_match
-Line_172_did_not_match
-Line_173_did_not_match
-Line_174_did_not_match
-Line_175_did_not_match
-Line_176_did_not_match
-Line_177_did_not_match
-Line_178_did_not_match
-Line_179_did_not_match
-Line_180_did_not_match
-Line_181_did_not_match
-Line_182_did_not_match
-Line_190_did_not_match
-Line_191_did_not_match
-Line_192_did_not_match
-Line_193_did_not_match
-Line_194_did_not_match
-Line_195_did_not_match
-Line_196_did_not_match
-Line_200_did_not_match
-Line_201_did_not_match
-Line_202_did_not_match
-Line_203_did_not_match
-Line_204_did_not_match
-Line_205_did_not_match
-Line_206_did_not_match
-Line_208_did_not_match
-Line_212_did_not_match
-Line_213_did_not_match
-Line_214_did_not_match
-Line_215_did_not_match
-Line_216_did_not_match
-Line_217_did_not_match
-Line_218_did_not_match
-Line_222_did_not_match
-Line_223_did_not_match
-Line_224_did_not_match
-Line_225_did_not_match
-Line_226_did_not_match
-Line_227_did_not_match
-Line_228_did_not_match
-Line_229_did_not_match
-Line_230_did_not_match
-Line_231_did_not_match
-Line_232_did_not_match
-Line_233_did_not_match
-Line_234_did_not_match
-Line_235_did_not_match
-Line_236_did_not_match
-Line_237_did_not_match
-Line_238_did_not_match
-Line_239_did_not_match
-Line_240_did_not_match
-Line_241_did_not_match
-Line_242_did_not_match
-Line_243_did_not_match
-Line_244_did_not_match
-Line_252_did_not_match
-Line_253_did_not_match
-Line_254_did_not_match
-Line_255_did_not_match
-Line_256_did_not_match
-Line_257_did_not_match
-Line_261_did_not_match
-Line_262_did_not_match
-Line_263_did_not_match
-Line_264_did_not_match
-Line_265_did_not_match
-Line_266_did_not_match
-Line_268_did_not_match
-Line_272_did_not_match
-Line_273_did_not_match
-Line_274_did_not_match
-Line_275_did_not_match
-Line_276_did_not_match
-Line_277_did_not_match
-Line_281_did_not_match
-Line_282_did_not_match
-Line_283_did_not_match
-Line_284_did_not_match
-Line_285_did_not_match
-Line_286_did_not_match
-Line_287_did_not_match
-Line_288_did_not_match
-Line_289_did_not_match
-Line_290_did_not_match
-Line_291_did_not_match
-Line_292_did_not_match
-Line_293_did_not_match
-Line_294_did_not_match
-Line_295_did_not_match
-Line_296_did_not_match
-Line_297_did_not_match
-Line_298_did_not_match
-Line_299_did_not_match
-Line_300_did_not_match
-Line_308_did_not_match
-Line_309_did_not_match
-Line_310_did_not_match
-Line_311_did_not_match
-Line_312_did_not_match
-Line_313_did_not_match
-Line_314_did_not_match
-Line_318_did_not_match
-Line_319_did_not_match
-Line_320_did_not_match
-Line_321_did_not_match
-Line_322_did_not_match
-Line_323_did_not_match
-Line_324_did_not_match
-Line_330_did_not_match
-Line_331_did_not_match
-Line_332_did_not_match
-Line_333_did_not_match
-Line_334_did_not_match
-Line_335_did_not_match
-Line_339_did_not_match
-Line_340_did_not_match
-Line_341_did_not_match
-Line_342_did_not_match
-Line_343_did_not_match
-Line_344_did_not_match
-Line_345_did_not_match
-Line_346_did_not_match
-Line_347_did_not_match
-Line_348_did_not_match
-Line_349_did_not_match
-Line_350_did_not_match
-Line_351_did_not_match
-Line_352_did_not_match
-Line_353_did_not_match
-Line_354_did_not_match
-Line_355_did_not_match
-Line_356_did_not_match
-Line_357_did_not_match
-Line_358_did_not_match
-Line_359_did_not_match
-Line_367_did_not_match
-Line_368_did_not_match
-Line_369_did_not_match
-Line_370_did_not_match
-Line_371_did_not_match
-Line_372_did_not_match
-Line_373_did_not_match
-Line_377_did_not_match
-Line_378_did_not_match
-Line_379_did_not_match
-Line_380_did_not_match
-Line_381_did_not_match
-Line_382_did_not_match
-Line_383_did_not_match
-Line_389_did_not_match
-Line_390_did_not_match
-Line_391_did_not_match
-Line_392_did_not_match
-Line_393_did_not_match
-Line_394_did_not_match
-Line_398_did_not_match
-Line_399_did_not_match
-Line_400_did_not_match
-Line_401_did_not_match
-Line_402_did_not_match
-Line_403_did_not_match
-Line_404_did_not_match
-Line_405_did_not_match
-Line_406_did_not_match
-Line_407_did_not_match
-Line_408_did_not_match
-Line_409_did_not_match
-Line_410_did_not_match
-Line_411_did_not_match
-Line_412_did_not_match
-Line_413_did_not_match
-Line_414_did_not_match
-Line_415_did_not_match
-Line_416_did_not_match
-Line_417_did_not_match
-Line_418_did_not_match
-Line_426_did_not_match
-Line_427_did_not_match
-Line_428_did_not_match
-Line_429_did_not_match
-Line_430_did_not_match
-Line_431_did_not_match
-Line_435_did_not_match
-Line_436_did_not_match
-Line_437_did_not_match
-Line_438_did_not_match
-Line_439_did_not_match
-Line_440_did_not_match
-Line_446_did_not_match
-Line_447_did_not_match
-Line_448_did_not_match
-Line_449_did_not_match
-Line_450_did_not_match
-Line_451_did_not_match
-Line_452_did_not_match
-Line_456_did_not_match
-Line_457_did_not_match
-Line_458_did_not_match
-Line_459_did_not_match
-Line_460_did_not_match
-Line_461_did_not_match
-Line_462_did_not_match
-Line_465_did_not_match
-Line_466_did_not_match
-Line_467_did_not_match
-Line_468_did_not_match
-Line_469_did_not_match
-Line_470_did_not_match
-Line_471_did_not_match
-Line_472_did_not_match
-Line_473_did_not_match
-Line_474_did_not_match
-Line_475_did_not_match
-Line_476_did_not_match
-Line_477_did_not_match
-Line_485_did_not_match
-Line_486_did_not_match
-Line_487_did_not_match
-Line_488_did_not_match
-Line_489_did_not_match
-Line_490_did_not_match
-Line_494_did_not_match
-Line_495_did_not_match
-Line_496_did_not_match
-Line_497_did_not_match
-Line_498_did_not_match
-Line_499_did_not_match
-Line_505_did_not_match
-Line_506_did_not_match
-Line_507_did_not_match
-Line_508_did_not_match
-Line_509_did_not_match
-Line_510_did_not_match
-Line_511_did_not_match
-Line_515_did_not_match
-Line_516_did_not_match
-Line_517_did_not_match
-Line_518_did_not_match
-Line_519_did_not_match
-Line_520_did_not_match
-Line_521_did_not_match
-Line_524_did_not_match
-Line_525_did_not_match
-Line_526_did_not_match
-Line_527_did_not_match
-Line_528_did_not_match
-Line_529_did_not_match
-Line_530_did_not_match
-Line_531_did_not_match
-Line_532_did_not_match
-Line_533_did_not_match
-Line_534_did_not_match
-Line_535_did_not_match
-Line_536_did_not_match
-Line_544_did_not_match
-Line_545_did_not_match
-Line_546_did_not_match
-Line_547_did_not_match
-Line_548_did_not_match
-Line_549_did_not_match
-Line_553_did_not_match
-Line_554_did_not_match
-Line_555_did_not_match
-Line_556_did_not_match
-Line_557_did_not_match
-Line_558_did_not_match
-Line_564_did_not_match
-Line_565_did_not_match
-Line_566_did_not_match
-Line_567_did_not_match
-Line_568_did_not_match
-Line_569_did_not_match
-Line_570_did_not_match
-Line_574_did_not_match
-Line_575_did_not_match
-Line_576_did_not_match
-Line_577_did_not_match
-Line_578_did_not_match
-Line_579_did_not_match
-Line_580_did_not_match
-Line_583_did_not_match
-Line_584_did_not_match
-Line_585_did_not_match
-Line_586_did_not_match
-Line_587_did_not_match
-Line_588_did_not_match
-Line_589_did_not_match
-Line_590_did_not_match
-Line_591_did_not_match
-Line_592_did_not_match
-Line_593_did_not_match
-Line_594_did_not_match
-Line_595_did_not_match
+Line_136_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
 --------							--------
 Kd Kh Ks 8d 7c 7h 2c 						Kd Kh Ks 8d 7c 7h 2c 
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value K)	 - The most of a kind is 3 of a kind (at index 0 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: Kd Kh Ks 7c 7h 		      |	 - 5 cards used for hand: Kd Kh 8d 7c 7h 
 Hand 2:								Hand 2:
 --------							--------
 Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h 
-							      >	2
-							      >	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value K)	 - The most of a kind is 3 of a kind (at index 0 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
- - evaluate_hand's ranking: FULL_HOUSE			      |	2
- - 5 cards used for hand: Kd Kh Ks 7c 7h 		      |	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	1
-							      >	 - evaluate_hand's ranking: FULL_HOUSE
-							      >	 - 5 cards used for hand: Kd Kh 9h 7c 7h 
-							      >	0
-							      >	1
-							      >	2
-							      >	2
-							      >	3
-							      >	1
-							      >	3
-							      >	0
-							      >	1
-							      >	2
-							      >	1
-							      >	3
-							      >	1
-							      >	1
+ - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
+ - 5 cards used for hand: Kd Kh Ks 7c 7h 		      |	 - 5 cards used for hand: Kd Kh 9h 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
 Tie							      |	Hand 2 wins!
@@ -2976,61 +744,19 @@ Tie							      |	Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kd Kh Ks 8d 7c 7h 2c 						Kd Kh Ks 8d 7c 7h 2c 
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value K)	 - The most of a kind is 3 of a kind (at index 0 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: Kd Kh Ks 7c 7h 		      |	 - 5 cards used for hand: Kd Kh 8d 7c 7h 
 Hand 2:								Hand 2:
 --------							--------
 Qd Qh Qs 9h 7c 7h 2h 						Qd Qh Qs 9h 7c 7h 2h 
-							      >	2
-							      >	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value Q)	 - The most of a kind is 3 of a kind (at index 0 / value Q)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
- - evaluate_hand's ranking: FULL_HOUSE			      |	2
- - 5 cards used for hand: Qd Qh Qs 7c 7h 		      |	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	1
-							      >	 - evaluate_hand's ranking: FULL_HOUSE
-							      >	 - 5 cards used for hand: Qd Qh 9h 7c 7h 
-							      >	0
-							      >	1
-							      >	2
-							      >	2
-							      >	3
-							      >	1
-							      >	3
-							      >	0
-							      >	1
-							      >	2
-							      >	1
-							      >	3
-							      >	1
-							      >	1
+ - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
+ - 5 cards used for hand: Qd Qh Qs 7c 7h 		      |	 - 5 cards used for hand: Qd Qh 9h 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3038,61 +764,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kd Kh Ks 8d 7c 7h 2c 						Kd Kh Ks 8d 7c 7h 2c 
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value K)	 - The most of a kind is 3 of a kind (at index 0 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: Kd Kh Ks 7c 7h 		      |	 - 5 cards used for hand: Kd Kh 8d 7c 7h 
 Hand 2:								Hand 2:
 --------							--------
 Qd Qh Qs 9h 8c 8h 2h 						Qd Qh Qs 9h 8c 8h 2h 
-							      >	2
-							      >	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value Q)	 - The most of a kind is 3 of a kind (at index 0 / value Q)
  - Secondary pair at index 4 (value 8)				 - Secondary pair at index 4 (value 8)
- - evaluate_hand's ranking: FULL_HOUSE			      |	2
- - 5 cards used for hand: Qd Qh Qs 8c 8h 		      |	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	1
-							      >	 - evaluate_hand's ranking: FULL_HOUSE
-							      >	 - 5 cards used for hand: Qd Qh 9h 8c 8h 
-							      >	0
-							      >	1
-							      >	2
-							      >	2
-							      >	3
-							      >	1
-							      >	3
-							      >	0
-							      >	1
-							      >	2
-							      >	1
-							      >	3
-							      >	1
-							      >	1
+ - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
+ - 5 cards used for hand: Qd Qh Qs 8c 8h 		      |	 - 5 cards used for hand: Qd Qh 9h 8c 8h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3100,61 +784,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kd Kh Ks 8d 7c 7h 2c 						Kd Kh Ks 8d 7c 7h 2c 
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value K)	 - The most of a kind is 3 of a kind (at index 0 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: Kd Kh Ks 7c 7h 		      |	 - 5 cards used for hand: Kd Kh 8d 7c 7h 
 Hand 2:								Hand 2:
 --------							--------
 Qd Qh Qs 9h 7c 7h 7s 						Qd Qh Qs 9h 7c 7h 7s 
-							      >	2
-							      >	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	0
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value Q)	 - The most of a kind is 3 of a kind (at index 0 / value Q)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
- - evaluate_hand's ranking: FULL_HOUSE			      |	2
- - 5 cards used for hand: Qd Qh Qs 7c 7h 		      |	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	0
-							      >	 - evaluate_hand's ranking: FULL_HOUSE
-							      >	 - 5 cards used for hand: Qd Qh 9h 7c 7h 
-							      >	0
-							      >	1
-							      >	2
-							      >	2
-							      >	3
-							      >	1
-							      >	3
-							      >	0
-							      >	1
-							      >	2
-							      >	1
-							      >	3
-							      >	1
-							      >	0
+ - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
+ - 5 cards used for hand: Qd Qh Qs 7c 7h 		      |	 - 5 cards used for hand: Qd Qh 9h 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3162,55 +804,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kd Kh Ks 8d 7c 7h 						Kd Kh Ks 8d 7c 7h 
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value K)	 - The most of a kind is 3 of a kind (at index 0 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
-							      >	2
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: Kd Kh Ks 7c 7h 		      |	 - 5 cards used for hand: Kd Kh 8d 7c 7h 
 Hand 2:								Hand 2:
 --------							--------
 Qd Qh Qs 9h 8c 8h 						Qd Qh Qs 9h 8c 8h 
-							      >	2
-							      >	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value Q)	 - The most of a kind is 3 of a kind (at index 0 / value Q)
  - Secondary pair at index 4 (value 8)				 - Secondary pair at index 4 (value 8)
- - evaluate_hand's ranking: FULL_HOUSE			      |	2
- - 5 cards used for hand: Qd Qh Qs 8c 8h 		      |	1
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	 - evaluate_hand's ranking: FULL_HOUSE
-							      >	 - 5 cards used for hand: Qd Qh 9h 8c 8h 
-							      >	0
-							      >	1
-							      >	2
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	1
-							      >	2
-							      >	1
-							      >	3
-							      >	1
+ - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
+ - 5 cards used for hand: Qd Qh Qs 8c 8h 		      |	 - 5 cards used for hand: Qd Qh 9h 8c 8h 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3218,58 +824,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 As Kd Kh Ks 7c 7h 2c 						As Kd Kh Ks 7c 7h 2c 
-							      >	0
-							      >	2
-							      >	1
-							      >	0
-							      >	3
-							      >	1
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 1 / value K)	 - The most of a kind is 3 of a kind (at index 1 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
-							      >	0
-							      >	2
-							      >	1
-							      >	0
-							      >	3
-							      >	1
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Hand 2:								Hand 2:
 --------							--------
 Ad Ah As 8c 8d 8h 						Ad Ah As 8c 8d 8h 
-							      >	2
-							      >	1
-							      >	0
-							      >	3
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value A)	 - The most of a kind is 3 of a kind (at index 0 / value A)
  - Secondary pair at index 3 (value 8)				 - Secondary pair at index 3 (value 8)
- - evaluate_hand's ranking: FULL_HOUSE			      |	2
- - 5 cards used for hand: Ad Ah As 8c 8d 		      |	1
-							      >	0
-							      >	3
-							      >	2
-							      >	1
-							      >	 - evaluate_hand's ranking: FULL_HOUSE
-							      >	 - 5 cards used for hand: Ad Ah 8c 8c 8d 
-							      >	0
-							      >	0
-							      >	1
-							      >	2
-							      >	3
-							      >	1
-							      >	3
-							      >	0
-							      >	1
-							      >	2
-							      >	1
-							      >	3
-							      >	2
+ - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
+ - 5 cards used for hand: Ad Ah As 8c 8d 		      |	 - 5 cards used for hand: Ad Ah 8c 8c 8d 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -3277,58 +844,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 As Kd Kh Ks 7c 7h 2c 						As Kd Kh Ks 7c 7h 2c 
-							      >	0
-							      >	2
-							      >	1
-							      >	0
-							      >	3
-							      >	1
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 1 / value K)	 - The most of a kind is 3 of a kind (at index 1 / value K)
  - Secondary pair at index 4 (value 7)				 - Secondary pair at index 4 (value 7)
-							      >	0
-							      >	2
-							      >	1
-							      >	0
-							      >	3
-							      >	1
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Hand 2:								Hand 2:
 --------							--------
 Ad Ah As 6c 6d 6h 						Ad Ah As 6c 6d 6h 
-							      >	2
-							      >	1
-							      >	0
-							      >	3
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 0 / value A)	 - The most of a kind is 3 of a kind (at index 0 / value A)
  - Secondary pair at index 3 (value 6)				 - Secondary pair at index 3 (value 6)
- - evaluate_hand's ranking: FULL_HOUSE			      |	2
- - 5 cards used for hand: Ad Ah As 6c 6d 		      |	1
-							      >	0
-							      >	3
-							      >	2
-							      >	1
-							      >	 - evaluate_hand's ranking: FULL_HOUSE
-							      >	 - 5 cards used for hand: Ad Ah 6c 6c 6d 
-							      >	0
-							      >	0
-							      >	1
-							      >	2
-							      >	3
-							      >	1
-							      >	3
-							      >	0
-							      >	1
-							      >	2
-							      >	1
-							      >	3
-							      >	2
+ - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
+ - 5 cards used for hand: Ad Ah As 6c 6d 		      |	 - 5 cards used for hand: Ad Ah 6c 6c 6d 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -3336,58 +864,19 @@ Hand 2 wins!							Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kh Ks 8c 7c 7d 7h 						Kh Ks 8c 7c 7d 7h 
-							      >	1
-							      >	0
-							      >	3
-							      >	3
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 3 / value 7)	 - The most of a kind is 3 of a kind (at index 3 / value 7)
  - Secondary pair at index 0 (value K)				 - Secondary pair at index 0 (value K)
-							      >	1
-							      >	0
-							      >	3
-							      >	3
-							      >	2
-							      >	1
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: 7c 7d 7h Kh Ks 			 - 5 cards used for hand: 7c 7d 7h Kh Ks 
 Hand 2:								Hand 2:
 --------							--------
 Kh Ks 9d 3c 3h 3s 2c 						Kh Ks 9d 3c 3h 3s 2c 
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 3 / value 3)	 - The most of a kind is 3 of a kind (at index 3 / value 3)
  - Secondary pair at index 0 (value K)				 - Secondary pair at index 0 (value K)
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: 3c 3h 3s Kh Ks 			 - 5 cards used for hand: 3c 3h 3s Kh Ks 
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	3
-							      >	2
-							      >	0
-							      >	1
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3395,58 +884,19 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kh Ks 8c 7c 7d 7h 						Kh Ks 8c 7c 7d 7h 
-							      >	1
-							      >	0
-							      >	3
-							      >	3
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 3 / value 7)	 - The most of a kind is 3 of a kind (at index 3 / value 7)
  - Secondary pair at index 0 (value K)				 - Secondary pair at index 0 (value K)
-							      >	1
-							      >	0
-							      >	3
-							      >	3
-							      >	2
-							      >	1
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: 7c 7d 7h Kh Ks 			 - 5 cards used for hand: 7c 7d 7h Kh Ks 
 Hand 2:								Hand 2:
 --------							--------
 Qh Qs 9d 3c 3h 3s 2c 						Qh Qs 9d 3c 3h 3s 2c 
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 3 / value 3)	 - The most of a kind is 3 of a kind (at index 3 / value 3)
  - Secondary pair at index 0 (value Q)				 - Secondary pair at index 0 (value Q)
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: 3c 3h 3s Qh Qs 			 - 5 cards used for hand: 3c 3h 3s Qh Qs 
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	3
-							      >	2
-							      >	0
-							      >	1
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3454,354 +904,105 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Kh Ks 8c 7c 7d 7h 						Kh Ks 8c 7c 7d 7h 
-							      >	1
-							      >	0
-							      >	3
-							      >	3
-							      >	2
-							      >	1
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 3 / value 7)	 - The most of a kind is 3 of a kind (at index 3 / value 7)
  - Secondary pair at index 0 (value K)				 - Secondary pair at index 0 (value K)
-							      >	1
-							      >	0
-							      >	3
-							      >	3
-							      >	2
-							      >	1
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: 7c 7d 7h Kh Ks 			 - 5 cards used for hand: 7c 7d 7h Kh Ks 
 Hand 2:								Hand 2:
 --------							--------
 Jh Js 9d 7c 7h 7s 2c 						Jh Js 9d 7c 7h 7s 2c 
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
  - No flush							 - No flush
  - The most of a kind is 3 of a kind (at index 3 / value 7)	 - The most of a kind is 3 of a kind (at index 3 / value 7)
  - Secondary pair at index 0 (value J)				 - Secondary pair at index 0 (value J)
-							      >	1
-							      >	0
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
  - evaluate_hand's ranking: FULL_HOUSE				 - evaluate_hand's ranking: FULL_HOUSE
  - 5 cards used for hand: 7c 7h 7s Jh Js 			 - 5 cards used for hand: 7c 7h 7s Jh Js 
-							      >	0
-							      >	1
-							      >	3
-							      >	1
-							      >	3
-							      >	2
-							      >	0
-							      >	1
-							      >	2
-							      >	3
-							      >	1
-							      >	0
-							      >	3
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Testcase 8: Trying hands with 4 of a kind
 Valgrind returned an error status
-==450== Memcheck, a memory error detector
-==450== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==450== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==450== Command: ./test-eval inp.8.txt
-==450== Parent PID: 449
-==450== 
-==450== Use of uninitialised value of size 8
-==450==    at 0x400C0D: print_hand (deck.c:8)
-==450==    by 0x4025F2: describe_hand (test-eval.c:74)
-==450==    by 0x4027D2: main (test-eval.c:116)
-==450== 
-==450== Invalid read of size 8
-==450==    at 0x400C0D: print_hand (deck.c:8)
-==450==    by 0x4025F2: describe_hand (test-eval.c:74)
-==450==    by 0x4027D2: main (test-eval.c:116)
-==450==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==450== 
-==450== 
-==450== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==450==  Access not within mapped region at address 0x0
-==450==    at 0x400C0D: print_hand (deck.c:8)
-==450==    by 0x4025F2: describe_hand (test-eval.c:74)
-==450==    by 0x4027D2: main (test-eval.c:116)
-==450==  If you believe this happened as a result of a stack
-==450==  overflow in your program's main thread (unlikely but
-==450==  possible), you can try to increase the size of the
-==450==  main thread stack using the --main-stacksize= flag.
-==450==  The main thread stack size used in this run was 8388608.
-==450== 
-==450== HEAP SUMMARY:
-==450==     in use at exit: 896 bytes in 18 blocks
-==450==   total heap usage: 32 allocs, 14 frees, 9,376 bytes allocated
-==450== 
-==450== LEAK SUMMARY:
-==450==    definitely lost: 0 bytes in 0 blocks
-==450==    indirectly lost: 0 bytes in 0 blocks
-==450==      possibly lost: 0 bytes in 0 blocks
-==450==    still reachable: 896 bytes in 18 blocks
-==450==         suppressed: 0 bytes in 0 blocks
-==450== Rerun with --leak-check=full to see details of leaked memory
-==450== 
-==450== For counts of detected and suppressed errors, rerun with: -v
-==450== Use --track-origins=yes to see where uninitialised values come from
-==450== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==667== Memcheck, a memory error detector
+==667== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==667== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==667== Command: ./test-eval inp.8.txt
+==667== Parent PID: 666
+==667== 
+==667== Use of uninitialised value of size 8
+==667==    at 0x400C0D: print_hand (deck.c:8)
+==667==    by 0x4025DE: describe_hand (test-eval.c:74)
+==667==    by 0x4027BE: main (test-eval.c:116)
+==667== 
+==667== Invalid read of size 8
+==667==    at 0x400C0D: print_hand (deck.c:8)
+==667==    by 0x4025DE: describe_hand (test-eval.c:74)
+==667==    by 0x4027BE: main (test-eval.c:116)
+==667==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==667== 
+==667== 
+==667== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==667==  Access not within mapped region at address 0x0
+==667==    at 0x400C0D: print_hand (deck.c:8)
+==667==    by 0x4025DE: describe_hand (test-eval.c:74)
+==667==    by 0x4027BE: main (test-eval.c:116)
+==667==  If you believe this happened as a result of a stack
+==667==  overflow in your program's main thread (unlikely but
+==667==  possible), you can try to increase the size of the
+==667==  main thread stack using the --main-stacksize= flag.
+==667==  The main thread stack size used in this run was 8388608.
+==667== 
+==667== HEAP SUMMARY:
+==667==     in use at exit: 896 bytes in 18 blocks
+==667==   total heap usage: 32 allocs, 14 frees, 9,376 bytes allocated
+==667== 
+==667== LEAK SUMMARY:
+==667==    definitely lost: 0 bytes in 0 blocks
+==667==    indirectly lost: 0 bytes in 0 blocks
+==667==      possibly lost: 0 bytes in 0 blocks
+==667==    still reachable: 896 bytes in 18 blocks
+==667==         suppressed: 0 bytes in 0 blocks
+==667== Rerun with --leak-check=full to see details of leaked memory
+==667== 
+==667== For counts of detected and suppressed errors, rerun with: -v
+==667== Use --track-origins=yes to see where uninitialised values come from
+==667== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 9: Trying hands with straight flushes
  Checking the output 
-Line_4_did_not_match
-Line_5_did_not_match
-Line_6_did_not_match
 Line_7_did_not_match
-Line_8_did_not_match
-Line_12_did_not_match
-Line_13_did_not_match
-Line_14_did_not_match
 Line_15_did_not_match
-Line_16_did_not_match
-Line_17_did_not_match
-Line_22_did_not_match
-Line_23_did_not_match
-Line_24_did_not_match
-Line_25_did_not_match
-Line_26_did_not_match
-Line_30_did_not_match
-Line_31_did_not_match
-Line_32_did_not_match
-Line_33_did_not_match
-Line_34_did_not_match
+Line_27_did_not_match
 Line_35_did_not_match
-Line_37_did_not_match
-Line_38_did_not_match
-Line_39_did_not_match
-Line_40_did_not_match
-Line_41_did_not_match
-Line_42_did_not_match
-Line_43_did_not_match
-Line_44_did_not_match
-Line_45_did_not_match
-Line_46_did_not_match
-Line_54_did_not_match
+Line_47_did_not_match
 Line_55_did_not_match
-Line_56_did_not_match
-Line_57_did_not_match
-Line_58_did_not_match
-Line_59_did_not_match
-Line_60_did_not_match
-Line_64_did_not_match
-Line_65_did_not_match
-Line_66_did_not_match
 Line_67_did_not_match
 Line_68_did_not_match
-Line_69_did_not_match
-Line_70_did_not_match
-Line_71_did_not_match
+Line_75_did_not_match
 Line_76_did_not_match
-Line_77_did_not_match
-Line_78_did_not_match
 Line_79_did_not_match
-Line_80_did_not_match
-Line_81_did_not_match
-Line_82_did_not_match
-Line_86_did_not_match
 Line_87_did_not_match
-Line_88_did_not_match
-Line_89_did_not_match
-Line_90_did_not_match
-Line_91_did_not_match
-Line_92_did_not_match
-Line_93_did_not_match
 Line_95_did_not_match
 Line_96_did_not_match
-Line_97_did_not_match
-Line_98_did_not_match
-Line_99_did_not_match
-Line_100_did_not_match
-Line_101_did_not_match
-Line_102_did_not_match
-Line_103_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
-Line_107_did_not_match
-Line_108_did_not_match
-Line_116_did_not_match
-Line_117_did_not_match
-Line_118_did_not_match
-Line_119_did_not_match
-Line_120_did_not_match
-Line_121_did_not_match
-Line_122_did_not_match
-Line_126_did_not_match
-Line_127_did_not_match
-Line_128_did_not_match
-Line_129_did_not_match
-Line_130_did_not_match
-Line_131_did_not_match
-Line_132_did_not_match
-Line_133_did_not_match
-Line_138_did_not_match
-Line_139_did_not_match
-Line_140_did_not_match
-Line_141_did_not_match
-Line_142_did_not_match
-Line_143_did_not_match
-Line_144_did_not_match
-Line_148_did_not_match
-Line_149_did_not_match
-Line_150_did_not_match
-Line_151_did_not_match
-Line_152_did_not_match
-Line_153_did_not_match
-Line_154_did_not_match
-Line_155_did_not_match
-Line_157_did_not_match
-Line_158_did_not_match
-Line_159_did_not_match
-Line_160_did_not_match
-Line_161_did_not_match
-Line_162_did_not_match
-Line_163_did_not_match
-Line_164_did_not_match
-Line_165_did_not_match
-Line_166_did_not_match
-Line_167_did_not_match
-Line_168_did_not_match
-Line_169_did_not_match
-Line_170_did_not_match
-Line_178_did_not_match
-Line_179_did_not_match
-Line_180_did_not_match
-Line_181_did_not_match
-Line_182_did_not_match
-Line_183_did_not_match
-Line_187_did_not_match
-Line_188_did_not_match
-Line_189_did_not_match
-Line_190_did_not_match
-Line_191_did_not_match
-Line_192_did_not_match
-Line_193_did_not_match
-Line_194_did_not_match
-Line_198_did_not_match
-Line_199_did_not_match
-Line_200_did_not_match
-Line_201_did_not_match
-Line_202_did_not_match
-Line_203_did_not_match
-Line_207_did_not_match
-Line_208_did_not_match
-Line_209_did_not_match
-Line_210_did_not_match
-Line_211_did_not_match
-Line_212_did_not_match
-Line_213_did_not_match
-Line_214_did_not_match
-Line_215_did_not_match
-Line_216_did_not_match
-Line_217_did_not_match
-Line_218_did_not_match
-Line_219_did_not_match
-Line_220_did_not_match
-Line_221_did_not_match
-Line_222_did_not_match
-Line_223_did_not_match
-Line_224_did_not_match
-Line_225_did_not_match
-Line_226_did_not_match
-Line_229_did_not_match
-Line_234_did_not_match
-Line_235_did_not_match
-Line_236_did_not_match
-Line_237_did_not_match
-Line_238_did_not_match
-Line_242_did_not_match
-Line_243_did_not_match
-Line_244_did_not_match
-Line_245_did_not_match
-Line_246_did_not_match
-Line_247_did_not_match
-Line_252_did_not_match
-Line_253_did_not_match
-Line_254_did_not_match
-Line_255_did_not_match
-Line_256_did_not_match
-Line_260_did_not_match
-Line_261_did_not_match
-Line_262_did_not_match
-Line_263_did_not_match
-Line_264_did_not_match
-Line_265_did_not_match
-Line_266_did_not_match
-Line_267_did_not_match
-Line_268_did_not_match
-Line_269_did_not_match
-Line_270_did_not_match
-Line_271_did_not_match
-Line_272_did_not_match
-Line_273_did_not_match
-Line_274_did_not_match
-Line_275_did_not_match
-Line_276_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
 --------							--------
 As Ks Qs Js 0s 							As Ks Qs Js 0s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - Straight flush at index 0				      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	 - evaluate_hand's ranking: FLUSH
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Ks Qs Js 0s 			 - 5 cards used for hand: As Ks Qs Js 0s 
 Hand 2:								Hand 2:
 --------							--------
 Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - Straight flush at index 0				      <
  - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	 - evaluate_hand's ranking: FLUSH
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3809,67 +1010,25 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 As Ks Qs Js 0s 9s 8s 						As Ks Qs Js 0s 9s 8s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - Straight flush at index 0				      <
  - Straight flush at index 1				      <
  - Straight flush at index 2				      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	 - evaluate_hand's ranking: FLUSH
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Ks Qs Js 0s 			 - 5 cards used for hand: As Ks Qs Js 0s 
 Hand 2:								Hand 2:
 --------							--------
 Kh Qh Jh 0h 9h 8h 7h 						Kh Qh Jh 0h 9h 8h 7h 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - Straight flush at index 0				      <
  - Straight flush at index 1				      <
  - Straight flush at index 2				      <
  - The most of a kind is 1 of a kind (at index 0 / value K)	 - The most of a kind is 1 of a kind (at index 0 / value K)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	 - evaluate_hand's ranking: FLUSH
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3877,65 +1036,23 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ac As Kc Ks Qs Js 0s 						Ac As Kc Ks Qs Js 0s 
-							      >	3
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - Straight at index 0					      <
  - Straight flush at index 1				      <
  - The most of a kind is 2 of a kind (at index 0 / value A)	 - The most of a kind is 2 of a kind (at index 0 / value A)
  - Secondary pair at index 2 (value K)				 - Secondary pair at index 2 (value K)
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	3
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	 - evaluate_hand's ranking: FLUSH
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Ks Qs Js 0s 			 - 5 cards used for hand: As Ks Qs Js 0s 
 Hand 2:								Hand 2:
 --------							--------
 Ad Kh Qh Jh Js 0h 9h 						Ad Kh Qh Jh Js 0h 9h 
-							      >	2
-							      >	1
-							      >	1
-							      >	1
-							      >	0
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - Straight at index 0					      <
  - Straight flush at index 1				      <
  - The most of a kind is 2 of a kind (at index 3 / value J)	 - The most of a kind is 2 of a kind (at index 3 / value J)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	2
-							      >	1
-							      >	1
-							      >	1
-							      >	0
-							      >	1
-							      >	1
-							      >	 - evaluate_hand's ranking: FLUSH
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
-							      >	0
-							      >	3
-							      >	0
-							      >	3
-							      >	0
-							      >	0
-							      >	0
-							      >	2
-							      >	1
-							      >	1
-							      >	1
-							      >	0
-							      >	1
-							      >	1
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -3943,58 +1060,22 @@ Hand 1 wins!							Hand 1 wins!
 Hand 1:								Hand 1:
 --------							--------
 Ah Kc 5h 4h 3h 2h 						Ah Kc 5h 4h 3h 2h 
-							      >	1
-							      >	3
-							      >	1
-							      >	1
-							      >	1
-							      >	1
  - Flush in suit h						 - Flush in suit h
  - Straight flush at index 0				      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	1
- - 5 cards used for hand: 5h 4h 3h 2h Ah 		      |	3
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	 - evaluate_hand's ranking: FLUSH
-							      >	 - 5 cards used for hand: Ah 5h 4h 3h 2h 
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
+ - 5 cards used for hand: 5h 4h 3h 2h Ah 		      |	 - 5 cards used for hand: Ah 5h 4h 3h 2h 
 Hand 2:								Hand 2:
 --------							--------
 Ac 6c 5c 4c 3c 2c 						Ac 6c 5c 4c 3c 2c 
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
  - Flush in suit c						 - Flush in suit c
  - Straight flush at index 0				      <
  - Straight flush at index 1				      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	3
- - 5 cards used for hand: 5c 4c 3c 2c Ac 		      |	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	 - evaluate_hand's ranking: FLUSH
-							      >	 - 5 cards used for hand: Ac 6c 5c 4c 3c 
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	1
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
-							      >	3
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
+ - 5 cards used for hand: 5c 4c 3c 2c Ac 		      |	 - 5 cards used for hand: Ac 6c 5c 4c 3c 
 Comparison : 							Comparison : 
 --------------							--------------
 Tie							      |	Hand 2 wins!
@@ -4002,100 +1083,70 @@ Tie							      |	Hand 2 wins!
 Hand 1:								Hand 1:
 --------							--------
 As Ks Qs Js 0s 							As Ks Qs Js 0s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - Straight flush at index 0				      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	 - evaluate_hand's ranking: FLUSH
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
  - 5 cards used for hand: As Ks Qs Js 0s 			 - 5 cards used for hand: As Ks Qs Js 0s 
 Hand 2:								Hand 2:
 --------							--------
 As 5s 4s 3s 2s 							As 5s 4s 3s 2s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
  - Flush in suit s						 - Flush in suit s
  - Straight flush at index 0				      <
  - The most of a kind is 1 of a kind (at index 0 / value A)	 - The most of a kind is 1 of a kind (at index 0 / value A)
  - No secondary pair						 - No secondary pair
- - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	0
- - 5 cards used for hand: 5s 4s 3s 2s As 		      |	0
-							      >	0
-							      >	0
-							      >	0
-							      >	 - evaluate_hand's ranking: FLUSH
-							      >	 - 5 cards used for hand: As 5s 4s 3s 2s 
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
-							      >	0
+ - evaluate_hand's ranking: STRAIGHT_FLUSH		      |	 - evaluate_hand's ranking: FLUSH
+ - 5 cards used for hand: 5s 4s 3s 2s As 		      |	 - 5 cards used for hand: As 5s 4s 3s 2s 
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Testcase 10: Trying each type of hand ranking
 Valgrind returned an error status
-==468== Memcheck, a memory error detector
-==468== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==468== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==468== Command: ./test-eval inp.10.txt
-==468== Parent PID: 467
-==468== 
-==468== Use of uninitialised value of size 8
-==468==    at 0x400C0D: print_hand (deck.c:8)
-==468==    by 0x4025F2: describe_hand (test-eval.c:74)
-==468==    by 0x4027F2: main (test-eval.c:119)
-==468== 
-==468== Invalid read of size 8
-==468==    at 0x400C0D: print_hand (deck.c:8)
-==468==    by 0x4025F2: describe_hand (test-eval.c:74)
-==468==    by 0x4027F2: main (test-eval.c:119)
-==468==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==468== 
-==468== 
-==468== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==468==  Access not within mapped region at address 0x0
-==468==    at 0x400C0D: print_hand (deck.c:8)
-==468==    by 0x4025F2: describe_hand (test-eval.c:74)
-==468==    by 0x4027F2: main (test-eval.c:119)
-==468==  If you believe this happened as a result of a stack
-==468==  overflow in your program's main thread (unlikely but
-==468==  possible), you can try to increase the size of the
-==468==  main thread stack using the --main-stacksize= flag.
-==468==  The main thread stack size used in this run was 8388608.
-==468== 
-==468== HEAP SUMMARY:
-==468==     in use at exit: 896 bytes in 18 blocks
-==468==   total heap usage: 34 allocs, 16 frees, 9,424 bytes allocated
-==468== 
-==468== LEAK SUMMARY:
-==468==    definitely lost: 0 bytes in 0 blocks
-==468==    indirectly lost: 0 bytes in 0 blocks
-==468==      possibly lost: 0 bytes in 0 blocks
-==468==    still reachable: 896 bytes in 18 blocks
-==468==         suppressed: 0 bytes in 0 blocks
-==468== Rerun with --leak-check=full to see details of leaked memory
-==468== 
-==468== For counts of detected and suppressed errors, rerun with: -v
-==468== Use --track-origins=yes to see where uninitialised values come from
-==468== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==685== Memcheck, a memory error detector
+==685== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==685== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==685== Command: ./test-eval inp.10.txt
+==685== Parent PID: 684
+==685== 
+==685== Use of uninitialised value of size 8
+==685==    at 0x400C0D: print_hand (deck.c:8)
+==685==    by 0x4025DE: describe_hand (test-eval.c:74)
+==685==    by 0x4027DE: main (test-eval.c:119)
+==685== 
+==685== Invalid read of size 8
+==685==    at 0x400C0D: print_hand (deck.c:8)
+==685==    by 0x4025DE: describe_hand (test-eval.c:74)
+==685==    by 0x4027DE: main (test-eval.c:119)
+==685==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==685== 
+==685== 
+==685== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==685==  Access not within mapped region at address 0x0
+==685==    at 0x400C0D: print_hand (deck.c:8)
+==685==    by 0x4025DE: describe_hand (test-eval.c:74)
+==685==    by 0x4027DE: main (test-eval.c:119)
+==685==  If you believe this happened as a result of a stack
+==685==  overflow in your program's main thread (unlikely but
+==685==  possible), you can try to increase the size of the
+==685==  main thread stack using the --main-stacksize= flag.
+==685==  The main thread stack size used in this run was 8388608.
+==685== 
+==685== HEAP SUMMARY:
+==685==     in use at exit: 896 bytes in 18 blocks
+==685==   total heap usage: 34 allocs, 16 frees, 9,424 bytes allocated
+==685== 
+==685== LEAK SUMMARY:
+==685==    definitely lost: 0 bytes in 0 blocks
+==685==    indirectly lost: 0 bytes in 0 blocks
+==685==      possibly lost: 0 bytes in 0 blocks
+==685==    still reachable: 896 bytes in 18 blocks
+==685==         suppressed: 0 bytes in 0 blocks
+==685== Rerun with --leak-check=full to see details of leaked memory
+==685== 
+==685== For counts of detected and suppressed errors, rerun with: -v
+==685== Use --track-origins=yes to see where uninitialised values come from
+==685== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 
 Overall Grade: F
