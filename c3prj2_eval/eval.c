@@ -48,13 +48,38 @@ size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
   }
   return 0;
 }
-ssize_t  find_secondary_pair(deck_t * hand,
+size_t  find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
+  for (size_t i=0; i<match_idx;i++){
+    if (match_counts[i]>1){
+      return i;
+    }
+  }
+  for (size_t j = match_idx + match_counts[match_idx];j<hand->n_cards;j++){
+    if (match_counts[j]>1){
+      return j;
+    }
+  }
   return -1;
 }
 
 int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
+  //checking if the no of remaining cards is less than 5
+  if (hand->n_cards - index >= 5){
+    return 0;
+  }
+  int straight_counter = 0;
+  for (int q=index; q<hand->n_cards-1;q++){
+    unsigned v1 = ((hand->cards)[q])-> value;
+    unsigned v2 = ((hand->cards)[q+1])->value;
+    if (v1-v2 == 1 ){
+      straight_counter++;
+    }
+  }
+  if (straight_counter>=5){
+    return 1;
+  }
   return 0;
 }
 
@@ -64,15 +89,49 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 				  size_t idx) {
 
   hand_eval_t ans;
+  int card_counter = n;
+  ans.ranking = what;
+  for (int i=0;i<n; i++){
+    ans.cards[i]=hand->cards[idx+i];
+  }
+  for (int j=0;j<idx;j++){
+    if (card_counter==5){
+      break;
+    }
+    ans.cards[n+j]=hand->cards[j];
+    card_counter++;
+  }
+  for (int k=idx+n;k<hand->n_cards;k++){
+    if (card_counter==5){
+      break;
+    }
+    ans.cards[card_counter-1]=hand->cards[k];
+    card_counter++;
+  }
   return ans;
 }
 
 
 int compare_hands(deck_t * hand1, deck_t * hand2) {
-
-  return 0;
+  hand_eval_t h1 = evaluate_hand(hand1);
+  hand_eval_t h2 = evaluate_hand(hand2);
+  if (h1.ranking != h2.ranking){
+    return h1.ranking-h2.ranking;
+  }
+  else{
+    for (int i=0; i <5;i++){
+      unsigned v1 = (h1.cards[i])->value;
+      unsigned v2 = (h2.cards[i])->value;
+      if (v1 == v2){
+	continue;
+      }
+      else{
+	return v1 - v2;
+      }
+    }
+    return 0;
+  }
 }
-
 
 
 //You will write this function in Course 4.
