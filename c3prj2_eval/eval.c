@@ -143,7 +143,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
     if (card_counter==5){
       break;
     }
-    ans.cards[n+j]=(hand->cards)[j];
+    (ans.cards)[n+j]=(hand->cards)[j];
     card_counter++;
   }
   for (int k=idx+n;k<hand->n_cards;k++){
