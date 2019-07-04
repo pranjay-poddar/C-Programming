@@ -49,7 +49,7 @@ size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
   }
   return 0;
 }
-size_t  find_secondary_pair(deck_t * hand,
+size_t find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
   for (size_t i=0; i<match_idx;i++){
@@ -67,7 +67,7 @@ size_t  find_secondary_pair(deck_t * hand,
 
 int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   //checking if the no of remaining cards is less than 5
-  if (hand->n_cards - index >= 5){
+  if (hand->n_cards - index <= 5){
     return 0;
   }
   int straight_counter = 0;
