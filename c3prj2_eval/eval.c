@@ -88,15 +88,24 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   else{
     // straight flush counter
     int s_f_c = 0;
-    unsigned V1,V2;
-    suit_t s1,s2;
-    for (int z = index ; z < hand->n_cards-1; z++){
-      V1 = ((hand->cards)[z])->value;
-      s1 = ((hand->cards)[z])->suit;
-      V2 = ((hand->cards)[z+1])->value;
-      s2 = ((hand->cards)[z+1])->suit;
-      if ((V1-V2 == 1)&& s1==fs && s2 == fs){
+    unsigned ref_val,val;
+    suit_t s;
+    ref_val = ((hand->cards)[index])->value;
+    for (int z = index ; z < hand->n_cards; z++){
+      val = ((hand->cards)[z])->value;
+      // s1 = ((hand->cards)[z])->suit;
+      // V2 = ((hand->cards)[z+1])->value;
+      s = ((hand->cards)[z])->suit;
+      if (s_f_c ==0 && s == fs){
+	ref_val = val;
 	s_f_c++;
+      }
+      else if(s == fs && ref_val-val==1){
+	ref_val = val;
+	s_f_c ++;
+      }
+      else{
+	continue;
       }
     }
     if (s_f_c >= 5){
