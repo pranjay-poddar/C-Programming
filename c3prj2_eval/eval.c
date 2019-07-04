@@ -67,21 +67,43 @@ size_t find_secondary_pair(deck_t * hand,
 
 int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   //checking if the no of remaining cards is less than 5
-  if (hand->n_cards - index <= 5){
+  if (hand->n_cards - index < 5){
     return 0;
   }
-  int straight_counter = 0;
-  for (int q=index; q<hand->n_cards-1;q++){
-    unsigned v1 = ((hand->cards)[q])-> value;
-    unsigned v2 = ((hand->cards)[q+1])->value;
-    if (v1-v2 == 1 ){
-      straight_counter++;
+  if (fs == NUM_SUITS){
+    int straight_counter = 0;
+    for (int q=index; q<hand->n_cards-1;q++){
+      unsigned v1 = ((hand->cards)[q])-> value;
+      unsigned v2 = ((hand->cards)[q+1])->value;
+      if (v1-v2 == 1 ){
+	straight_counter++;
+      }
     }
+    if (straight_counter>=5){
+      return 1;
+    }
+    return 0;
   }
-  if (straight_counter>=5){
-    return 1;
+  // checking for straight_flush
+  else{
+    // straight flush counter
+    int s_f_c = 0;
+    unsigned V1,V2;
+    suit_t s1,s2;
+    for (int z = index ; z < hand->n_cards-1; z++){
+      V1 = ((hand->cards)[z])->value;
+      s1 = ((hand->cards)[z])->suit;
+      V2 = ((hand->cards)[z+1])->value;
+      s2 = ((hand->cards)[z+1])->suit;
+      if ((V1-V2 == 1)&& s1==fs && s2 == fs){
+	s_f_c++;
+      }
+    }
+    if (s_f_c >= 5){
+      return 1;
+    }
+    return 0;
   }
-  return 0;
 }
 
 hand_eval_t build_hand_from_match(deck_t * hand,
