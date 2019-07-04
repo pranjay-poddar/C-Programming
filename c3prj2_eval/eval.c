@@ -21,7 +21,6 @@ suit_t flush_suit(deck_t * hand) {
   for (int i=0; i< hand->n_cards;i++){
     suit_t dum = ((hand->cards)[i])->suit;
     suit_count[dum]+=1;
-    printf("%d\n",dum);
   }
   suit_t j;
   for (j=SPADES; j <= CLUBS; j++){
