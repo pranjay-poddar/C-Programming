@@ -70,6 +70,19 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   if (hand->n_cards - index < 5){
     return 0;
   }
+  if (((hand->cards)[index])->value == VALUE_ACE){
+    unsigned ref = 5;
+    unsigned v ;
+    for (int d=index+1; d<hand->n_cards;d++){
+      v = ((hand->cards)[d])->value;
+      if(v==ref){
+	ref--;
+      }
+    }
+    if (ref == 1){
+      return -1;
+    }
+  }
   if (fs == NUM_SUITS){
     int straight_counter = 0;
     for (int q=index; q<hand->n_cards-1;q++){
