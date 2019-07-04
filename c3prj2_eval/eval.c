@@ -17,9 +17,11 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 }
 
 suit_t flush_suit(deck_t * hand) {
-  int suit_count[4]={0};
+  int suit_count[4]={0,0,0,0};
   for (int i=0; i< hand->n_cards;i++){
-    suit_count[(*(hand->cards))->suit]+=1;
+    suit_t dum = ((hand->cards)[i])->suit;
+    suit_count[dum]+=1;
+    printf("%d\n",dum);
   }
   suit_t j;
   for (j=SPADES; j <= CLUBS; j++){
