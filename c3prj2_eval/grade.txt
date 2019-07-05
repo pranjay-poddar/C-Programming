@@ -1,4 +1,4 @@
-Grading at Fri Jul  5 16:47:14 UTC 2019
+Grading at Fri Jul  5 17:02:39 UTC 2019
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -203,31 +203,31 @@ Your file matched the expected output
  - Testcase passed
 Testcase 4: Trying hands with 3 of a kind
 Valgrind returned an error status
-==227== Memcheck, a memory error detector
-==227== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==227== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==227== Command: ./test-eval inp.4.txt
-==227== Parent PID: 226
-==227== 
-==227== Invalid read of size 8
-==227==    at 0x40202D: evaluate_hand (eval.c:287)
-==227==    by 0x401A90: compare_hands (eval.c:172)
-==227==    by 0x4029B1: main (test-eval.c:124)
-==227==  Address 0x520daa0 is 0 bytes after a block of size 48 alloc'd
-==227==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==227==    by 0x400FFC: add_card_to (deck-c4.c:29)
-==227==    by 0x4030D4: hand_from_string (input.c:49)
-==227==    by 0x40299A: main (test-eval.c:123)
-==227== 
-==227== 
-==227== HEAP SUMMARY:
-==227==     in use at exit: 0 bytes in 0 blocks
-==227==   total heap usage: 352 allocs, 352 frees, 15,296 bytes allocated
-==227== 
-==227== All heap blocks were freed -- no leaks are possible
-==227== 
-==227== For counts of detected and suppressed errors, rerun with: -v
-==227== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==552== Memcheck, a memory error detector
+==552== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==552== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==552== Command: ./test-eval inp.4.txt
+==552== Parent PID: 551
+==552== 
+==552== Invalid read of size 8
+==552==    at 0x402027: evaluate_hand (eval.c:287)
+==552==    by 0x401A90: compare_hands (eval.c:172)
+==552==    by 0x4029AB: main (test-eval.c:124)
+==552==  Address 0x520daa0 is 0 bytes after a block of size 48 alloc'd
+==552==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==552==    by 0x400FFC: add_card_to (deck-c4.c:29)
+==552==    by 0x4030CE: hand_from_string (input.c:49)
+==552==    by 0x402994: main (test-eval.c:123)
+==552== 
+==552== 
+==552== HEAP SUMMARY:
+==552==     in use at exit: 0 bytes in 0 blocks
+==552==   total heap usage: 352 allocs, 352 frees, 15,296 bytes allocated
+==552== 
+==552== All heap blocks were freed -- no leaks are possible
+==552== 
+==552== For counts of detected and suppressed errors, rerun with: -v
+==552== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 Testcase 5: Trying hands with straights
  Checking the output 
 Line_118_did_not_match
