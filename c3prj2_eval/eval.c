@@ -49,15 +49,15 @@ size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
   }
   return 0;
 }
-size_t find_secondary_pair(deck_t * hand,
+ssize_t find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
-  for (size_t i=0; i<match_idx;i++){
+  for (ssize_t i=0; i<match_idx;i++){
     if (match_counts[i]>1){
       return i;
     }
   }
-  for (size_t j = match_idx + match_counts[match_idx];j<hand->n_cards;j++){
+  for (ssize_t j = match_idx + match_counts[match_idx];j<hand->n_cards;j++){
     if (match_counts[j]>1){
       return j;
     }
@@ -287,6 +287,8 @@ hand_eval_t evaluate_hand(deck_t * hand) {
   else if (n_of_a_kind == 3 && other_pair_idx >= 0) {     //full house
     ans = build_hand_from_match(hand, 3, FULL_HOUSE, match_idx);
     ans.cards[3] = hand->cards[other_pair_idx];
+    printf("%zd\n",other_pair_idx+1);
+    assert(other_pair_idx<=hand->n_cards);
     ans.cards[4] = hand->cards[other_pair_idx+1];
     return ans;
   }
