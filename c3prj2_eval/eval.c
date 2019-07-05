@@ -168,7 +168,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   hand_eval_t h1 = evaluate_hand(hand1);
   hand_eval_t h2 = evaluate_hand(hand2);
   if (h1.ranking != h2.ranking){
-    return h1.ranking-h2.ranking;
+    return h2.ranking-h1.ranking;
   }
   else{
     for (int i=0; i <5;i++){
