@@ -181,8 +181,8 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	continue;
       }
       else{
-	int dum = v1 - v2;
-	return dum;
+	//int dum = v1 - v2;
+	return v1 - v2;
       }
     }
     return 0;
