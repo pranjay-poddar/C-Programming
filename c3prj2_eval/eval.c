@@ -179,7 +179,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   else{
     for (int i=0; i <5;i++){
       unsigned v1 = h1.cards[i]->value;
-      unsigned v2 = (h2.cards[i])->value;
+      unsigned v2 = h2.cards[i]->value;
       if (v1 == v2){
 	continue;
       }
