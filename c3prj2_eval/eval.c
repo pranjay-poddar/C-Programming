@@ -94,6 +94,9 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
       }
       else if(v1-v2 == 1){
 	straight_counter++;
+	if (straight_counter==4){
+	  return 1;
+	}
       }
       else{
 	continue;
