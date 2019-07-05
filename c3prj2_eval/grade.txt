@@ -1,4 +1,4 @@
-Grading at Fri Jul  5 03:26:11 UTC 2019
+Grading at Fri Jul  5 03:28:58 UTC 2019
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -113,85 +113,83 @@ Hand 2 wins!						      |	Hand 1 wins!
 ============================					============================
 Testcase 2: Trying hands with pairs
 Valgrind returned an error status
-==4187== Memcheck, a memory error detector
-==4187== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==4187== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==4187== Command: ./test-eval inp.2.txt
-==4187== Parent PID: 4186
-==4187== 
-==4187== Use of uninitialised value of size 8
-==4187==    at 0x400C0D: print_hand (deck.c:8)
-==4187==    by 0x402735: describe_hand (test-eval.c:74)
-==4187==    by 0x402935: main (test-eval.c:119)
-==4187== 
-==4187== Invalid read of size 8
-==4187==    at 0x400C0D: print_hand (deck.c:8)
-==4187==    by 0x402735: describe_hand (test-eval.c:74)
-==4187==    by 0x402935: main (test-eval.c:119)
-==4187==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==4187== 
-==4187== 
-==4187== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==4187==  Access not within mapped region at address 0x0
-==4187==    at 0x400C0D: print_hand (deck.c:8)
-==4187==    by 0x402735: describe_hand (test-eval.c:74)
-==4187==    by 0x402935: main (test-eval.c:119)
-==4187==  If you believe this happened as a result of a stack
-==4187==  overflow in your program's main thread (unlikely but
-==4187==  possible), you can try to increase the size of the
-==4187==  main thread stack using the --main-stacksize= flag.
-==4187==  The main thread stack size used in this run was 8388608.
-==4187== 
-==4187== HEAP SUMMARY:
-==4187==     in use at exit: 896 bytes in 18 blocks
-==4187==   total heap usage: 204 allocs, 186 frees, 12,516 bytes allocated
-==4187== 
-==4187== LEAK SUMMARY:
-==4187==    definitely lost: 0 bytes in 0 blocks
-==4187==    indirectly lost: 0 bytes in 0 blocks
-==4187==      possibly lost: 0 bytes in 0 blocks
-==4187==    still reachable: 896 bytes in 18 blocks
-==4187==         suppressed: 0 bytes in 0 blocks
-==4187== Rerun with --leak-check=full to see details of leaked memory
-==4187== 
-==4187== For counts of detected and suppressed errors, rerun with: -v
-==4187== Use --track-origins=yes to see where uninitialised values come from
-==4187== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==4426== Memcheck, a memory error detector
+==4426== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==4426== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4426== Command: ./test-eval inp.2.txt
+==4426== Parent PID: 4425
+==4426== 
+==4426== Use of uninitialised value of size 8
+==4426==    at 0x400C0D: print_hand (deck.c:8)
+==4426==    by 0x402735: describe_hand (test-eval.c:74)
+==4426==    by 0x402935: main (test-eval.c:119)
+==4426== 
+==4426== Invalid read of size 8
+==4426==    at 0x400C0D: print_hand (deck.c:8)
+==4426==    by 0x402735: describe_hand (test-eval.c:74)
+==4426==    by 0x402935: main (test-eval.c:119)
+==4426==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==4426== 
+==4426== 
+==4426== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==4426==  Access not within mapped region at address 0x0
+==4426==    at 0x400C0D: print_hand (deck.c:8)
+==4426==    by 0x402735: describe_hand (test-eval.c:74)
+==4426==    by 0x402935: main (test-eval.c:119)
+==4426==  If you believe this happened as a result of a stack
+==4426==  overflow in your program's main thread (unlikely but
+==4426==  possible), you can try to increase the size of the
+==4426==  main thread stack using the --main-stacksize= flag.
+==4426==  The main thread stack size used in this run was 8388608.
+==4426== 
+==4426== HEAP SUMMARY:
+==4426==     in use at exit: 896 bytes in 18 blocks
+==4426==   total heap usage: 204 allocs, 186 frees, 12,516 bytes allocated
+==4426== 
+==4426== LEAK SUMMARY:
+==4426==    definitely lost: 0 bytes in 0 blocks
+==4426==    indirectly lost: 0 bytes in 0 blocks
+==4426==      possibly lost: 0 bytes in 0 blocks
+==4426==    still reachable: 896 bytes in 18 blocks
+==4426==         suppressed: 0 bytes in 0 blocks
+==4426== Rerun with --leak-check=full to see details of leaked memory
+==4426== 
+==4426== For counts of detected and suppressed errors, rerun with: -v
+==4426== Use --track-origins=yes to see where uninitialised values come from
+==4426== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 3: Trying hands with 2 pairs
  Checking the output 
 Your file matched the expected output
  - Testcase passed
 Testcase 4: Trying hands with 3 of a kind
 Valgrind returned an error status
-==4204== Memcheck, a memory error detector
-==4204== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==4204== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==4204== Command: ./test-eval inp.4.txt
-==4204== Parent PID: 4203
-==4204== 
-==4204== Invalid read of size 8
-==4204==    at 0x402006: evaluate_hand (eval.c:284)
-==4204==    by 0x401A69: compare_hands (eval.c:169)
-==4204==    by 0x40298A: main (test-eval.c:124)
-==4204==  Address 0x520daa0 is 0 bytes after a block of size 48 alloc'd
-==4204==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==4204==    by 0x400FFC: add_card_to (deck-c4.c:29)
-==4204==    by 0x4030AD: hand_from_string (input.c:49)
-==4204==    by 0x402973: main (test-eval.c:123)
-==4204== 
-==4204== 
-==4204== HEAP SUMMARY:
-==4204==     in use at exit: 0 bytes in 0 blocks
-==4204==   total heap usage: 352 allocs, 352 frees, 15,296 bytes allocated
-==4204== 
-==4204== All heap blocks were freed -- no leaks are possible
-==4204== 
-==4204== For counts of detected and suppressed errors, rerun with: -v
-==4204== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==4443== Memcheck, a memory error detector
+==4443== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==4443== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4443== Command: ./test-eval inp.4.txt
+==4443== Parent PID: 4442
+==4443== 
+==4443== Invalid read of size 8
+==4443==    at 0x402006: evaluate_hand (eval.c:284)
+==4443==    by 0x401A69: compare_hands (eval.c:169)
+==4443==    by 0x40298A: main (test-eval.c:124)
+==4443==  Address 0x520daa0 is 0 bytes after a block of size 48 alloc'd
+==4443==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4443==    by 0x400FFC: add_card_to (deck-c4.c:29)
+==4443==    by 0x4030AD: hand_from_string (input.c:49)
+==4443==    by 0x402973: main (test-eval.c:123)
+==4443== 
+==4443== 
+==4443== HEAP SUMMARY:
+==4443==     in use at exit: 0 bytes in 0 blocks
+==4443==   total heap usage: 352 allocs, 352 frees, 15,296 bytes allocated
+==4443== 
+==4443== All heap blocks were freed -- no leaks are possible
+==4443== 
+==4443== For counts of detected and suppressed errors, rerun with: -v
+==4443== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 Testcase 5: Trying hands with straights
  Checking the output 
-Line_43_did_not_match
-Line_110_did_not_match
 Line_118_did_not_match
 Line_133_did_not_match
 Your file did not match the expected ouput
@@ -238,7 +236,7 @@ Hand 2:								Hand 2:
  - 5 cards used for hand: 6c 5h 4s 3s 2d 			 - 5 cards used for hand: 6c 5h 4s 3s 2d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -305,7 +303,7 @@ Ac 5s 4c 3s 2s 							Ac 5s 4c 3s 2s
  - 5 cards used for hand: 5s 4c 3s 2s Ac 			 - 5 cards used for hand: 5s 4c 3s 2s Ac 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -644,50 +642,50 @@ Your file matched the expected output
  - Testcase passed
 Testcase 8: Trying hands with 4 of a kind
 Valgrind returned an error status
-==4247== Memcheck, a memory error detector
-==4247== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==4247== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==4247== Command: ./test-eval inp.8.txt
-==4247== Parent PID: 4246
-==4247== 
-==4247== Use of uninitialised value of size 8
-==4247==    at 0x400C0D: print_hand (deck.c:8)
-==4247==    by 0x402735: describe_hand (test-eval.c:74)
-==4247==    by 0x402935: main (test-eval.c:119)
-==4247== 
-==4247== Invalid read of size 8
-==4247==    at 0x400C0D: print_hand (deck.c:8)
-==4247==    by 0x402735: describe_hand (test-eval.c:74)
-==4247==    by 0x402935: main (test-eval.c:119)
-==4247==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==4247== 
-==4247== 
-==4247== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==4247==  Access not within mapped region at address 0x0
-==4247==    at 0x400C0D: print_hand (deck.c:8)
-==4247==    by 0x402735: describe_hand (test-eval.c:74)
-==4247==    by 0x402935: main (test-eval.c:119)
-==4247==  If you believe this happened as a result of a stack
-==4247==  overflow in your program's main thread (unlikely but
-==4247==  possible), you can try to increase the size of the
-==4247==  main thread stack using the --main-stacksize= flag.
-==4247==  The main thread stack size used in this run was 8388608.
-==4247== 
-==4247== HEAP SUMMARY:
-==4247==     in use at exit: 896 bytes in 18 blocks
-==4247==   total heap usage: 208 allocs, 190 frees, 12,640 bytes allocated
-==4247== 
-==4247== LEAK SUMMARY:
-==4247==    definitely lost: 0 bytes in 0 blocks
-==4247==    indirectly lost: 0 bytes in 0 blocks
-==4247==      possibly lost: 0 bytes in 0 blocks
-==4247==    still reachable: 896 bytes in 18 blocks
-==4247==         suppressed: 0 bytes in 0 blocks
-==4247== Rerun with --leak-check=full to see details of leaked memory
-==4247== 
-==4247== For counts of detected and suppressed errors, rerun with: -v
-==4247== Use --track-origins=yes to see where uninitialised values come from
-==4247== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==4486== Memcheck, a memory error detector
+==4486== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==4486== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4486== Command: ./test-eval inp.8.txt
+==4486== Parent PID: 4485
+==4486== 
+==4486== Use of uninitialised value of size 8
+==4486==    at 0x400C0D: print_hand (deck.c:8)
+==4486==    by 0x402735: describe_hand (test-eval.c:74)
+==4486==    by 0x402935: main (test-eval.c:119)
+==4486== 
+==4486== Invalid read of size 8
+==4486==    at 0x400C0D: print_hand (deck.c:8)
+==4486==    by 0x402735: describe_hand (test-eval.c:74)
+==4486==    by 0x402935: main (test-eval.c:119)
+==4486==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==4486== 
+==4486== 
+==4486== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==4486==  Access not within mapped region at address 0x0
+==4486==    at 0x400C0D: print_hand (deck.c:8)
+==4486==    by 0x402735: describe_hand (test-eval.c:74)
+==4486==    by 0x402935: main (test-eval.c:119)
+==4486==  If you believe this happened as a result of a stack
+==4486==  overflow in your program's main thread (unlikely but
+==4486==  possible), you can try to increase the size of the
+==4486==  main thread stack using the --main-stacksize= flag.
+==4486==  The main thread stack size used in this run was 8388608.
+==4486== 
+==4486== HEAP SUMMARY:
+==4486==     in use at exit: 896 bytes in 18 blocks
+==4486==   total heap usage: 208 allocs, 190 frees, 12,640 bytes allocated
+==4486== 
+==4486== LEAK SUMMARY:
+==4486==    definitely lost: 0 bytes in 0 blocks
+==4486==    indirectly lost: 0 bytes in 0 blocks
+==4486==      possibly lost: 0 bytes in 0 blocks
+==4486==    still reachable: 896 bytes in 18 blocks
+==4486==         suppressed: 0 bytes in 0 blocks
+==4486== Rerun with --leak-check=full to see details of leaked memory
+==4486== 
+==4486== For counts of detected and suppressed errors, rerun with: -v
+==4486== Use --track-origins=yes to see where uninitialised values come from
+==4486== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 Testcase 9: Trying hands with straight flushes
  Checking the output 
 Line_53_did_not_match
@@ -812,77 +810,6 @@ Hand 1 wins!						      <
 ============================				      <
 Testcase 10: Trying each type of hand ranking
  Checking the output 
-Line_19_did_not_match
-Line_39_did_not_match
-Line_59_did_not_match
-Line_79_did_not_match
-Line_100_did_not_match
-Line_121_did_not_match
-Line_141_did_not_match
-Line_161_did_not_match
-Line_181_did_not_match
-Line_201_did_not_match
-Line_221_did_not_match
-Line_241_did_not_match
-Line_262_did_not_match
-Line_283_did_not_match
-Line_303_did_not_match
-Line_323_did_not_match
-Line_343_did_not_match
-Line_363_did_not_match
-Line_383_did_not_match
-Line_403_did_not_match
-Line_424_did_not_match
-Line_445_did_not_match
-Line_465_did_not_match
-Line_485_did_not_match
-Line_505_did_not_match
-Line_525_did_not_match
-Line_545_did_not_match
-Line_565_did_not_match
-Line_586_did_not_match
-Line_607_did_not_match
-Line_627_did_not_match
-Line_647_did_not_match
-Line_667_did_not_match
-Line_687_did_not_match
-Line_707_did_not_match
-Line_727_did_not_match
-Line_748_did_not_match
-Line_769_did_not_match
-Line_789_did_not_match
-Line_809_did_not_match
-Line_830_did_not_match
-Line_851_did_not_match
-Line_872_did_not_match
-Line_893_did_not_match
-Line_914_did_not_match
-Line_936_did_not_match
-Line_957_did_not_match
-Line_978_did_not_match
-Line_999_did_not_match
-Line_1020_did_not_match
-Line_1041_did_not_match
-Line_1062_did_not_match
-Line_1083_did_not_match
-Line_1105_did_not_match
-Line_1126_did_not_match
-Line_1147_did_not_match
-Line_1167_did_not_match
-Line_1187_did_not_match
-Line_1207_did_not_match
-Line_1227_did_not_match
-Line_1247_did_not_match
-Line_1268_did_not_match
-Line_1289_did_not_match
-Line_1309_did_not_match
-Line_1329_did_not_match
-Line_1349_did_not_match
-Line_1369_did_not_match
-Line_1389_did_not_match
-Line_1430_did_not_match
-Line_1451_did_not_match
-Line_1471_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -904,7 +831,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -925,7 +852,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -946,7 +873,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -967,7 +894,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -989,7 +916,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1011,7 +938,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1032,7 +959,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1053,7 +980,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1074,7 +1001,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1094,7 +1021,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1114,7 +1041,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1134,7 +1061,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1155,7 +1082,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1176,7 +1103,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1196,7 +1123,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1216,7 +1143,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1237,7 +1164,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1257,7 +1184,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1277,7 +1204,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1297,7 +1224,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1318,7 +1245,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1339,7 +1266,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1359,7 +1286,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1379,7 +1306,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1400,7 +1327,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1420,7 +1347,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1440,7 +1367,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1460,7 +1387,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1481,7 +1408,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1502,7 +1429,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1522,7 +1449,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1542,7 +1469,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1563,7 +1490,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1583,7 +1510,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1603,7 +1530,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1623,7 +1550,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1644,7 +1571,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1665,7 +1592,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1685,7 +1612,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1705,7 +1632,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1727,7 +1654,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1748,7 +1675,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1769,7 +1696,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1790,7 +1717,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1811,7 +1738,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1833,7 +1760,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1854,7 +1781,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1875,7 +1802,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1897,7 +1824,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1918,7 +1845,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1939,7 +1866,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1960,7 +1887,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1981,7 +1908,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2003,7 +1930,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2024,7 +1951,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2045,7 +1972,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2066,7 +1993,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2086,7 +2013,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2106,7 +2033,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2126,7 +2053,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2146,7 +2073,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2167,7 +2094,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2188,7 +2115,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2208,7 +2135,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
  - 5 cards used for hand: Ad Ah Kd Ks 3h 			 - 5 cards used for hand: Ad Ah Kd Ks 3h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2229,7 +2156,7 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
  - 5 cards used for hand: As Ks Js 0s 3s 			 - 5 cards used for hand: As Ks Js 0s 3s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2249,7 +2176,7 @@ Kc Kd Kh Ks 8c 6d 						Kc Kd Kh Ks 8c 6d
  - 5 cards used for hand: Kc Kd Kh Ks 8c 			 - 5 cards used for hand: Kc Kd Kh Ks 8c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2269,7 +2196,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
  - 5 cards used for hand: Kd Kh Ks 7c 7h 			 - 5 cards used for hand: Kd Kh Ks 7c 7h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2289,7 +2216,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
  - 5 cards used for hand: Kc Js 7h 6c 4d 			 - 5 cards used for hand: Kc Js 7h 6c 4d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2330,7 +2257,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
  - 5 cards used for hand: Kh Qh Jh 0h 9h 			 - 5 cards used for hand: Kh Qh Jh 0h 9h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2351,7 +2278,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
  - 5 cards used for hand: Js 0c 9s 8d 7c 			 - 5 cards used for hand: Js 0c 9s 8d 7c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -2371,7 +2298,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
  - 5 cards used for hand: Jc Jd Jh 7c 5h 			 - 5 cards used for hand: Jc Jd Jh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 
 Overall Grade: F
