@@ -106,6 +106,9 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   }
   // checking for straight_flush
   else{
+    if (hand->cards[index]->suit != fs){
+      return 0;
+    }
     // straight flush counter
     int s_f_c = 0;
     unsigned ref_val,val;
