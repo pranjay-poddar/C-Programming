@@ -89,8 +89,14 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
     for (int q=index; q<hand->n_cards-1;q++){
       v1 = ((hand->cards)[q])-> value;
       v2 = ((hand->cards)[q+1])->value;
-      if (v1-v2 == 1 ){
+      if (v1-v2 > 1 ){
+	return 0;
+      }
+      else if(v1-v2 == 1){
 	straight_counter++;
+      }
+      else{
+	continue;
       }
     }
     if (straight_counter>=4){
