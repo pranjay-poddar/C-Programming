@@ -150,7 +150,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
     card_counter++;
   }
   for (int j=0;j<idx;j++){
-    if (card_counter==4){
+    if (card_counter==5){
       break;
     }
     ans.cards[card_counter]=hand->cards[j];
