@@ -9,7 +9,7 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
   const card_t * c1 = *cp1;
   const card_t * c2 = *cp2;
   if (c1->value == c2->value){
-    return c2->suit - c1->suit;
+    return c1->suit - c2->suit;
   }
   else{
     return c2->value - c1->value;
@@ -67,14 +67,14 @@ size_t find_secondary_pair(deck_t * hand,
 
 int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   //checking if the no of remaining cards is less than 5
-  if (hand->n_cards - index < 5){
+  /*if (hand->n_cards - index < 5){
     return 0;
-  }
-  if (((hand->cards)[index])->value == VALUE_ACE){
+    }*/
+  if (hand->cards[index]->value == VALUE_ACE){
     unsigned ref = 5;
     unsigned v ;
     for (int d=index+1; d<hand->n_cards;d++){
-      v = ((hand->cards)[d])->value;
+      v = hand->cards[d]->value;
       if(v==ref){
 	ref--;
       }
@@ -85,14 +85,15 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
   }
   if (fs == NUM_SUITS){
     int straight_counter = 0;
+    unsigned v1,v2;
     for (int q=index; q<hand->n_cards-1;q++){
-      unsigned v1 = ((hand->cards)[q])-> value;
-      unsigned v2 = ((hand->cards)[q+1])->value;
+      v1 = ((hand->cards)[q])-> value;
+      v2 = ((hand->cards)[q+1])->value;
       if (v1-v2 == 1 ){
 	straight_counter++;
       }
     }
-    if (straight_counter>=5){
+    if (straight_counter>=4){
       return 1;
     }
     return 0;
@@ -172,7 +173,8 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	continue;
       }
       else{
-	return v1 - v2;
+	int dum = v1 - v2;
+	return dum;
       }
     }
     return 0;
@@ -201,7 +203,7 @@ void copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t cou
   unsigned nextv = from->cards[ind]->value;
   size_t to_ind = 0;
   while (count > 0) {
-    assert(ind < from->n_cards);
+     assert(ind < from->n_cards);
     assert(nextv >= 2);
     assert(to_ind <5);
     if (from->cards[ind]->value == nextv &&
