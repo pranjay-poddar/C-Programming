@@ -8,18 +8,21 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
   const card_t * const * cp2 = vp2;
   const card_t * c1 = *cp1;
   const card_t * c2 = *cp2;
+  int dum;
   if (c1->value == c2->value){
-    return c2->suit - c1->suit;
+    dum = c2->suit - c1->suit;
+    return dum;
   }
   else{
-    return c2->value - c1->value;
+    dum = c2->value - c1->value;
+    return dum;
   }
 }
 
 suit_t flush_suit(deck_t * hand) {
   int suit_count[4]={0,0,0,0};
   for (int i=0; i< hand->n_cards;i++){
-    suit_t dum = ((hand->cards)[i])->suit;
+    suit_t dum = hand->cards[i]->suit;
     suit_count[dum]+=1;
   }
   suit_t j;
