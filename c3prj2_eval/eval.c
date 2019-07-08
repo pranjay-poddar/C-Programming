@@ -288,7 +288,7 @@ hand_eval_t evaluate_hand(deck_t * hand) {
     ans = build_hand_from_match(hand, 3, FULL_HOUSE, match_idx);
     ans.cards[3] = hand->cards[other_pair_idx];
     //    printf("%zd\n",other_pair_idx+1);
-    assert(other_pair_idx<=hand->n_cards);
+    assert(other_pair_idx<=hand->n_cards-2);
     ans.cards[4] = hand->cards[other_pair_idx+1];
     return ans;
   }
