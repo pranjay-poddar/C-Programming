@@ -46,25 +46,28 @@ unsigned get_largest_element(unsigned * arr, size_t n) {
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
   for (size_t i=0; i<n ; i++){
-    if (match_counts[i]== n_of_akind){
+    if (match_counts[(int)i]== n_of_akind){
       return i;
     }
   }
+  assert(0);
   return 0;
 }
 ssize_t find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
-  for (ssize_t i=0; i<match_idx;i++){
-    if (match_counts[i]>1){
+  for (ssize_t i=0; i< hand->n_cards;i++){
+    if (match_counts[i]>1 && (hand->cards[i]->value != hand->cards[match_idx]->value)){
       return i;
     }
   }
+  /*
   for (ssize_t j = match_idx + match_counts[match_idx];j<hand->n_cards;j++){
     if (match_counts[j]>1){
       return j;
     }
   }
+  */
   return -1;
 }
 
