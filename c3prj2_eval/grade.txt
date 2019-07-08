@@ -1,4 +1,4 @@
-Grading at Mon Jul  8 19:55:12 UTC 2019
+Grading at Mon Jul  8 21:00:54 UTC 2019
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -113,7 +113,6 @@ Hand 2 wins!						      |	Hand 1 wins!
 ============================					============================
 Testcase 2: Trying hands with pairs
  Checking the output 
-Line_19_did_not_match
 Line_39_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
@@ -135,7 +134,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
  - 5 cards used for hand: Kc Ks Js 9h 2c 			 - 5 cards used for hand: Kc Ks Js 9h 2c 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -203,8 +202,8 @@ Your file matched the expected output
  - Testcase passed
 Testcase 4: Trying hands with 3 of a kind
  Checking the output 
-Line_39_did_not_match
 Line_79_did_not_match
+Line_119_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -245,7 +244,7 @@ Qc Qd Qh 8c 5h 2c 						Qc Qd Qh 8c 5h 2c
  - 5 cards used for hand: Qc Qd Qh 8c 5h 			 - 5 cards used for hand: Qc Qd Qh 8c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -285,7 +284,7 @@ Qc Qd Qh 7c 5h 3c 						Qc Qd Qh 7c 5h 3c
  - 5 cards used for hand: Qc Qd Qh 7c 5h 			 - 5 cards used for hand: Qc Qd Qh 7c 5h 
 Comparison : 							Comparison : 
 --------------							--------------
-Tie							      |	Hand 2 wins!
+Tie							      |	Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -323,10 +322,10 @@ As Qc Jc Jd Jh 7c 						As Qc Jc Jd Jh 7c
  - No secondary pair						 - No secondary pair
  - evaluate_hand's ranking: THREE_OF_A_KIND			 - evaluate_hand's ranking: THREE_OF_A_KIND
  - 5 cards used for hand: Jc Jd Jh As Qc 			 - 5 cards used for hand: Jc Jd Jh As Qc 
-Comparison : 						      <
---------------						      <
-Hand 1 wins!						      <
-============================				      <
+Comparison : 							Comparison : 
+--------------							--------------
+Hand 1 wins!						      |	Hand 2 wins!
+============================					============================
 Testcase 5: Trying hands with straights
  Checking the output 
 Line_134_did_not_match
