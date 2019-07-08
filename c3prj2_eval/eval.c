@@ -177,8 +177,10 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 
 
 int compare_hands(deck_t * hand1, deck_t * hand2) {
-  hand_eval_t h1 = evaluate_hand(hand1);
-  hand_eval_t h2 = evaluate_hand(hand2);
+  qsort(hand1->cards,hand1->n_cards,sizeof(hand1->cards),card_ptr_comp);
+  qsort(hand2->cards,hand2->n_cards,sizeof(hand2->cards),card_ptr_comp);
+  const hand_eval_t h1 = evaluate_hand(hand1);
+  const hand_eval_t h2 = evaluate_hand(hand2);
   if (h1.ranking != h2.ranking){
     return h2.ranking-h1.ranking;
   }
