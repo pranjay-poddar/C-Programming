@@ -33,18 +33,19 @@ void print_array (int * array, int n){
     }
   }
 }
-void break_cypher(FILE * f){
+int break_cypher(FILE * f){
   int c;
   int n = ALPHABET_NUM;
   int letter_count[ALPHABET_NUM] = {0};
   count_letter (f,letter_count);
   int idx = max_idx(letter_count, n);
   //  print_array(letter_count,n);
-  if (idx - 4 < 0){
+  /* if (idx - 4 < 0){
     printf("i could not find a key\n");
     return EXIT_FAILURE;
   }
-  printf("%d\n",idx-4);
+  printf("%d\n",idx-4);*/
+  return idx-4;
 }
 int main(int argc, char ** argv){
   if (argc != 2){
@@ -58,7 +59,13 @@ int main(int argc, char ** argv){
     return EXIT_FAILURE;
   }
   //  printf("before enter the fun\n");
-  break_cypher(f);
+  if (break_cypher(f)<0){
+    printf("i could not find a key\n");
+    return EXIT_FAILURE;
+  }
+  else{
+    printf("%d\n",break_cypher(f));
+  }
   if (fclose(f) != 0){
     perror("could not close the input file!");
     return EXIT_FAILURE;
