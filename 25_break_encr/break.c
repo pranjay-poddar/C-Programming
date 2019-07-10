@@ -19,8 +19,10 @@ void break_cypher(FILE * f){
   int letter_count[ALPHABET_NUM] = {0};
   while(c = fgetc(f) != EOF){
     if (isalpha(c)){
+      printf("c is alpha and it is %d\n",c);
       c = tolower(c);
-      letter_count[c-'a']+=1;
+      printf("%d\n",c);
+      letter_count[c-97]+=1;
     }
   }
   int idx = max_idx(letter_count, ALPHABET_NUM);
@@ -36,6 +38,8 @@ int main(int argc, char ** argv){
     printf("could not open the file\n");
     return EXIT_FAILURE;
   }
+  printf("before enter the fun\n");
   break_cypher(f);
+  printf("after\n");
   return EXIT_SUCCESS;
 }
