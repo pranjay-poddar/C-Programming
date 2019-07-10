@@ -1,5 +1,6 @@
-# include<stdio.h>
+# include <stdio.h>
 # include <stdlib.h>
+# include <ctype.h>
 # define ALPHABET_NUM 26
 
 int max_idx (int * array, int n){
@@ -13,7 +14,7 @@ int max_idx (int * array, int n){
   }
   return max_idx;
 }
-void break (FILE * f){
+void break_cypher(FILE * f){
   int c;
   int letter_count[ALPHABET_NUM] = {0};
   while(c = fgetc(f) != EOF){
@@ -25,10 +26,16 @@ void break (FILE * f){
   int idx = max_idx(letter_count, ALPHABET_NUM);
   printf("%d\n",idx-4);
 }
-int main(int argc, char * argv){
+int main(int argc, char ** argv){
   if (argc != 2){
     printf("Usage: break input-filename");
     return EXIT_FAILURE;
   }
-  
+  FILE * f = fopen(argv[1],"r");
+  if (f == NULL){
+    printf("could not open the file\n");
+    return EXIT_FAILURE;
+  }
+  break_cypher(f);
+  return EXIT_SUCCESS;
 }
