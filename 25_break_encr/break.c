@@ -39,8 +39,8 @@ void break_cypher(FILE * f){
   int letter_count[ALPHABET_NUM] = {0};
   count_letter (f,letter_count);
   int idx = max_idx(letter_count, n);
-  print_array(letter_count,n);
-  printf("\n%d\n",idx);
+  //  print_array(letter_count,n);
+  printf("%d\n",idx-4);
 }
 int main(int argc, char ** argv){
   if (argc != 2){
@@ -53,7 +53,7 @@ int main(int argc, char ** argv){
     perror("could not open the file");
     return EXIT_FAILURE;
   }
-  printf("before enter the fun\n");
+  //  printf("before enter the fun\n");
   break_cypher(f);
   if (fclose(f) != 0){
     perror("could not close the input file!");
