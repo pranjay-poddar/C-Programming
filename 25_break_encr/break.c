@@ -59,12 +59,13 @@ int main(int argc, char ** argv){
     return EXIT_FAILURE;
   }
   //  printf("before enter the fun\n");
-  if (break_cypher(f)<0){
+  int key = break_cypher(f);
+  if (key<0){
     printf("i could not find a key\n");
     return EXIT_FAILURE;
   }
   else{
-    printf("%d\n",break_cypher(f));
+    printf("%d\n",key);
   }
   if (fclose(f) != 0){
     perror("could not close the input file!");
