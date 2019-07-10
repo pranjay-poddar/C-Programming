@@ -40,6 +40,10 @@ void break_cypher(FILE * f){
   count_letter (f,letter_count);
   int idx = max_idx(letter_count, n);
   //  print_array(letter_count,n);
+  if (idx - 4 < 0){
+    printf("i could not find a key\n");
+    return EXIT_FAILURE;
+  }
   printf("%d\n",idx-4);
 }
 int main(int argc, char ** argv){
