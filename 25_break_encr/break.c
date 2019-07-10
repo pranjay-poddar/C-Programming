@@ -61,8 +61,9 @@ int main(int argc, char ** argv){
   //  printf("before enter the fun\n");
   int key = break_cypher(f);
   if (key<0){
-    printf("i could not find a key\n");
-    return EXIT_FAILURE;
+    printf("%d\n",(key+26)%26)
+    //    printf("i could not find a key\n");
+    //    return EXIT_FAILURE;
   }
   else{
     printf("%d\n",key);
