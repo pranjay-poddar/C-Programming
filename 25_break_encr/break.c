@@ -7,13 +7,13 @@ int max_idx (int * array, int n){
   int largest = 0;
   int max_id = -1;
   for (int i=0; i<n ; i++){
-    printf("%d ",array[i]);
+    // printf("%d ",array[i]);
     if ( array[i] > largest){
       largest = array[i];
       max_id = i;
     }
   }
-  printf("the largest is %d",largest);
+  // printf("the largest is %d",largest);
   return max_id;
 }
 void break_cypher(FILE * f){
