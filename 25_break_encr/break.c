@@ -16,21 +16,31 @@ int max_idx (int * array, int n){
   // printf("the largest is %d",largest);
   return max_id;
 }
-void break_cypher(FILE * f){
+void count_letter (FILE * f, int * array){
   int c;
-  int letter_count[ALPHABET_NUM] = {0};
-  while((c = fgetc(f)) != EOF){
-    //    printf("inside the while%d %c\n",c,c);
+  while ((c = fgetc(f)) != EOF){
     if (isalpha(c)){
-      //      printf("c is alpha and it is %d\n",c);
-      c = tolower(c);
-      //      printf("%d\n",c);
-      letter_count[c-97]+=1;
+      c = tolower(c)- 'a';
+      array[c]+=1;
     }
   }
+}
+void print_array (int * array, int n){
+  for (int i = 0; i<n ; i++){
+    printf("%d ",array[i]);
+    if ((i+1)%10 == 0){
+      printf("\n");
+    }
+  }
+}
+void break_cypher(FILE * f){
+  int c;
   int n = ALPHABET_NUM;
+  int letter_count[ALPHABET_NUM] = {0};
+  count_letter (f,letter_count);
   int idx = max_idx(letter_count, n);
-  printf("%d\n",(idx-4+26)%26);
+  print_array(letter_count,n);
+  printf("\n%d\n",idx);
 }
 int main(int argc, char ** argv){
   if (argc != 2){
