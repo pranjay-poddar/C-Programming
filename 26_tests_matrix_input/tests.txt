@@ -1,1 +1,10 @@
-./run-all.sh in2.txt
+in7.txt
+in1.txt
+in2.txt
+in3.txt
+in4.txt
+in5.txt
+in6.txt
+in1.txt in3.txt
+
+in7.txt
