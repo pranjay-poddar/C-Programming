@@ -15,7 +15,7 @@ int main(int argc, char * argv[]){
   FILE * f;
   char matrix[N][N] = {0};
   if (argc > 2){
-    printf("Too many argument\n");
+    fprintf(stderr,"Too many argument\n");
     return EXIT_FAILURE;
   }
   else if(argc < 2){
