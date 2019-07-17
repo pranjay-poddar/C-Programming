@@ -1,4 +1,4 @@
-Grading at Wed Jul 17 13:24:15 UTC 2019
+Grading at Wed Jul 17 13:48:21 UTC 2019
 Attempting to compile rotateMatrix.c
 testcase1 failed, your program didn't indicate this is a failure case
 #################################################
@@ -32,7 +32,7 @@ testcase8 failed, your program didn't indicate this is a failure case
 #################################################
 testcase9: normal1.txt normal2.txt
  (should indicate an error)
-testcase9 failed, your program didn't indicate this is a failure case
+testcase9 passed
 #################################################
 testcase10: normal1.txt
 Your file matched the expected output
