@@ -19,14 +19,14 @@ int main(int argc, char * argv[]){
     return EXIT_FAILURE;
   }
   else if(argc < 2){
-    printf("one argument expected\n");
+    fprintf(stderr,"one argument expected\n");
     return EXIT_FAILURE;
   }
   else{
     //    char * file_name[]=argv[1];
     //    printf("%s\n",argv[1]);
     if ((f = fopen(argv[1],"r")) == NULL){
-      printf("could not open the file\n");
+      fprintf(stderr,"could not open the file\n");
       return EXIT_FAILURE;
     }
   }
@@ -35,11 +35,11 @@ int main(int argc, char * argv[]){
     for (int j=0 ; j < N; j++){//columns
       //      printf("%c",c);
       if ((c = fgetc(f)) == EOF){
-	printf("wrong format: EOF at the middle of the data\n");
+	fprintf(stderr,"wrong format: EOF at the middle of the data\n");
 	return EXIT_FAILURE;
       }
       else if (c == '\n'){
-	printf("wrong format: early newline\n");
+	fprintf(stderr,"wrong format: early newline\n");
 	return EXIT_FAILURE;
       }
       else{
@@ -47,7 +47,7 @@ int main(int argc, char * argv[]){
       }
     }
     if (fgetc(f) != '\n'){
-      printf("wrong format: no newline after 10 char\n");
+      fprintf(stderr,"wrong format: no newline after 10 char\n");
       return EXIT_FAILURE;
     }
   }
