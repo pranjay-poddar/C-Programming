@@ -51,6 +51,10 @@ int main(int argc, char * argv[]){
       return EXIT_FAILURE;
     }
   }
+  if (fgetc(f) != EOF){
+    fprintf(stderr,"too long characters");
+    return EXIT_FAILURE;
+  }
   rotate(matrix);
   print_array(matrix,N);
   return EXIT_SUCCESS;
