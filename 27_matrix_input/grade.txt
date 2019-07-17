@@ -1,26 +1,26 @@
-Grading at Wed Jul 17 13:48:21 UTC 2019
+Grading at Wed Jul 17 14:36:14 UTC 2019
 Attempting to compile rotateMatrix.c
-testcase1 failed, your program didn't indicate this is a failure case
+testcase1 passed
 #################################################
 testcase2: NonExistentFile
  (should indicate an error)
-testcase2 failed, your program didn't indicate this is a failure case
+testcase2 passed
 #################################################
 testcase3: blank.txt
  (should indicate an error)
-testcase3 failed, your program didn't indicate this is a failure case
+testcase3 passed
 #################################################
 testcase4: short-line.txt
  (should indicate an error)
-testcase4 failed, your program didn't indicate this is a failure case
+testcase4 passed
 #################################################
 testcase5: short-file.txt
  (should indicate an error)
-testcase5 failed, your program didn't indicate this is a failure case
+testcase5 passed
 #################################################
 testcase6: long-line.txt
  (should indicate an error)
-testcase6 failed, your program didn't indicate this is a failure case
+testcase6 passed
 #################################################
 testcase7: long-file.txt
  (should indicate an error)
@@ -28,7 +28,7 @@ testcase7 failed, your program didn't indicate this is a failure case
 #################################################
 testcase8: long-line-2.txt
  (should indicate an error)
-testcase8 failed, your program didn't indicate this is a failure case
+testcase8 passed
 #################################################
 testcase9: normal1.txt normal2.txt
  (should indicate an error)
@@ -50,4 +50,4 @@ testcase10: eof.txt
 Your file matched the expected output
 testcase10 passed
 
-Overall Grade: F
+Overall Grade: B
