@@ -22,6 +22,7 @@ void encrypt(FILE * f, int key, FILE * outfile){
     }
     fprintf(outfile, "%s", line);
   }
+  free(line);
 }
 
 int main(int argc, char ** argv) {
@@ -41,9 +42,9 @@ int main(int argc, char ** argv) {
   }
   //outfileNAme is argv[2] + ".txt", so add 4 to its length.
   char * outFileName = malloc((strlen(argv[2]) + 8) * sizeof(*outFileName));
-  printf("%lu\n",sizeof(char));
-  printf("%lu\n",sizeof(outFileName));
-  printf("%s\n",argv[2]);
+  //  printf("%lu\n",sizeof(char));
+  //  printf("%lu\n",sizeof(outFileName));
+  //  printf("%s\n",argv[2]);
   strcpy(outFileName, argv[2]);
   strcat(outFileName, ".enc");
   FILE * outFile = fopen(outFileName, "w");
@@ -56,6 +57,6 @@ int main(int argc, char ** argv) {
     perror("Failed to close the input file!");
     return EXIT_FAILURE;
   }
-
+  free(outFileName);
   return EXIT_SUCCESS;
 }
