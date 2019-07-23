@@ -1,208 +1,28 @@
-Grading at Sun Jul 21 03:11:27 UTC 2019
+Grading at Tue Jul 23 12:24:21 UTC 2019
 Attempting to compile encrypt.c
 testcase1:
-1
-8
-55_fix_vg_encr_input.txt
-1
-8
-55_fix_vg_encr_input.txt
 your output was correct
-  - Valgrind reported errors
-valgrind was not clean
-==120== Memcheck, a memory error detector
-==120== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==120== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==120== 
-==120== Parent PID: 119
-==120== 
-==120== 
-==120== HEAP SUMMARY:
-==120==     in use at exit: 152 bytes in 2 blocks
-==120==   total heap usage: 7 allocs, 5 frees, 13,544 bytes allocated
-==120== 
-==120== 32 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==120==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==120==    by 0x400BD9: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==120== 
-==120== 120 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==120==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==120==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==120==    by 0x400ADC: encrypt (in /graderhome/work/28_fix_vg_encr/encrypt)
-==120==    by 0x400C8F: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==120== 
-==120== LEAK SUMMARY:
-==120==    definitely lost: 152 bytes in 2 blocks
-==120==    indirectly lost: 0 bytes in 0 blocks
-==120==      possibly lost: 0 bytes in 0 blocks
-==120==    still reachable: 0 bytes in 0 blocks
-==120==         suppressed: 0 bytes in 0 blocks
-==120== 
-==120== For counts of detected and suppressed errors, rerun with: -v
-==120== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase2:
   - Valgrind was clean (no errors, no memory leaks)
 valgrind was clean
 #################################################
 testcase3:
-1
-8
-55_fix_vg_encr_input.txt
-1
-8
-55_fix_vg_encr_input.txt
-  - Valgrind reported errors
-valgrind was not clean
-==137== Memcheck, a memory error detector
-==137== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==137== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==137== 
-==137== Parent PID: 136
-==137== 
-==137== 
-==137== HEAP SUMMARY:
-==137==     in use at exit: 152 bytes in 2 blocks
-==137==   total heap usage: 7 allocs, 5 frees, 13,544 bytes allocated
-==137== 
-==137== 32 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==137==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==137==    by 0x400BD9: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==137== 
-==137== 120 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==137==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==137==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==137==    by 0x400ADC: encrypt (in /graderhome/work/28_fix_vg_encr/encrypt)
-==137==    by 0x400C8F: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==137== 
-==137== LEAK SUMMARY:
-==137==    definitely lost: 152 bytes in 2 blocks
-==137==    indirectly lost: 0 bytes in 0 blocks
-==137==      possibly lost: 0 bytes in 0 blocks
-==137==    still reachable: 0 bytes in 0 blocks
-==137==         suppressed: 0 bytes in 0 blocks
-==137== 
-==137== For counts of detected and suppressed errors, rerun with: -v
-==137== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase4:
-1
-8
-55_fix_vg_encr_input.txt
-1
-8
-55_fix_vg_encr_input.txt
-  - Valgrind reported errors
-valgrind was not clean
-==146== Memcheck, a memory error detector
-==146== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==146== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==146== 
-==146== Parent PID: 145
-==146== 
-==146== 
-==146== HEAP SUMMARY:
-==146==     in use at exit: 152 bytes in 2 blocks
-==146==   total heap usage: 7 allocs, 5 frees, 13,544 bytes allocated
-==146== 
-==146== 32 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==146==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==146==    by 0x400BD9: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==146== 
-==146== 120 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==146==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==146==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==146==    by 0x400ADC: encrypt (in /graderhome/work/28_fix_vg_encr/encrypt)
-==146==    by 0x400C8F: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==146== 
-==146== LEAK SUMMARY:
-==146==    definitely lost: 152 bytes in 2 blocks
-==146==    indirectly lost: 0 bytes in 0 blocks
-==146==      possibly lost: 0 bytes in 0 blocks
-==146==    still reachable: 0 bytes in 0 blocks
-==146==         suppressed: 0 bytes in 0 blocks
-==146== 
-==146== For counts of detected and suppressed errors, rerun with: -v
-==146== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase5:
-1
-8
-55_fix_vg_encr_input.txt
-1
-8
-55_fix_vg_encr_input.txt
-  - Valgrind reported errors
-valgrind was not clean
-==155== Memcheck, a memory error detector
-==155== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==155== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==155== 
-==155== Parent PID: 154
-==155== 
-==155== 
-==155== HEAP SUMMARY:
-==155==     in use at exit: 152 bytes in 2 blocks
-==155==   total heap usage: 7 allocs, 5 frees, 13,544 bytes allocated
-==155== 
-==155== 32 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==155==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==155==    by 0x400BD9: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==155== 
-==155== 120 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==155==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==155==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==155==    by 0x400ADC: encrypt (in /graderhome/work/28_fix_vg_encr/encrypt)
-==155==    by 0x400C8F: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==155== 
-==155== LEAK SUMMARY:
-==155==    definitely lost: 152 bytes in 2 blocks
-==155==    indirectly lost: 0 bytes in 0 blocks
-==155==      possibly lost: 0 bytes in 0 blocks
-==155==    still reachable: 0 bytes in 0 blocks
-==155==         suppressed: 0 bytes in 0 blocks
-==155== 
-==155== For counts of detected and suppressed errors, rerun with: -v
-==155== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase6:
-1
-8
-55_fix_vg_encr_input.txt
-1
-8
-55_fix_vg_encr_input.txt
-  - Valgrind reported errors
-valgrind was not clean
-==164== Memcheck, a memory error detector
-==164== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==164== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==164== 
-==164== Parent PID: 163
-==164== 
-==164== 
-==164== HEAP SUMMARY:
-==164==     in use at exit: 152 bytes in 2 blocks
-==164==   total heap usage: 7 allocs, 5 frees, 13,544 bytes allocated
-==164== 
-==164== 32 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==164==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==164==    by 0x400BD9: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==164== 
-==164== 120 bytes in 1 blocks are definitely lost in loss record 2 of 2
-==164==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==164==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==164==    by 0x400ADC: encrypt (in /graderhome/work/28_fix_vg_encr/encrypt)
-==164==    by 0x400C8F: main (in /graderhome/work/28_fix_vg_encr/encrypt)
-==164== 
-==164== LEAK SUMMARY:
-==164==    definitely lost: 152 bytes in 2 blocks
-==164==    indirectly lost: 0 bytes in 0 blocks
-==164==      possibly lost: 0 bytes in 0 blocks
-==164==    still reachable: 0 bytes in 0 blocks
-==164==         suppressed: 0 bytes in 0 blocks
-==164== 
-==164== For counts of detected and suppressed errors, rerun with: -v
-==164== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
-Overall Grade: F
+Overall Grade: A
