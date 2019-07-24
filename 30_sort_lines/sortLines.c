@@ -50,6 +50,10 @@ int main(int argc, char ** argv) {
     // read from files
     // open the file
     for (int j=1;j<argc;j++){
+      line = NULL;
+      sz = 0;
+      str_array = NULL;
+      n = 0;
       FILE * f = fopen(argv[j],"r");
       if (f == NULL){
 	fprintf(stderr,"can not open the file");
@@ -66,15 +70,15 @@ int main(int argc, char ** argv) {
 	fprintf(stderr,"could not close the file!\n");
 	return EXIT_FAILURE;
       }
+      sortData(str_array,n);
+      print_str_array(str_array,n);
+      free(line);
+      // freeing the array
+      for (int i=0; i<n; i++){
+	free(str_array[i]);
+      }
+      free(str_array);
     }
-    sortData(str_array,n);
-    print_str_array(str_array,n);
-    free(line);
-    // freeing the array
-    for (int i=0; i<n; i++){
-      free(str_array[i]);
-    }
-    free(str_array);
   }
   return EXIT_SUCCESS;
 }
