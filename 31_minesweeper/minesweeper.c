@@ -199,7 +199,14 @@ int click (board_t * b, int x, int y) {
 
 int checkWin(board_t * b) {
   //WRITE ME!
-  return 0;
+  for (int i=0; i <b->height;i++){
+    for (int j=0; j < b->width; j++){
+      if (b->board[i][j] == UNKNOWN){
+	return 0;
+      }
+    }
+  }
+  return 1;
 }
 
 void freeBoard(board_t * b) {
