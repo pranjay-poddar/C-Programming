@@ -1,0 +1,49 @@
+Grading at Wed Jul 24 16:36:48 UTC 2019
+Attempting to compile sortLines.c
+#################################################
+testcase1:
+testcase1 failed, your program didn't indicate this is a failure case
+#################################################
+testcase2:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase3:
+Your output is correct
+  - Valgrind reported errors
+valgrind was not clean
+==392== Memcheck, a memory error detector
+==392== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==392== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==392== 
+==392== Parent PID: 391
+==392== 
+==392== 
+==392== HEAP SUMMARY:
+==392==     in use at exit: 760 bytes in 7 blocks
+==392==   total heap usage: 14 allocs, 7 frees, 9,584 bytes allocated
+==392== 
+==392== 120 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==392==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==392==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
+==392==    by 0x400B0D: main (in /graderhome/work/30_sort_lines/sortLines)
+==392== 
+==392== 640 (40 direct, 600 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==392==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==392==    by 0x400AA4: main (in /graderhome/work/30_sort_lines/sortLines)
+==392== 
+==392== LEAK SUMMARY:
+==392==    definitely lost: 160 bytes in 2 blocks
+==392==    indirectly lost: 600 bytes in 5 blocks
+==392==      possibly lost: 0 bytes in 0 blocks
+==392==    still reachable: 0 bytes in 0 blocks
+==392==         suppressed: 0 bytes in 0 blocks
+==392== 
+==392== For counts of detected and suppressed errors, rerun with: -v
+==392== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+#################################################
+testcase4:
+Your output is incorrect
+
+Overall Grade: F
