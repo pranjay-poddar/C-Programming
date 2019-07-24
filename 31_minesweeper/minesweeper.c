@@ -23,7 +23,22 @@ struct _board_t {
 };
 
 typedef struct _board_t board_t;
-
+int min (int a,int b){
+  if (a>b){
+    return b;
+  }
+  else{
+    return a;
+  }
+}
+int max (int a, int b){
+  if (a>b){
+    return a;
+  }
+  else{
+    return b;
+  }
+}
 void addRandomMine(board_t * b) {
   int x;
   int y;
@@ -104,7 +119,64 @@ void printBoard(board_t * b) {
 }
 int countMines(board_t * b, int x, int y) {
   //WRITE ME!
-  return 0;
+  int w = b->width;
+  int h = b->height;
+  int mineCount=0;
+  // check if the square is in the middle of the board
+  if (x>=1){
+    if (IS_MINE(b->board[y][x-1])){
+      mineCount++;
+    }
+  }
+  if (x+2<= w){
+    if (IS_MINE(b->board[y][x+1])){
+      mineCount++;
+    }
+  }
+  if (y>=1){
+    if (IS_MINE(b->board[y-1][x])){
+      mineCount++;
+    }
+  }
+  if (y+2 <= h){
+    if (IS_MINE(b->board[y+1][x])){
+      mineCount++;
+    }
+  }
+  if ((x>=1) && (y>=1)){
+    if (IS_MINE(b->board[y-1][x-1])){
+      mineCount++;
+    }
+  }
+  if ((x+2 <= w)&&(y+2 <= h)){
+    if (IS_MINE(b->board[y+1][x+1])){
+      mineCount++;
+    }
+  }
+  if ((y>=1)&&(x+2<= w)){
+    if (IS_MINE(b->board[y-1][x+1])){
+      mineCount++;
+    }
+  }
+  if ((x>=1)&&(y+2 <= h)){
+    if (IS_MINE(b->board[y+1][x-1])){
+      mineCount++;
+    }
+  }
+  /*  
+  if ((x>=1) && (y>=1)){
+    if(IS_MINE(b->board[y][x-1])){
+      mineCount++;
+    }
+    if(IS_MINE(b->board[y-1][x-1])){
+      mineCount++;
+    }
+    if(IS_MINE(b->board[y-1][x])){
+      mineCount++;
+    }
+  }
+  */
+  return mineCount;
 }
 int click (board_t * b, int x, int y) {
   if (x < 0 || x >= b->width ||
