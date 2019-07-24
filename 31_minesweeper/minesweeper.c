@@ -47,6 +47,7 @@ void addRandomMine(board_t * b) {
   //we give up
   int limit = b->width * b->height * 10;
   do {
+    //    printf("%d\n",b->width);
     x = random() % b->width;
     y = random() % b->height;
     assert(limit > 0);
@@ -59,6 +60,8 @@ board_t * makeBoard(int w, int h, int numMines) {
   //WRITE ME!
   board_t * boardPtr = malloc(sizeof(*boardPtr));
   boardPtr->board = malloc(h*sizeof(*(boardPtr->board)));
+  boardPtr->width = w;
+  boardPtr->height = h;
   for (int i=0; i < h; i++){
     boardPtr->board[i] = malloc(w*sizeof(*(boardPtr->board[i])));
   }
