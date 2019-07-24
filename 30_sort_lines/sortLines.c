@@ -15,10 +15,50 @@ int stringOrder(const void * vp1, const void * vp2) {
 void sortData(char ** data, size_t count) {
   qsort(data, count, sizeof(char *), stringOrder);
 }
+void print_str_array (char ** array,int size){
+  for (int i=0; i< size; i++){
+    printf("%s",array[i]);
+  }
+}
 
 int main(int argc, char ** argv) {
   
   //WRITE YOUR CODE HERE!
-  
+  char * line = NULL;
+  size_t sz = 0;
+  char ** str_array = NULL;
+  int n = 0;
+  if (argc == 1){
+    // read from std input
+    while (getline(&line, &sz,stdin) != -1){
+      str_array = realloc(str_array,(n+1)*sizeof(*str_array));
+      str_array[n] = malloc(sz * sizeof(*str_array[n]));
+      strcpy(str_array[n],line);
+      n++;
+      //      printf("%s\n",line);
+    }
+  }
+  if (argc > 1){
+    // read from files
+    // open the file
+    FILE * f = fopen(argv[1],"r");
+    if (f == NULL){
+      fprintf(stderr,"can not open the file");
+      return EXIT_FAILURE;
+    }
+    while (getline(&line, &sz,f) != -1){
+      str_array = realloc(str_array,(n+1)*sizeof(*str_array));
+      str_array[n] = malloc(sz * sizeof(*str_array[n]));
+      strcpy(str_array[n],line);
+      n++;
+      // printf("%s\n",line);
+    }
+    if (fclose(f) != 0){
+      fprintf(stderr,"could not close the file!\n");
+      return EXIT_FAILURE;
+    }
+  }
+  sortData(str_array,n);
+  print_str_array(str_array,n);
   return EXIT_SUCCESS;
 }
