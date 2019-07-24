@@ -50,7 +50,7 @@ int main(int argc, char ** argv) {
     // read from files
     // open the file
     for (int j=1;j<argc;j++){
-      FILE * f = fopen(argv[1],"r");
+      FILE * f = fopen(argv[j],"r");
       if (f == NULL){
 	fprintf(stderr,"can not open the file");
 	return EXIT_FAILURE;
