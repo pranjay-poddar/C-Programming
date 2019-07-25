@@ -50,9 +50,12 @@ void addRandomMine(board_t * b) {
     //    printf("%d\n",b->width);
     x = random() % b->width;
     y = random() % b->height;
+    //printf("x=%d  y=%d\n",x,y);
     assert(limit > 0);
     limit--;
   } while(b->board[y][x] == HAS_MINE);
+
+  
   b->board[y][x] = HAS_MINE;
 }
 
@@ -62,8 +65,12 @@ board_t * makeBoard(int w, int h, int numMines) {
   boardPtr->board = malloc(h*sizeof(*(boardPtr->board)));
   boardPtr->width = w;
   boardPtr->height = h;
+  boardPtr->totalMines = numMines;
   for (int i=0; i < h; i++){
     boardPtr->board[i] = malloc(w*sizeof(*(boardPtr->board[i])));
+    for (int j=0;j<w;j++){
+      boardPtr->board[i][j]=UNKNOWN;
+    }
   }
   for (int j=1; j<= numMines; j++){
     addRandomMine(boardPtr);
@@ -218,6 +225,7 @@ void freeBoard(board_t * b) {
     free(b->board[i]);
   }
   free(b->board);
+  free(b);
 }
 
 int readInt(char ** linep, size_t * lineszp) {
