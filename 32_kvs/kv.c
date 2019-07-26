@@ -28,6 +28,7 @@ kvarray_t * readKVs(const char * fname) {
       int diff = searchPtr - buffer;
       strcpy(values,searchPtr+1);
       strncpy(keys,buffer,diff);
+      keys[diff]='\0';
     }
     else{
       fprintf(stderr,"bad style did not find the equal sign! \n");
@@ -57,7 +58,9 @@ void freeKVs(kvarray_t * pairs) {
 void printKVs(kvarray_t * pairs) {
   //WRITE ME
   for (int i=0; i < pairs->n; i++){
-    printf("key = '%s' value = '%s'\n",pairs->array[i].key,pairs->array[i].value);
+    char * k = pairs->array[i].key;
+    char * v = pairs->array[i].value;
+    printf("key = '%s' value = '%s'\n",k,v);
   }
 }
 
