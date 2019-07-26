@@ -36,6 +36,7 @@ kvarray_t * readKVs(const char * fname) {
     kv_array->array[n].value=values;
     n++;
   }
+  free(buffer);
   kv_array->n=n;
   if (fclose(f)!=0){
     fprintf(stderr,"could not close the file\n");
@@ -45,6 +46,10 @@ kvarray_t * readKVs(const char * fname) {
 
 void freeKVs(kvarray_t * pairs) {
   //WRITE ME
+  for (int c=0; c<pairs->n;c++){
+    free(pairs->array[c].key);
+    free(pairs->array[c].value);
+  }
   free(pairs->array);
   free(pairs);
 }
