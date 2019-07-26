@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include "kv.h"
 
-
+#define WORD_LEN 100
 
 kvarray_t * readKVs(const char * fname) {
   //WRITE ME
@@ -19,16 +19,25 @@ kvarray_t * readKVs(const char * fname) {
   kv_array->array = NULL;
   int n = 0 ;
   while (getline(&buffer, &sz,f)>0){
-    //    printf("%s",buffer);
     kv_array->array = realloc(kv_array->array,(n+1)* sizeof(*(kv_array->array)));
+    char * keys = malloc(WORD_LEN*sizeof(*keys));
+    char * values = malloc(WORD_LEN*sizeof(*values));
     char * searchPtr;
-    char * keys= malloc(sz*sizeof(*keys));
-    char * values = malloc(sz*sizeof(*values));
     if ((searchPtr = strchr(buffer,'='))!=NULL){
       int diff = searchPtr - buffer;
       strcpy(values,searchPtr+1);
       strncpy(keys,buffer,diff);
       keys[diff]='\0';
+      //values[sz-diff]='n';
+      int dum = 0;
+      while(1){
+	if (values[dum]=='\n'){
+	  values[dum]='\0';
+	  break;
+	}
+	dum++;
+      }
+      //      printf("%c\n",values[3]);
     }
     else{
       fprintf(stderr,"bad style did not find the equal sign! \n");
