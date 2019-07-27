@@ -47,9 +47,15 @@ int main(int argc, char ** argv) {
     }
     //compute the output file name from argv[i] (call this outName)
     char * outName = computeOutputFileName(argv[i]);
-
+    if (outName == NULL){
+      return EXIT_FAILURE;
+    }
     //open the file named by outName (call that f)
     FILE * f = fopen(outName,"w");
+    if (f == NULL){
+      fprintf(stderr, "could not open the file\n");
+      return EXIT_FAILURE;
+    }
     //print the counts from c into the FILE f
     printCounts(c,f);
     //close f
