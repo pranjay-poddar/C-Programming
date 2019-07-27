@@ -28,7 +28,7 @@ void addCount(counts_t * c, const char * name) {
     if (found == 0){
       c->count_array = realloc(c->count_array, (c->n+1)*sizeof(*(c->count_array)));
       //try to malloc this
-      c->count_array[c->n].keyString = malloc(strlen(name)*sizeof(char));
+      c->count_array[c->n].keyString = malloc(500*sizeof(char));
       strcpy(c->count_array[c->n].keyString , name);
       c->count_array[c->n].repeat = 1;
       c->n +=1;
