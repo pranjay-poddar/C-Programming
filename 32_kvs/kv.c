@@ -28,7 +28,9 @@ kvarray_t * readKVs(const char * fname) {
       strcpy(values,searchPtr+1);
       strncpy(keys,buffer,diff);
       keys[diff]='\0';
+      values[strlen(values)-1]='\0'
       //values[sz-diff]='n';
+      /*
       int dum = 0;
       while(1){
 	if (values[dum]=='\n'){
@@ -36,8 +38,7 @@ kvarray_t * readKVs(const char * fname) {
 	  break;
 	}
 	dum++;
-      }
-      //      printf("%c\n",values[3]);
+      }*/
     }
     else{
       fprintf(stderr,"bad style did not find the equal sign! \n");
@@ -82,6 +83,5 @@ char * lookupValue(kvarray_t * pairs, const char * Key) {
       return pairs->array[j].value;
     }
   }
-  return NULL;
-  
+  return NULL;  
 }
