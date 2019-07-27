@@ -20,8 +20,8 @@ kvarray_t * readKVs(const char * fname) {
   int n = 0 ;
   while (getline(&buffer, &sz,f)>0){
     kv_array->array = realloc(kv_array->array,(n+1)* sizeof(*(kv_array->array)));
-    char * keys = malloc(WORD_LEN*sizeof(*keys));
-    char * values = malloc(WORD_LEN*sizeof(*values));
+    char * keys = malloc(strlen(buffer)*sizeof(*keys));
+    char * values = malloc(strlen(buffer)*sizeof(*values));
     char * searchPtr;
     if ((searchPtr = strchr(buffer,'='))!=NULL){
       int diff = searchPtr - buffer;
@@ -42,6 +42,7 @@ kvarray_t * readKVs(const char * fname) {
   kv_array->n=n;
   if (fclose(f)!=0){
     fprintf(stderr,"could not close the file\n");
+    return NULL;
   }
   return kv_array;
 }
