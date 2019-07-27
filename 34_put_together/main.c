@@ -17,6 +17,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   while(getline(&buffer,&sz,f)>0){
     addCount(C_array, lookupValue(kvPairs,buffer));
   }
+  free(buffer);
   if (fclose(f) != 0){
     fprintf(stderr,"could not close the file\n");
   }
@@ -48,8 +49,9 @@ int main(int argc, char ** argv) {
     }
     //free the memory for outName and c
     freeCounts(c);
+    free(outName);
   }
  //free the memory for kv
-  free(kv);
+  freeKVs(kv);
   return EXIT_SUCCESS;
 }
