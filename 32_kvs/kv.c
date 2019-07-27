@@ -29,19 +29,10 @@ kvarray_t * readKVs(const char * fname) {
       strncpy(keys,buffer,diff);
       keys[diff]='\0';
       values[strlen(values)-1]='\0';
-      //values[sz-diff]='n';
-      /*
-      int dum = 0;
-      while(1){
-	if (values[dum]=='\n'){
-	  values[dum]='\0';
-	  break;
-	}
-	dum++;
-      }*/
     }
     else{
       fprintf(stderr,"bad style did not find the equal sign! \n");
+      return NULL;
     }
     (kv_array->array[n]).key=keys;
     kv_array->array[n].value=values;
