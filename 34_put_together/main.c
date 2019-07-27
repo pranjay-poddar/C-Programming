@@ -10,7 +10,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   FILE * f = fopen(filename,"r");
   if (f == NULL){
     fprintf(stderr,"could not open the file\n");
-    return EXIT_FAILURE;
+    return NULL;
   }
   counts_t * C_array = createCounts();
   char * buffer = NULL;
@@ -39,6 +39,9 @@ int main(int argc, char ** argv) {
     //count the values that appear in the file named by argv[i], using kv as the key/value pair
     //   (call this result c)
     counts_t * c = countFile(argv[i],kv);
+    if (c == NULL){
+      return EXIT_FAILURE;
+    }
     //compute the output file name from argv[i] (call this outName)
     char * outName = computeOutputFileName(argv[i]);
 
