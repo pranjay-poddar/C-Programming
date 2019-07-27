@@ -28,7 +28,7 @@ kvarray_t * readKVs(const char * fname) {
       strcpy(values,searchPtr+1);
       strncpy(keys,buffer,diff);
       keys[diff]='\0';
-      values[strlen(values)-1]='\0'
+      values[strlen(values)-1]='\0';
       //values[sz-diff]='n';
       /*
       int dum = 0;
