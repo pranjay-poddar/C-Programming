@@ -24,7 +24,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 	//	printf("yes the buffer has anull terminator\n ");
 	break;
       }
-      if (d>20){
+      if (d>100){
 	break;
       }
       d++;
