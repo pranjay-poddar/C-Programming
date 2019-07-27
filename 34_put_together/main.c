@@ -16,22 +16,6 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   size_t sz=0;
   while(getline(&buffer,&sz,f)>0){
     buffer[strlen(buffer)-1]='\0';
-    // printf("%s   %zd\n",buffer,strlen(buffer));
-    /*
-    while(1){
-      if (buffer[d]=='\n'){
-	buffer[d]='\0';
-	//	printf("%d",buffer[d-1]);
-	//	printf("yes the buffer has anull terminator\n ");
-	break;
-      }
-      if (d>strlen(buffer)){
-	break;
-      }
-      d++;
-    }
-    */
-    //printf("%c\n", lookupValue(kvPairs,buffer)[0]);
     addCount(C_array, lookupValue(kvPairs,buffer));
   }
   free(buffer);
