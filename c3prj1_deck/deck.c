@@ -58,9 +58,8 @@ card_t * add_empty_card(deck_t * deck){
 
 deck_t * make_deck_exclude (deck_t * excluded_cards){
   deck_t * deck_excluded = malloc(sizeof(*(deck_excluded)));
-  size_t num = 52 - excluded_cards->n_cards;
-  deck_excluded->n_cards = num;
-  deck_excluded->cards = malloc(num*sizeof(*(deck_excluded->cards)));
+  deck_excluded->n_cards = 0;
+  deck_excluded->cards = NULL;
   for (int i=0; i<52 ; i++){
     if (!deck_contains(excluded_cards, card_from_num(i))){
       add_card_to(deck_excluded,card_from_num(i));
