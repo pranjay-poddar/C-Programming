@@ -1,63 +1,23 @@
-Grading at Wed Jul 31 11:01:18 UTC 2019
+Grading at Wed Jul 31 11:05:38 UTC 2019
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
-Compiling cards.c -> cards.o
-Linking eval.o, deck.o, cards.o, and our tester
-Testing free_deck(deck_t *)
-- Test passed
-Testing add_card_to(deck_t *, card_t)
-- Test passed
-Testing add_empty_card(deck_t *)
-- Test passed
-Testing make_deck_exclude(deck_t *)
-- Test passed
-Testing build_remaining_deck(deck_t **, size_t)
-Testing with 1 hand
-Testing with 2 hands
-Testing with 3 hands
-Testing with 4 hands
-Testing with 5 hands
-Testing with 6 hands
-- Test passed
-Testing get_match_count(deck_t *)
-timeout: the monitored command dumped core
-Valgrind reported errors:
-==1872== Memcheck, a memory error detector
-==1872== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==1872== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==1872== Command: ./tester gmc
-==1872== Parent PID: 1871
-==1872== 
-==1872== Invalid write of size 4
-==1872==    at 0x401497: get_match_counts (in /graderhome/work/c4prj1_deck/tester)
-==1872==    by 0x402EB9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1872==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1872==  Address 0x520568c is 4 bytes before a block of size 12 alloc'd
-==1872==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1872==    by 0x401394: get_match_counts (in /graderhome/work/c4prj1_deck/tester)
-==1872==    by 0x402EB9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1872==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1872== 
-==1872== 
-==1872== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==1872==  Bad permissions for mapped region at address 0x51FDFFC
-==1872==    at 0x401497: get_match_counts (in /graderhome/work/c4prj1_deck/tester)
-==1872==    by 0x402EB9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1872==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1872== 
-==1872== HEAP SUMMARY:
-==1872==     in use at exit: 4,248 bytes in 13 blocks
-==1872==   total heap usage: 21 allocs, 8 frees, 4,320 bytes allocated
-==1872== 
-==1872== LEAK SUMMARY:
-==1872==    definitely lost: 4,180 bytes in 9 blocks
-==1872==    indirectly lost: 0 bytes in 0 blocks
-==1872==      possibly lost: 0 bytes in 0 blocks
-==1872==    still reachable: 68 bytes in 4 blocks
-==1872==         suppressed: 0 bytes in 0 blocks
-==1872== Rerun with --leak-check=full to see details of leaked memory
-==1872== 
-==1872== For counts of detected and suppressed errors, rerun with: -v
-==1872== ERROR SUMMARY: 385 errors from 1 contexts (suppressed: 0 from 0)
+eval.c: In function ‘get_match_counts’:
+eval.c:252:1: error: ISO C forbids nested functions [-Werror=pedantic]
+ void copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t count) {
+ ^
+eval.c:277:1: error: ISO C forbids nested functions [-Werror=pedantic]
+ int find_straight(deck_t * hand, suit_t fs, hand_eval_t * ans) {
+ ^
+eval.c:309:1: error: ISO C forbids nested functions [-Werror=pedantic]
+ hand_eval_t evaluate_hand(deck_t * hand) {
+ ^
+eval.c:377:1: error: expected declaration or statement at end of input
+ }
+ ^
+eval.c:377:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation of eval.c failed
 
-Overall Grade: B
+Overall Grade: F
