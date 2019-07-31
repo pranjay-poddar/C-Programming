@@ -1,29 +1,15 @@
-Grading at Wed Jul 31 09:04:13 UTC 2019
+Grading at Wed Jul 31 09:07:59 UTC 2019
 Compiling deck.c -> deck.o
-deck.c:43:19: error: unknown type name ‘dect_t’
- void add_card_to (dect_t * deck, card_t c){
-                   ^
-deck.c: In function ‘make_deck_exclude’:
-deck.c:65:19: error: called object ‘deck_excluded’ is not a function or function pointer
-       add_card_to(deck_excluded(card_from_num(i)));
-                   ^
-deck.c:59:12: note: declared here
-   deck_t * deck_excluded = malloc(sizeof(*(deck_excluded)));
-            ^
-deck.c:65:7: error: too few arguments to function ‘add_card_to’
-       add_card_to(deck_excluded(card_from_num(i)));
-       ^
-In file included from deck.c:4:0:
-deck.h:17:6: note: declared here
- void add_card_to(deck_t * deck, card_t c);
-      ^
+deck.c: In function ‘add_card_to’:
+deck.c:45:46: error: invalid type argument of unary ‘*’ (have ‘card_t {aka struct card_tag}’)
+   deck->cards[deck->n_cards] = malloc(sizeof(*c));
+                                              ^
 deck.c: In function ‘build_remaining_deck’:
 deck.c:77:34: error: incompatible type for argument 2 of ‘add_card_to’
        add_card_to(tailored_deck, hands[i]->cards[j]);
                                   ^
-In file included from deck.c:4:0:
-deck.h:17:6: note: expected ‘card_t {aka struct card_tag}’ but argument is of type ‘card_t * {aka struct card_tag *}’
- void add_card_to(deck_t * deck, card_t c);
+deck.c:43:6: note: expected ‘card_t {aka struct card_tag}’ but argument is of type ‘card_t * {aka struct card_tag *}’
+ void add_card_to (deck_t * deck, card_t c){
       ^
 Compilation of deck.c failed
 
