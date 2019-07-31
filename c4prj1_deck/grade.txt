@@ -1,4 +1,4 @@
-Grading at Wed Jul 31 11:12:00 UTC 2019
+Grading at Wed Jul 31 11:15:59 UTC 2019
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
 Compiling cards.c -> cards.o
@@ -20,9 +20,6 @@ Testing with 5 hands
 Testing with 6 hands
 - Test passed
 Testing get_match_count(deck_t *)
-In this hand: Ac Ah 
-  I expected the 0'th match count to be 2 but you got 1
-  I expected the 1'th match count to be 2 but you got 1
-- Test failed
+- Test passed
 
-Overall Grade: B
+Overall Grade: A
