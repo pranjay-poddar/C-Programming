@@ -210,7 +210,7 @@ unsigned * get_match_counts(deck_t * hand){
   unsigned * match_count = malloc(hand->n_cards * sizeof(*match_count));
   unsigned count = 1;
   for (int i =1; i < hand->n_cards; i++){
-    if (hand->cards[i].value == hand->cards[i-1].value){
+    if (hand->cards[i]->value == hand->cards[i-1]->value){
       count++;
     }
     else{
