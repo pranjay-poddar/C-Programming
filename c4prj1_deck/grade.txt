@@ -1,9 +1,5 @@
-Grading at Wed Jul 31 09:07:59 UTC 2019
+Grading at Wed Jul 31 09:09:44 UTC 2019
 Compiling deck.c -> deck.o
-deck.c: In function ‘add_card_to’:
-deck.c:45:46: error: invalid type argument of unary ‘*’ (have ‘card_t {aka struct card_tag}’)
-   deck->cards[deck->n_cards] = malloc(sizeof(*c));
-                                              ^
 deck.c: In function ‘build_remaining_deck’:
 deck.c:77:34: error: incompatible type for argument 2 of ‘add_card_to’
        add_card_to(tailored_deck, hands[i]->cards[j]);
