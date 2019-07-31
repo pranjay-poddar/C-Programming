@@ -216,7 +216,7 @@ unsigned * get_match_counts(deck_t * hand){
 	for (int j = i; j>i-count; j--){
 	  match_count[j]=count;
 	}
-	return match_count;
+	//	return match_count;
       }
     }
     else{
@@ -225,10 +225,13 @@ unsigned * get_match_counts(deck_t * hand){
       }
       if (i == hand->n_cards -1){
 	match_count[i]=1;
-	return match_count;
+	//	return match_count;
       }
       count = 1;
     }
+  }
+  for (int k = 0 ; k < hand->n_cards ; k++){
+    printf("index = %d  value =%u\n",k,match_count[k]);
   }
   return match_count;
 }
