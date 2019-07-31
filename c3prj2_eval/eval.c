@@ -231,7 +231,8 @@ unsigned * get_match_counts(deck_t * hand){
     }
   }
   for (int k = 0 ; k < hand->n_cards ; k++){
-    printf("index = %d  value =%u\n",k,match_count[k]);
+    match_count[k]=1;
+    //    printf("index = %d  value =%u\n",k,match_count[k]);
   }
   return match_count;
 }
