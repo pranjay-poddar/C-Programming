@@ -74,7 +74,7 @@ deck_t * build_remaining_deck (deck_t ** hands, size_t n_hands){
   tailored_deck->cards = NULL;
   for (int i=0; i < n_hands ; i++){
     for (int j=0; j < hands[i]->n_cards; j++){
-      add_card_to(tailored_deck, hands[i]->cards[j]);
+      add_card_to(tailored_deck, *(hands[i]->cards[j]));
     }
   }
   return make_deck_exclude(tailored_deck);
