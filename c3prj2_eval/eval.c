@@ -224,18 +224,19 @@ unsigned * get_match_counts(deck_t * hand){
 	//	return match_count;
       }
     }
+    /*
     else{
       for (int j = i-1; j>=i-count; j--){
 	match_count[j]=count;
       }
-      if (i == hand->n_cards -1){
+      if (i == (hand->n_cards-1)){
 	match_count[i]=1;
 	//	return match_count;
       }
       count = 1;
     }
   }
-  
+    */
   return match_count;
 }
 
