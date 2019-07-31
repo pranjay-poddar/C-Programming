@@ -1,63 +1,11 @@
-Grading at Wed Jul 31 10:53:06 UTC 2019
+Grading at Wed Jul 31 10:54:52 UTC 2019
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
-Compiling cards.c -> cards.o
-Linking eval.o, deck.o, cards.o, and our tester
-Testing free_deck(deck_t *)
-- Test passed
-Testing add_card_to(deck_t *, card_t)
-- Test passed
-Testing add_empty_card(deck_t *)
-- Test passed
-Testing make_deck_exclude(deck_t *)
-- Test passed
-Testing build_remaining_deck(deck_t **, size_t)
-Testing with 1 hand
-Testing with 2 hands
-Testing with 3 hands
-Testing with 4 hands
-Testing with 5 hands
-Testing with 6 hands
-- Test passed
-Testing get_match_count(deck_t *)
-timeout: the monitored command dumped core
-Valgrind reported errors:
-==1499== Memcheck, a memory error detector
-==1499== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==1499== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==1499== Command: ./tester gmc
-==1499== Parent PID: 1498
-==1499== 
-==1499== Invalid write of size 4
-==1499==    at 0x40145D: get_match_counts (in /graderhome/work/c4prj1_deck/tester)
-==1499==    by 0x402EB9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1499==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1499==  Address 0x520568c is 4 bytes before a block of size 12 alloc'd
-==1499==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1499==    by 0x401394: get_match_counts (in /graderhome/work/c4prj1_deck/tester)
-==1499==    by 0x402EB9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1499==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1499== 
-==1499== 
-==1499== Process terminating with default action of signal 11 (SIGSEGV): dumping core
-==1499==  Bad permissions for mapped region at address 0x51FDFFC
-==1499==    at 0x40145D: get_match_counts (in /graderhome/work/c4prj1_deck/tester)
-==1499==    by 0x402EB9: check_get_match_count (in /graderhome/work/c4prj1_deck/tester)
-==1499==    by 0x400AB8: main (in /graderhome/work/c4prj1_deck/tester)
-==1499== 
-==1499== HEAP SUMMARY:
-==1499==     in use at exit: 4,248 bytes in 13 blocks
-==1499==   total heap usage: 21 allocs, 8 frees, 4,320 bytes allocated
-==1499== 
-==1499== LEAK SUMMARY:
-==1499==    definitely lost: 4,180 bytes in 9 blocks
-==1499==    indirectly lost: 0 bytes in 0 blocks
-==1499==      possibly lost: 0 bytes in 0 blocks
-==1499==    still reachable: 68 bytes in 4 blocks
-==1499==         suppressed: 0 bytes in 0 blocks
-==1499== Rerun with --leak-check=full to see details of leaked memory
-==1499== 
-==1499== For counts of detected and suppressed errors, rerun with: -v
-==1499== ERROR SUMMARY: 385 errors from 1 contexts (suppressed: 0 from 0)
+eval.c: In function ‘get_match_counts’:
+eval.c:211:12: error: unused variable ‘count’ [-Werror=unused-variable]
+   unsigned count = 1;
+            ^
+cc1: all warnings being treated as errors
+Compilation of eval.c failed
 
-Overall Grade: B
+Overall Grade: F
