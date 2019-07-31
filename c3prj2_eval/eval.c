@@ -208,12 +208,16 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 //use of get_match_counts.
 unsigned * get_match_counts(deck_t * hand){
   unsigned * match_count = malloc(hand->n_cards * sizeof(*match_count));
-  /*
+  for (int k = 0 ; k < hand->n_cards ; k++){
+    match_count[k]=1;
+    //    printf("index = %d  value =%u\n",k,match_count[k]);
+  }
+
   unsigned count = 1;
   for (int i =1; i < hand->n_cards; i++){
     if (hand->cards[i]->value == hand->cards[i-1]->value){
       count++;
-      if (i==hand->n_cards-1){
+      if (i == (hand->n_cards-1)){
 	for (int j = i; j>i-count; j--){
 	  match_count[j]=count;
 	}
@@ -231,11 +235,7 @@ unsigned * get_match_counts(deck_t * hand){
       count = 1;
     }
   }
-  */
-  for (int k = 0 ; k < hand->n_cards ; k++){
-    match_count[k]=1;
-    //    printf("index = %d  value =%u\n",k,match_count[k]);
-  }
+  
   return match_count;
 }
 
