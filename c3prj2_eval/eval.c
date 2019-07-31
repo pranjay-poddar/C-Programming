@@ -224,9 +224,9 @@ unsigned * get_match_counts(deck_t * hand){
 	//	return match_count;
       }
     }
-    /*
+    
     else{
-      for (int j = i-1; j>=i-count; j--){
+      for (int j = (i-count); j<=(i-1); j++){
 	match_count[j]=count;
       }
       if (i == (hand->n_cards-1)){
@@ -235,7 +235,7 @@ unsigned * get_match_counts(deck_t * hand){
       }
       count = 1;
     }
-    */
+    
   }
     
   return match_count;
