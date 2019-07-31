@@ -212,10 +212,20 @@ unsigned * get_match_counts(deck_t * hand){
   for (int i =1; i < hand->n_cards; i++){
     if (hand->cards[i]->value == hand->cards[i-1]->value){
       count++;
+      if (i==hand->n_cards-1){
+	for (int j = i; j>i-count; j--){
+	  match_count[j]=count;
+	}
+	return match_count;
+      }
     }
     else{
       for (int j = i-1; j>=i-count; j--){
 	match_count[j]=count;
+      }
+      if (i == hand->n_cards -1){
+	match_count[i]=1;
+	return match_count;
       }
       count = 1;
     }
