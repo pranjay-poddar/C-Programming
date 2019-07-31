@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "counts.h"
+
+#define MAX_LINE_LENGTH 500
+
 counts_t * createCounts(void) {
   //WRITE ME
   counts_t * count = malloc (sizeof(*count));
@@ -28,7 +31,7 @@ void addCount(counts_t * c, const char * name) {
     if (found == 0){
       c->count_array = realloc(c->count_array, (c->n+1)*sizeof(*(c->count_array)));
       //try to malloc this
-      c->count_array[c->n].keyString = malloc(500*sizeof(char));
+      c->count_array[c->n].keyString = malloc(MAX_LINE_LENGTH*sizeof(char));
       strcpy(c->count_array[c->n].keyString , name);
       c->count_array[c->n].repeat = 1;
       c->n +=1;
