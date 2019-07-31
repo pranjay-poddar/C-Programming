@@ -40,7 +40,7 @@ void assert_full_deck(deck_t * d) {
   }
 }
 
-void add_card_to (dect_t * deck, card_t c){
+void add_card_to (deck_t * deck, card_t c){
   deck->cards = realloc(deck->cards, (deck->n_cards + 1)*sizeof(*(deck->cards)));
   deck->cards[deck->n_cards] = malloc(sizeof(*c));
   deck->cards[deck->n_cards]->value = c.value;
@@ -62,7 +62,7 @@ deck_t * make_deck_exclude (deck_t * excluded_cards){
   deck_excluded->cards = malloc(num*sizeof(*(deck_excluded->cards)));
   for (int i=0; i<52 ; i++){
     if (!deck_contains(excluded_cards, card_from_num(i))){
-      add_card_to(deck_excluded(card_from_num(i)));
+      add_card_to(deck_excluded,card_from_num(i));
     }
   }
   return deck_excluded;
