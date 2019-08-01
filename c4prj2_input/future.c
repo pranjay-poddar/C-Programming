@@ -1,3 +1,4 @@
+#include "future.h"
 
 void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
   if ((index+1) > fc->n_decks){
