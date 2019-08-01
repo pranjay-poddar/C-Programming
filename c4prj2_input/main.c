@@ -16,8 +16,10 @@ int main (){
   fc->decks = NULL;
   fc->n_decks = 0;
   deck_t ** hands_array = read_input(f, &n_hands, fc);
+  /*
   for (int i=0; i<n_hands; i++){
     print_hand(hands_array[i]);
   }
+  */
   return EXIT_SUCCESS;
 }
