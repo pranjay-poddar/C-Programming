@@ -1,23 +1,12 @@
-Grading at Thu Aug  1 13:20:09 UTC 2019
+Grading at Thu Aug  1 13:21:48 UTC 2019
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
 Compiling future.c -> future.o
-future.c: In function ‘add_future_card’:
-future.c:5:25: error: ‘decks’ undeclared (first use in this function)
-     fc->decks = realloc(decks, (index+1)*sizeof(*decks));
-                         ^
-future.c:5:25: note: each undeclared identifier is reported only once for each function it appears in
 future.c: In function ‘future_cards_from_deck’:
-future.c:19:5: error: implicit declaration of function ‘printf’ [-Werror=implicit-function-declaration]
-     printf("there is not enough cards\n");
-     ^
-future.c:19:5: error: incompatible implicit declaration of built-in function ‘printf’ [-Werror]
-future.c:19:5: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
-future.c:23:35: error: ‘deck_t {aka struct deck_tag}’ has no member named ‘n_cars’
+future.c:24:35: error: ‘deck_t {aka struct deck_tag}’ has no member named ‘n_cars’
        for (int j=0; j<fc->decks[i].n_cars;j++){
                                    ^
-cc1: all warnings being treated as errors
 Compilation of future.c failed
 
 Overall Grade: F
