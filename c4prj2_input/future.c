@@ -10,9 +10,15 @@ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
     fc->n_decks = index+1;
   }
   else{
+    if (fc->decks[index].cards == NULL){
+      fc->decks[index].n_cards = 0;
+      //      printf("yes cards is null\n");
+    }
     fc->decks[index].cards = realloc(fc->decks[index].cards, (fc->decks[index].n_cards +1)*sizeof(*(fc->decks[index].cards)));
     fc->decks[index].n_cards += 1;
-    fc->decks[index].cards[fc->decks[index].n_cards -1]=ptr;
+    printf("%lu\n",fc->decks[index].n_cards);
+    fc->decks[index].cards[(fc->decks[index].n_cards)-1]=ptr;
+    
   }
 }
 
