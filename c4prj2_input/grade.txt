@@ -1,20 +1,23 @@
-Grading at Thu Aug  1 13:16:50 UTC 2019
+Grading at Thu Aug  1 13:18:48 UTC 2019
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
-input.c: In function ‘hand_from_string’:
-input.c:11:10: error: assignment to expression with array type
-   cursor = strcpy(cursor, str);
-          ^
-input.c:22:13: error: lvalue required as increment operand
-       cursor++;
-             ^
-input.c:29:9: error: assignment to expression with array type
-  cursor = card_end + 1;
-         ^
-input.c:33:9: error: assignment to expression with array type
-  cursor += 2;
-         ^
-Compilation of input.c failed
+Compiling future.c -> future.o
+future.c:2:22: error: unknown type name ‘future_cards_t’
+ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
+                      ^
+future.c:2:43: error: unknown type name ‘size_t’
+ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
+                                           ^
+future.c:2:57: error: unknown type name ‘card_t’
+ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
+                                                         ^
+future.c:16:29: error: unknown type name ‘deck_t’
+ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
+                             ^
+future.c:16:44: error: unknown type name ‘future_cards_t’
+ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
+                                            ^
+Compilation of future.c failed
 
 Overall Grade: F
