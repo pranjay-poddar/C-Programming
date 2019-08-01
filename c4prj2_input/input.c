@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "deck.h"
-#include "card.h"
+//#include "card.h"
 #include "future.h"
 
 deck_t * hand_from_string(const char * str, futrue_cards_t * fc){
