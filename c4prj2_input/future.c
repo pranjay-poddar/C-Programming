@@ -31,8 +31,8 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
     //    print_hand(deck);
     for (int i=0; i < fc->n_decks ; i++){
       for (int j=0; j<fc->decks[i].n_cards;j++){
-	print_card(*(deck->cards[i]));
-	printf("\n");
+	//print_card(*(deck->cards[i]));
+	//printf("\n");
 	*(fc->decks[i].cards[j]) = *(deck->cards[i]);
       }
     }
