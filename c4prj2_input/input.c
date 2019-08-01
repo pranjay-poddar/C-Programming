@@ -7,7 +7,7 @@
 
 
 deck_t * hand_from_string(const char * str, future_cards_t * fc){
-  char hand [100];
+  char hand [300];
   char * cursor = strcpy(hand, str);
   printf("%s\n",cursor);
   deck_t * dummy_deck = malloc(sizeof(* dummy_deck));
