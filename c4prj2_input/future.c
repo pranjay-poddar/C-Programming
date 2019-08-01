@@ -32,10 +32,15 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
   else{
     //    print_hand(deck);
     for (int i=0; i < fc->n_decks ; i++){
-      for (int j=0; j<fc->decks[i].n_cards;j++){
-	//print_card(*(deck->cards[i]));
-	//printf("\n");
-	fc->decks[i].cards[j]->value = deck->cards[i]->value;
+      if (fc->decks[i].cards == NULL){
+	continue;
+      }
+      else{
+	for (int j=0; j<fc->decks[i].n_cards;j++){
+	  //print_card(*(deck->cards[i]));
+	  //printf("\n");
+	  *(fc->decks[i].cards[j]) = *(deck->cards[i]);
+	}
       }
     }
   }
