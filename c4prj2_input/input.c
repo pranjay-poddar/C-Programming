@@ -38,7 +38,7 @@ deck_t * hand_from_string(const char * str, futrue_cards_t * fc){
 
 deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc){
   char * buffer = NULL;
-  sz = 0;
+  size_t sz = 0;
   unsigned hand_count = 0;
   deck_t ** deck_array = NULL;
   deck_t * deckPtr = NULL;
