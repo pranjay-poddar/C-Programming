@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+#include "input.h"
 #include "deck.h"
-//#include "card.h"
 #include "future.h"
+
 
 deck_t * hand_from_string(const char * str, futrue_cards_t * fc){
   char * cursor = str;
