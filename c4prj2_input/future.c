@@ -35,7 +35,7 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
       for (int j=0; j<fc->decks[i].n_cards;j++){
 	//print_card(*(deck->cards[i]));
 	//printf("\n");
-	fc->decks[i].cards[j]->value =5/* deck->cards[i]->value*/;
+	fc->decks[i].cards[j]->value = deck->cards[i]->value;
       }
     }
   }
