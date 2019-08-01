@@ -2,6 +2,7 @@
 #include "future.h"
 
 void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
+  size_t n =0;
   if ((index+1) > fc->n_decks){
     fc->decks = realloc(fc->decks, (index+1)*sizeof(*(fc->decks)));
     fc->decks[index].cards=malloc(sizeof(*(fc->decks[index].cards)));
@@ -14,11 +15,12 @@ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
       fc->decks[index].n_cards = 0;
       //      printf("yes cards is null\n");
     }
-    fc->decks[index].cards = realloc(fc->decks[index].cards, (fc->decks[index].n_cards +1)*sizeof(*(fc->decks[index].cards)));
-    fc->decks[index].n_cards += 1;
-    printf("%lu\n",fc->decks[index].n_cards);
-    fc->decks[index].cards[(fc->decks[index].n_cards)-1]=ptr;
-    
+    n = fc->decks[index].n_cards;
+    fc->decks[index].cards = realloc(fc->decks[index].cards,(n+1)*sizeof(card_t));
+    //printf("%lu\n",fc->decks[index].n_cards);
+    fc->decks[index].cards[n]=ptr;
+    n++;
+    fc->decks[index].n_cards = n;
   }
 }
 
