@@ -46,7 +46,7 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc){
   }
   if (dummy_deck->n_cards < 5){
     fprintf(stderr,"the hand must be at least 5\n");
-    return EXIT_FAILURE;
+    exit(EXIT_FAILURE);
   }
   return dummy_deck;
 }
