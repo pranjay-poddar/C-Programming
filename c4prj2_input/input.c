@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "deck.h"
 //#include "card.h"
 #include "future.h"
