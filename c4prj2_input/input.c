@@ -5,12 +5,6 @@
 #include "deck.h"
 #include "future.h"
 
-struct future_cards_tag {
-  deck_t * decks;
-  size_t n_decks;
-};
-typedef struct future_cards_tag future_cards_t;
-
 
 deck_t * hand_from_string(const char * str, futrue_cards_t * fc){
   char * cursor = str;
