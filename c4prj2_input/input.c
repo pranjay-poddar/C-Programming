@@ -33,7 +33,7 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc){
       if (*cursor == '?'){
 	cursor++;
 	dummy_card = add_empty_card(dummy_deck);
-	printf("unkonwn card here %p\n",dummy_card);
+	// printf("unkonwn card here %p\n",dummy_card);
 	add_future_card(fc, atoi(cursor), dummy_card);
 	k += (card_end - cursor+1);
 	cursor = card_end + 1;
