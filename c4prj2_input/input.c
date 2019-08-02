@@ -10,7 +10,6 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc){
   size_t L = strlen(str);
   char hand [L+1];
   char * cursor = strcpy(hand, str);
-  //printf("%lu\n",strlen(cursor));
   //printf("%s\n",cursor);
   card_t * dummy_card = NULL;
   deck_t * dummy_deck = malloc(sizeof(* dummy_deck));
@@ -33,7 +32,8 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc){
       // check for future card
       if (*cursor == '?'){
 	cursor++;
-	dummy_card =  add_empty_card(dummy_deck);
+	dummy_card = add_empty_card(dummy_deck);
+	printf("unkonwn card here %p\n",dummy_card);
 	add_future_card(fc, atoi(cursor), dummy_card);
 	k += (card_end - cursor+1);
 	cursor = card_end + 1;

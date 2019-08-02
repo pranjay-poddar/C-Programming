@@ -40,6 +40,7 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
 	  //print_card(*(deck->cards[i]));
 	  //printf("\n");
 	  *(fc->decks[i].cards[j]) = *(deck->cards[i]);
+	  //printf("%p\n",fc->decks[i].cards[j]);
 	}
       }
     }
