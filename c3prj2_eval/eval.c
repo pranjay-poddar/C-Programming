@@ -255,7 +255,8 @@ void copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t cou
   unsigned nextv = from->cards[ind]->value;
   size_t to_ind = 0;
   while (count > 0) {
-     assert(ind < from->n_cards);
+    printf("%zu  %zu\n",ind,from->n_cards);
+    assert(ind < from->n_cards);
     assert(nextv >= 2);
     assert(to_ind <5);
     if (from->cards[ind]->value == nextv &&
