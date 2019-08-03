@@ -80,7 +80,7 @@ int main(int argc, char ** argv) {
   }
   double ratio = 0;
   for (size_t k=0; k < n_hands; k++){
-    ratio = ((double) score[k]) / num_trial;
+    ratio = ((double) score[k]*100) / num_trial;
     printf("Hand %zu won %u / %u times (%.2f%%)\n", k,score[k], num_trial, ratio);
   }
   printf("And there were %u ties\n", score[n_hands]);
