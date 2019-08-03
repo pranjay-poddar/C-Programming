@@ -84,6 +84,6 @@ int main(int argc, char ** argv) {
     printf("Hand %zu won %u / %u times (%.2f%%)\n", k,score[k], num_trial, ratio);
   }
   printf("And there were %u ties\n", score[n_hands]);
-  
+  //  printf("%d\n",compare_hands(hands_array[0],hands_array[1]));
   return EXIT_SUCCESS;
 }

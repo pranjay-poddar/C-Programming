@@ -250,6 +250,35 @@ unsigned * get_match_counts(deck_t * hand){
 //into the card array "to"
 //if "fs" is NUM_SUITS, then suits are ignored.
 //if "fs" is any other value, a straight flush (of that suit) is copied.
+
+///////////  Edited vesion  //////////////
+
+int copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t count) {
+  assert(fs == NUM_SUITS || from->cards[ind]->suit == fs);
+  unsigned nextv = from->cards[ind]->value;
+  size_t to_ind = 0;
+  while (count > 0) {
+    //    printf("%zu  %zu\n",ind,from->n_cards);
+    if (!(ind < from->n_cards)){
+      return 0;
+    }
+    assert(nextv >= 2);
+    assert(to_ind <5);
+    if (from->cards[ind]->value == nextv &&
+	(fs == NUM_SUITS || from->cards[ind]->suit == fs)){
+      to[to_ind] = from->cards[ind];
+      to_ind++;
+      count--;
+      nextv--;
+    }
+    ind++;
+  }
+  return 1;
+}
+
+
+
+/* ####### original version######
 void copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t count) {
   assert(fs == NUM_SUITS || from->cards[ind]->suit == fs);
   unsigned nextv = from->cards[ind]->value;
@@ -269,7 +298,7 @@ void copy_straight(card_t ** to, deck_t *from, size_t ind, suit_t fs, size_t cou
     ind++;
   }
 }
-
+*/
 
 //This looks for a straight (or straight flush if "fs" is not NUM_SUITS)
 // in "hand".  It calls the student's is_straight_at for each possible
@@ -284,19 +313,33 @@ int find_straight(deck_t * hand, suit_t fs, hand_eval_t * ans) {
     int x = is_straight_at(hand, i, fs);
     if (x != 0){
       if (x < 0) { //ace low straight
-	assert(hand->cards[i]->value == VALUE_ACE &&
-	       (fs == NUM_SUITS || hand->cards[i]->suit == fs));
+	//assert(hand->cards[i]->value == VALUE_ACE &&
+	//     (fs == NUM_SUITS || hand->cards[i]->suit == fs));
+	if (!(hand->cards[i]->value == VALUE_ACE && (fs == NUM_SUITS || hand->cards[i]->suit == fs))){
+	  return 0;
+	}
 	ans->cards[4] = hand->cards[i];
 	size_t cpind = i+1;
 	while(hand->cards[cpind]->value != 5 ||
 	      !(fs==NUM_SUITS || hand->cards[cpind]->suit ==fs)){
 	  cpind++;
-	  assert(cpind < hand->n_cards);
+	  // assert(cpind < hand->n_cards); original
+	  if (!(cpind < hand->n_cards)){
+	    return 0;
+	  }
 	}
-	copy_straight(ans->cards, hand, cpind, fs,4) ;
+	// original
+	// copy_straight(ans->cards, hand, cpind, fs,4)==0
+	if (copy_straight(ans->cards, hand, cpind, fs,4)==0){
+	  return 0;
+	}
       }
       else {
-	copy_straight(ans->cards, hand, i, fs,5);
+	// original
+	// copy_straight(ans->cards, hand, i, fs,5) == 0
+	if (copy_straight(ans->cards, hand, i, fs,5) == 0){
+	  return 0;
+	}
       }
       return 1;
     }
